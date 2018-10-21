@@ -38,6 +38,7 @@ bool Result::check() {
 		}
 	}
 	fillResult();
+
 	if (isSolution()) {
 		printVictory();
 		return true;
