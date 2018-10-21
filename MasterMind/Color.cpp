@@ -63,6 +63,7 @@ char Color::getColor() {
 bool Color::isEqual(Color color) {
 	assert(&color != nullptr);
 	return this->color == color.getColor();
+
 }
 
 char Color::convertToUpper(char &color) {

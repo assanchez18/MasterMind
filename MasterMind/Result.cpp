@@ -38,6 +38,10 @@ bool Result::check() {
 		}
 	}
 	fillResult();
+<<<<<<< HEAD
+=======
+	printResult();
+>>>>>>> b22cfb97d47850f5b01f524a99d0e4a6ddda4bf1
 	if (isSolution()) {
 		printVictory();
 		return true;
@@ -103,7 +107,11 @@ void Result::compareVectors(std::vector<int> secret, std::vector<int> possible) 
 		if (containsPosition(secret, possible.at(i))) {
 			pushResult(ResultColor::BLACK);
 		}
+<<<<<<< HEAD
 		else {
+=======
+		else if (secret.size() >= possible.size())  {
+>>>>>>> b22cfb97d47850f5b01f524a99d0e4a6ddda4bf1
 			pushResult(ResultColor::WHITE);
 		}
 	}
