@@ -14,7 +14,7 @@ public:
 	char getColor();
 	bool isEqual(Color color);
 	bool isValid();
-	
+
 protected:
 	char color;
 	char convertToChar(int color);

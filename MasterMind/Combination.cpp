@@ -35,7 +35,6 @@ int Combination::getSizeOfCombination()
 CombinationColor Combination::getColorAt(int position)
 {
 	assert(&position != nullptr);
-
 	return this->combination->at(position);
 }
 
@@ -62,6 +61,6 @@ int Combination::getSize() {
 
 void Combination::printCombination() {
 	for (int i = 0; i < this->SIZE_OF_COMBINATION; i++) {
-		std::cout << this->combination->at(i).getColor() << " ";
+		std::cout << i << " - " << this->combination->at(i).getColor() << std::endl;
 	}
 }
