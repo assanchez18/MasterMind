@@ -1,10 +1,8 @@
 #include "pch.h"
 #include <assert.h>
 #include <iostream>
-#include <string>
 #include "CloseInterval.h"
 #include "CombinationColor.h"
-using namespace std;
 
 CombinationColor::CombinationColor() {
 }
