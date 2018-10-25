@@ -24,7 +24,7 @@ Result::~Result()
 {
 }
 
-bool Result::check() {
+void Result::check() {
 	std::map<char, std::vector<int>> possiblePositions = {};
 	std::map<char, std::vector<int>> secretPositions = {};
 	
@@ -41,12 +41,10 @@ bool Result::check() {
 
 	if (isSolution()) {
 		printVictory();
-		return true;
 	}
-	return false;
 }
 bool Result::isSolution() {
-	for (int i = 0; i < this->result.size(); i++) {
+	for (unsigned i = 0; i < this->result.size(); i++) {
 		if (!this->result.at(i).isEqual(ResultColor::BLACK)) {
 			return false;
 		}

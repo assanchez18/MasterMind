@@ -2,19 +2,26 @@
 #include <vector>
 #include "PlayerCombination.h"
 #include "SecretCombination.h"
-
 class MasterMind
 {
 public:
 	MasterMind();
 	~MasterMind();
 	void run();
+	void startGame();
+	void addCombination();
+
 private:
 	bool isEnd();
+	int turn;
 	const int NUMBER_OF_ROUNDS = 12;
-	std::vector<PlayerCombination> rounds;
-	SecretCombination secret ;
+	std::vector<PlayerCombination>* rounds;
+	SecretCombination* secret ;
+	
 	void printRounds();
 	void printEmptyRound();
+	void initTurn();
+	void incrementTurn();
+	int getTurn();
 };
 

@@ -12,7 +12,7 @@ public:
 	Result(int size, SecretCombination* secret, std::vector<CombinationColor>* possible);
 	~Result();
 	void printResult();
-	bool check();
+	void check();
 private:
 	int SIZE_OF_RESULT;
 	SecretCombination* secret;

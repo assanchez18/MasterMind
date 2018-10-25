@@ -151,22 +151,39 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AddCombinationController.h" />
+    <ClInclude Include="CheckResultController.h" />
+    <ClInclude Include="ClearGameController.h" />
     <ClInclude Include="CloseInterval.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="CombinationColor.h" />
     <ClInclude Include="Combination.h" />
+    <ClInclude Include="Controller.h" />
+    <ClInclude Include="ControllerState.h" />
+    <ClInclude Include="EndGameController.h" />
+    <ClInclude Include="FactoryController.h" />
+    <ClInclude Include="IController.h" />
+    <ClInclude Include="Logic.h" />
     <ClInclude Include="MasterMind.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="PlayerCombination.h" />
     <ClInclude Include="Result.h" />
     <ClInclude Include="ResultColor.h" />
     <ClInclude Include="SecretCombination.h" />
+    <ClInclude Include="StartController.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AddCombinationController.cpp" />
+    <ClCompile Include="CheckResultController.cpp" />
+    <ClCompile Include="ClearGameController.cpp" />
     <ClCompile Include="CloseInterval.cpp" />
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="CombinationColor.cpp" />
     <ClCompile Include="Combination.cpp" />
+    <ClCompile Include="Controller.cpp" />
+    <ClCompile Include="ControllerState.cpp" />
+    <ClCompile Include="EndGameController.cpp" />
+    <ClCompile Include="Logic.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MasterMind.cpp" />
     <ClCompile Include="pch.cpp">
@@ -179,6 +196,7 @@
     <ClCompile Include="Result.cpp" />
     <ClCompile Include="ResultColor.cpp" />
     <ClCompile Include="SecretCombination.cpp" />
+    <ClCompile Include="StartController.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

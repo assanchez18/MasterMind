@@ -9,7 +9,7 @@ class PlayerCombination :
 public:
 	PlayerCombination();
 	~PlayerCombination();
-	bool checkResult();
+	void checkResult();
 	void createResult(SecretCombination *secret);
 	void printResult();
 private:

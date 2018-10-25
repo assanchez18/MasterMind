@@ -4,7 +4,7 @@ class ResultColor :
 	public Color
 {
 public:
-	static const char NO_COLOR = 'N';
+	static const char NO_COLOR = '-';
 	
 	ResultColor(char color);
 	~ResultColor();
