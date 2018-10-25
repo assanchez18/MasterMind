@@ -9,9 +9,10 @@ class PlayerCombination :
 public:
 	PlayerCombination();
 	~PlayerCombination();
-	bool checkResult();
+	void checkResult();
 	void createResult(SecretCombination *secret);
 	void printResult();
+	bool isResult();
 private:
 	Result result;
 	void askForCombination();

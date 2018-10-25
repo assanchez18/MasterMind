@@ -28,8 +28,8 @@ void PlayerCombination::askForCombination() {
 	}
 }
 
-bool PlayerCombination::checkResult() {
-	return this->result.check();
+void PlayerCombination::checkResult() {
+	this->result.check();
 }
 void PlayerCombination::createResult(SecretCombination* secret) {
 	this->result = Result::Result(this->SIZE_OF_COMBINATION, secret, this->getCombination());
@@ -38,4 +38,8 @@ void PlayerCombination::createResult(SecretCombination* secret) {
 void PlayerCombination::printResult()
 {
 	this->result.printResult();
+}
+
+bool PlayerCombination::isResult() {
+	return this->result.isSolution();
 }

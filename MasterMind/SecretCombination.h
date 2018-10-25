@@ -8,6 +8,5 @@ public:
 	SecretCombination();
 	~SecretCombination();
 	void randomCombination();
-private:
 };
 

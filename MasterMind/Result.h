@@ -12,7 +12,8 @@ public:
 	Result(int size, SecretCombination* secret, std::vector<CombinationColor>* possible);
 	~Result();
 	void printResult();
-	bool check();
+	void check();
+	bool isSolution();
 private:
 	int SIZE_OF_RESULT;
 	SecretCombination* secret;
@@ -26,5 +27,4 @@ private:
 	void compareVectors(std::vector<int> secret, std::vector<int> possible);
 	bool containsColor(std::map<char, std::vector<int>> map, char color);
 	void printVictory();
-	bool isSolution();
 };

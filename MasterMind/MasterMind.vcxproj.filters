@@ -16,14 +16,38 @@
     <Filter Include="Header Files\color">
       <UniqueIdentifier>{b825e0f6-5263-41c7-abe5-9932ace51c5a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\color">
-      <UniqueIdentifier>{2f76ccd2-0e27-49ae-b158-f2242a64664a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\utils">
       <UniqueIdentifier>{c7c65264-89c6-4e1e-9307-e0910c593a4a}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\utils">
       <UniqueIdentifier>{1ee0d815-27ad-49b8-a657-2b419f288c4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\controller">
+      <UniqueIdentifier>{2028e1fc-3a85-45b2-a2b8-a3509a9d0b50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\controllers">
+      <UniqueIdentifier>{8085f7ea-306b-46b6-be2a-58c2fc7d604f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\combinations">
+      <UniqueIdentifier>{6573f0c6-5360-49a9-a492-780618dd53a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\colors">
+      <UniqueIdentifier>{2f76ccd2-0e27-49ae-b158-f2242a64664a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\controllers\states">
+      <UniqueIdentifier>{0be25130-6b51-4be7-b174-eecf6690ff11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\combinations">
+      <UniqueIdentifier>{d7f47cbf-e8ad-4b61-bd31-152129425912}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\controller\states">
+      <UniqueIdentifier>{c35276ce-8fc9-4ef8-91fd-df152107186c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\controller\factory">
+      <UniqueIdentifier>{72964491-5974-4a13-a73a-8a2a594e8e00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\controller\interfaces">
+      <UniqueIdentifier>{1e00ffbc-df9a-4c34-9a97-9b9972af2a6c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -31,15 +55,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MasterMind.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Combination.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SecretCombination.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerCombination.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Color.h">
@@ -54,8 +69,47 @@
     <ClInclude Include="CloseInterval.h">
       <Filter>Header Files\utils</Filter>
     </ClInclude>
-    <ClInclude Include="Result.h">
+    <ClInclude Include="StartController.h">
+      <Filter>Header Files\controller</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckResultController.h">
+      <Filter>Header Files\controller</Filter>
+    </ClInclude>
+    <ClInclude Include="ClearGameController.h">
+      <Filter>Header Files\controller</Filter>
+    </ClInclude>
+    <ClInclude Include="AddCombinationController.h">
+      <Filter>Header Files\controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller.h">
+      <Filter>Header Files\controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Combination.h">
+      <Filter>Header Files\combinations</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerCombination.h">
+      <Filter>Header Files\combinations</Filter>
+    </ClInclude>
+    <ClInclude Include="SecretCombination.h">
+      <Filter>Header Files\combinations</Filter>
+    </ClInclude>
+    <ClInclude Include="Result.h">
+      <Filter>Header Files\combinations</Filter>
+    </ClInclude>
+    <ClInclude Include="EndGameController.h">
+      <Filter>Header Files\controller</Filter>
+    </ClInclude>
+    <ClInclude Include="ControllerState.h">
+      <Filter>Header Files\controller\states</Filter>
+    </ClInclude>
+    <ClInclude Include="FactoryController.h">
+      <Filter>Header Files\controller\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="IController.h">
+      <Filter>Header Files\controller\interfaces</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -68,29 +122,53 @@
     <ClCompile Include="MasterMind.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Combination.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SecretCombination.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerCombination.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Color.cpp">
-      <Filter>Source Files\color</Filter>
+      <Filter>Source Files\colors</Filter>
     </ClCompile>
     <ClCompile Include="CombinationColor.cpp">
-      <Filter>Source Files\color</Filter>
+      <Filter>Source Files\colors</Filter>
     </ClCompile>
     <ClCompile Include="ResultColor.cpp">
-      <Filter>Source Files\color</Filter>
+      <Filter>Source Files\colors</Filter>
     </ClCompile>
     <ClCompile Include="CloseInterval.cpp">
       <Filter>Source Files\utils</Filter>
     </ClCompile>
+    <ClCompile Include="StartController.cpp">
+      <Filter>Source Files\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckResultController.cpp">
+      <Filter>Source Files\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="ClearGameController.cpp">
+      <Filter>Source Files\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="Combination.cpp">
+      <Filter>Source Files\combinations</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller.cpp">
+      <Filter>Source Files\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCombination.cpp">
+      <Filter>Source Files\combinations</Filter>
+    </ClCompile>
+    <ClCompile Include="SecretCombination.cpp">
+      <Filter>Source Files\combinations</Filter>
+    </ClCompile>
     <ClCompile Include="Result.cpp">
+      <Filter>Source Files\combinations</Filter>
+    </ClCompile>
+    <ClCompile Include="ControllerState.cpp">
+      <Filter>Source Files\controllers\states</Filter>
+    </ClCompile>
+    <ClCompile Include="Logic.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EndGameController.cpp">
+      <Filter>Source Files\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="AddCombinationController.cpp">
+      <Filter>Source Files\controllers</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
