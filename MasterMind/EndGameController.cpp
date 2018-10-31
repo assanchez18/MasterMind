@@ -18,5 +18,5 @@ EndGameController::~EndGameController()
 
 void EndGameController::action()
 {
-	game->printResult();
+	game->endGame();
 }

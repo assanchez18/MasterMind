@@ -5,9 +5,10 @@
 
 
 
-PlayerCombination::PlayerCombination()
+PlayerCombination::PlayerCombination(SecretCombination* secret)
 {
 	askForCombination();
+	createResult(secret);
 }
 
 PlayerCombination::~PlayerCombination()

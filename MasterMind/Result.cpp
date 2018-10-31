@@ -1,6 +1,7 @@
 #include "pch.h"
 #include <iostream>
 #include <assert.h>
+#include <stdlib.h>
 
 #include "Result.h"
 #include "Combination.h"
@@ -30,7 +31,7 @@ void Result::check() {
 	
 	loadSetOfPosition(possiblePositions, this->possible);
 	loadSetOfPosition(secretPositions, this->secret->getCombination());
-
+	// CHECK NOT WORKING
 	std::map<char, std::vector<int>>::iterator itPossible;
 	for (itPossible = possiblePositions.begin(); itPossible != possiblePositions.end(); itPossible++) {
 		if (containsColor(secretPositions, itPossible->first)) {
@@ -38,8 +39,6 @@ void Result::check() {
 		}
 	}
 	fillResult();
-
-
 }
 bool Result::isSolution() {
 	for (unsigned i = 0; i < this->result.size(); i++) {
@@ -96,11 +95,16 @@ bool Result::containsColor(std::map<char, std::vector<int>> map, char color) {
 
 void Result::compareVectors(std::vector<int> secret, std::vector<int> possible) {
 	assert(&possible != nullptr); 
+	int itemsAdded = 0;
 	for (unsigned int i = 0; i < possible.size(); i++){
 		if (containsPosition(secret, possible.at(i))) {
 			pushResult(ResultColor::BLACK);
+			itemsAdded++;
 		}
-		else {
+	}
+	if (possible.size() >= secret.size()) {
+		unsigned int absoluteDifference = secret.size() - itemsAdded;
+		for (unsigned int i = 0; i < absoluteDifference; i++) {
 			pushResult(ResultColor::WHITE);
 		}
 	}

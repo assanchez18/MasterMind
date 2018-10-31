@@ -12,10 +12,13 @@ public:
 	bool isEnd();
 	
 	IController* getController(ControllerState state);
+	IController* getController();
 	void changeState();
+
 private:
 	std::map<ControllerState, IController*> controllers;
 	MasterMind game;
+	ControllerState getActualState();
 
 	void initializeControllers();
 };

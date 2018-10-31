@@ -26,9 +26,15 @@ IController* Logic::getController(ControllerState state) {
 	return this->controllers.at(state);
 }
 
+IController* Logic::getController() {
+	return this->controllers.at(getActualState());
+}
+
 void Logic::changeState()
 {
 	this->game.changeState();
 }
 
-
+ControllerState Logic::getActualState() {
+	return this->game.getActualState();
+}

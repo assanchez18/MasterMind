@@ -61,6 +61,6 @@ int Combination::getSize() {
 
 void Combination::printCombination() {
 	for (int i = 0; i < this->SIZE_OF_COMBINATION; i++) {
-		std::cout << i << " - " << this->combination->at(i).getColor() << std::endl;
+		std::cout << this->combination->at(i).getColor() << " ";
 	}
 }

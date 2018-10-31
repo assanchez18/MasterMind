@@ -7,14 +7,14 @@ class PlayerCombination :
 	public Combination
 {
 public:
-	PlayerCombination();
+	PlayerCombination(SecretCombination* secret);
 	~PlayerCombination();
 	void checkResult();
-	void createResult(SecretCombination *secret);
 	void printResult();
 	bool isResult();
 private:
 	Result result;
 	void askForCombination();
+	void createResult(SecretCombination *secret);
 };
 

@@ -15,21 +15,22 @@ MasterMind::~MasterMind()
 {
 }
 
-void MasterMind::run() {
+/*void MasterMind::run() {
 	//TO-DO
 	bool finished = false;
 	do {
 		
-		PlayerCombination possibleCombination = PlayerCombination::PlayerCombination();
+		//PlayerCombination possibleCombination = PlayerCombination::PlayerCombination();
 		//possibleCombination.createResult(&this->secret);
-		possibleCombination.checkResult();
+		//possibleCombination.checkResult();
+
 		this->rounds->assign(getTurn(), possibleCombination);
 		incrementTurn();
 		if (!finished) {
 			finished = isEnd();
 		}
 	} while (!finished);
-}
+}*/
 
 void MasterMind::startGame() {
 	this->secret = new SecretCombination();
@@ -38,16 +39,17 @@ void MasterMind::startGame() {
 }
 
 void MasterMind::addCombination() {
-	printRounds();
-	PlayerCombination* possibleCombination = &PlayerCombination::PlayerCombination();
-	possibleCombination->checkResult();
-	this->rounds->emplace_back(*possibleCombination);
+
+	printRounds(); 
+	PlayerCombination possibleCombination = PlayerCombination::PlayerCombination(this->secret);
+	possibleCombination.checkResult();
+	this->rounds->emplace_back(possibleCombination);
 	this->incrementTurn();
 }
 
 bool MasterMind::isEnd() {
 	if (unsigned(this->rounds->size()) < unsigned((this->NUMBER_OF_ROUNDS - 1))
-		&& isEnd2()) {
+		&& !isEnd2() ) {
 		return false;
 	}
 	else {
@@ -57,6 +59,7 @@ bool MasterMind::isEnd() {
 
 void MasterMind::printRounds() {
 	printf("\tCombination\tResult\n");
+
 	for (int i = 0; i < getTurn(); i++) {
 		printf("%d\t", i +1);
 		this->rounds->at(i).printCombination();
@@ -93,16 +96,19 @@ void MasterMind::clearGame() {
 }
 
 bool MasterMind::isEnd2() {
-	return this->actualState = (ControllerState::END_GAME);
+	return this->actualState=(ControllerState::END_GAME);
+}
+
+void MasterMind::printResult()
+{
+	//TO-DO PRINT RESULTS
+
 }
 
 
 void MasterMind::checkResult() {
-	if (isEnd()) {
+	if (isEnd() || isSolution()) {
 		this->actualState.setState(ControllerState::END_GAME);
-	}
-	else {
-		this->actualState.changeState();
 	}
 }
 
@@ -115,5 +121,10 @@ void MasterMind::changeState() {
 }
 
 void MasterMind::endGame() {
-	printVictory();
+	printResult();
+}
+
+bool MasterMind::isSolution() {
+	return this->rounds->at(getTurn() - 1).isResult();
+
 }

@@ -14,6 +14,7 @@ public:
 	void printResult();
 	void check();
 	bool isSolution();
+
 private:
 	int SIZE_OF_RESULT;
 	SecretCombination* secret;
