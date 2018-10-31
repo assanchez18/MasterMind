@@ -17,6 +17,7 @@ private:
 	std::map<ControllerState, IController*> controllers;
 	MasterMind game;
 
+
 	void initializeControllers();
 };
 

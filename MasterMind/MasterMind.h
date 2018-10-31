@@ -25,7 +25,9 @@ private:
 	const int NUMBER_OF_ROUNDS = 12;
 	std::vector<PlayerCombination>* rounds;
 	SecretCombination* secret ;
+
 	ControllerState actualState;
+
 	
 	void printRounds();
 	void printEmptyRound();

@@ -31,4 +31,3 @@ void Logic::changeState()
 	this->game.changeState();
 }
 
-

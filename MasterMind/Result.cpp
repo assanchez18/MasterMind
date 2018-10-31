@@ -38,8 +38,6 @@ void Result::check() {
 		}
 	}
 	fillResult();
-
-
 }
 bool Result::isSolution() {
 	for (unsigned i = 0; i < this->result.size(); i++) {

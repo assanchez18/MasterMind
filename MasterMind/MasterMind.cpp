@@ -23,6 +23,7 @@ void MasterMind::run() {
 		PlayerCombination possibleCombination = PlayerCombination::PlayerCombination();
 		//possibleCombination.createResult(&this->secret);
 		possibleCombination.checkResult();
+
 		this->rounds->assign(getTurn(), possibleCombination);
 		incrementTurn();
 		if (!finished) {
@@ -38,10 +39,12 @@ void MasterMind::startGame() {
 }
 
 void MasterMind::addCombination() {
+
 	printRounds();
 	PlayerCombination* possibleCombination = &PlayerCombination::PlayerCombination();
 	possibleCombination->checkResult();
 	this->rounds->emplace_back(*possibleCombination);
+
 	this->incrementTurn();
 }
 
@@ -57,6 +60,7 @@ bool MasterMind::isEnd() {
 
 void MasterMind::printRounds() {
 	printf("\tCombination\tResult\n");
+
 	for (int i = 0; i < getTurn(); i++) {
 		printf("%d\t", i +1);
 		this->rounds->at(i).printCombination();
