@@ -10,7 +10,6 @@ public:
 	MasterMind();
 	~MasterMind();
 	
-	//void run();
 	
 	void startGame();
 	void addCombination();
@@ -30,6 +29,7 @@ private:
 	ControllerState actualState;
 
 	void printResult();
+
 	void printRounds();
 	void printEmptyRound();
 	void initTurn();

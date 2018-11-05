@@ -15,23 +15,6 @@ MasterMind::~MasterMind()
 {
 }
 
-/*void MasterMind::run() {
-	//TO-DO
-	bool finished = false;
-	do {
-		
-		//PlayerCombination possibleCombination = PlayerCombination::PlayerCombination();
-		//possibleCombination.createResult(&this->secret);
-		//possibleCombination.checkResult();
-
-		this->rounds->assign(getTurn(), possibleCombination);
-		incrementTurn();
-		if (!finished) {
-			finished = isEnd();
-		}
-	} while (!finished);
-}*/
-
 void MasterMind::startGame() {
 	this->secret = new SecretCombination();
 	this->rounds = new std::vector<PlayerCombination>();
@@ -39,11 +22,11 @@ void MasterMind::startGame() {
 }
 
 void MasterMind::addCombination() {
-
 	printRounds(); 
 	PlayerCombination possibleCombination = PlayerCombination::PlayerCombination(this->secret);
 	possibleCombination.checkResult();
 	this->rounds->emplace_back(possibleCombination);
+
 	this->incrementTurn();
 }
 
@@ -126,5 +109,4 @@ void MasterMind::endGame() {
 
 bool MasterMind::isSolution() {
 	return this->rounds->at(getTurn() - 1).isResult();
-
 }
