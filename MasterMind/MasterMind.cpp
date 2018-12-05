@@ -6,7 +6,7 @@
 #include "FactoryController.h"
 
 MasterMind::MasterMind() :
-	actualState(ControllerState::START)
+	actualState(GameState::START)
 {
 }
 
@@ -21,11 +21,11 @@ void MasterMind::startGame() {
 	initTurn();
 }
 
-void MasterMind::addCombination() {
-	printRounds(); 
+void MasterMind::addCombination(PlayerCombination* possileCombination) {
+	
 	PlayerCombination possibleCombination = PlayerCombination::PlayerCombination(this->secret);
-	possibleCombination.checkResult();
-	this->rounds->emplace_back(possibleCombination);
+	possibleCombination->checkResult();
+	this->rounds->emplace_back(std::move(possibleCombination));
 
 	this->incrementTurn();
 }
@@ -79,7 +79,7 @@ void MasterMind::clearGame() {
 }
 
 bool MasterMind::isEnd2() {
-	return this->actualState=(ControllerState::END_GAME);
+	return this->actualState=(GameState::END_GAME);
 }
 
 void MasterMind::printResult()
@@ -91,11 +91,11 @@ void MasterMind::printResult()
 
 void MasterMind::checkResult() {
 	if (isEnd() || isSolution()) {
-		this->actualState.setState(ControllerState::END_GAME);
+		this->actualState.setState(GameState::END_GAME);
 	}
 }
 
-ControllerState MasterMind::getActualState() {
+GameState MasterMind::getActualState() {
 	return this->actualState;
 }
 

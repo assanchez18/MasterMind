@@ -1,13 +1,10 @@
 #pragma once
-#include "Controller.h"
+#include "IOperationController.h"
 
 class StartController :
-	public Controller
+	public IOperationController
 {
 public:
-	StartController();
-	StartController(MasterMind* game);
-	~StartController();
-	void action() override;
+	virtual void start() = 0;
 };
 

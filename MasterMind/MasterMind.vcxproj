@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AddCombinationController.h" />
+    <ClInclude Include="AddCombinationView.h" />
     <ClInclude Include="CheckResultController.h" />
     <ClInclude Include="ClearGameController.h" />
     <ClInclude Include="CloseInterval.h" />
@@ -159,21 +160,28 @@
     <ClInclude Include="CombinationColor.h" />
     <ClInclude Include="Combination.h" />
     <ClInclude Include="Controller.h" />
-    <ClInclude Include="ControllerState.h" />
+    <ClInclude Include="GameState.h" />
     <ClInclude Include="EndGameController.h" />
     <ClInclude Include="FactoryController.h" />
     <ClInclude Include="IController.h" />
+    <ClInclude Include="IOperationController.h" />
+    <ClInclude Include="IOperationControllerVisitor.h" />
+    <ClInclude Include="LocalOperationController.h" />
+    <ClInclude Include="LocalStartController.h" />
     <ClInclude Include="Logic.h" />
     <ClInclude Include="MasterMind.h" />
+    <ClInclude Include="MasterMindView.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="PlayerCombination.h" />
     <ClInclude Include="Result.h" />
     <ClInclude Include="ResultColor.h" />
     <ClInclude Include="SecretCombination.h" />
     <ClInclude Include="StartController.h" />
+    <ClInclude Include="StartControllerView.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AddCombinationController.cpp" />
+    <ClCompile Include="AddCombinationView.cpp" />
     <ClCompile Include="CheckResultController.cpp" />
     <ClCompile Include="ClearGameController.cpp" />
     <ClCompile Include="CloseInterval.cpp" />
@@ -183,9 +191,12 @@
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="ControllerState.cpp" />
     <ClCompile Include="EndGameController.cpp" />
+    <ClCompile Include="LocalOperationController.cpp" />
+    <ClCompile Include="LocalStartController.cpp" />
     <ClCompile Include="Logic.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MasterMind.cpp" />
+    <ClCompile Include="MasterMindView.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -197,6 +208,7 @@
     <ClCompile Include="ResultColor.cpp" />
     <ClCompile Include="SecretCombination.cpp" />
     <ClCompile Include="StartController.cpp" />
+    <ClCompile Include="StartControllerView.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

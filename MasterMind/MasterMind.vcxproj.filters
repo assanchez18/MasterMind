@@ -13,103 +13,142 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\color">
-      <UniqueIdentifier>{b825e0f6-5263-41c7-abe5-9932ace51c5a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\utils">
       <UniqueIdentifier>{c7c65264-89c6-4e1e-9307-e0910c593a4a}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\utils">
       <UniqueIdentifier>{1ee0d815-27ad-49b8-a657-2b419f288c4e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\controller">
-      <UniqueIdentifier>{2028e1fc-3a85-45b2-a2b8-a3509a9d0b50}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\controllers">
       <UniqueIdentifier>{8085f7ea-306b-46b6-be2a-58c2fc7d604f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\combinations">
-      <UniqueIdentifier>{6573f0c6-5360-49a9-a492-780618dd53a0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\colors">
-      <UniqueIdentifier>{2f76ccd2-0e27-49ae-b158-f2242a64664a}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\controllers\states">
       <UniqueIdentifier>{0be25130-6b51-4be7-b174-eecf6690ff11}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\combinations">
+    <Filter Include="Header Files\models">
+      <UniqueIdentifier>{d43f0c7d-4636-4082-83f7-0bb13e3c2dd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\models\combinations">
       <UniqueIdentifier>{d7f47cbf-e8ad-4b61-bd31-152129425912}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\controller\states">
+    <Filter Include="Header Files\models\color">
+      <UniqueIdentifier>{b825e0f6-5263-41c7-abe5-9932ace51c5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\models">
+      <UniqueIdentifier>{314f63b4-46df-4eb8-8229-fd945e2e1883}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\controllers">
+      <UniqueIdentifier>{2028e1fc-3a85-45b2-a2b8-a3509a9d0b50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\controllers\states">
       <UniqueIdentifier>{c35276ce-8fc9-4ef8-91fd-df152107186c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\controller\factory">
+    <Filter Include="Header Files\controllers\factory">
       <UniqueIdentifier>{72964491-5974-4a13-a73a-8a2a594e8e00}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\controller\interfaces">
+    <Filter Include="Header Files\controllers\interfaces">
       <UniqueIdentifier>{1e00ffbc-df9a-4c34-9a97-9b9972af2a6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\models\combinations">
+      <UniqueIdentifier>{6573f0c6-5360-49a9-a492-780618dd53a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\models\colors">
+      <UniqueIdentifier>{2f76ccd2-0e27-49ae-b158-f2242a64664a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\views">
+      <UniqueIdentifier>{d1667adc-47ea-4633-a20e-bbc44fdb9e1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\views">
+      <UniqueIdentifier>{8c721da8-6eaf-4983-907f-0f09bf08c450}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\controllers\local">
+      <UniqueIdentifier>{510feb07-8d8f-4de6-82ec-50b67cdf7ac1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\controllers\local">
+      <UniqueIdentifier>{fcaa2a30-de32-43a6-9586-5fc9c11501ae}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MasterMind.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Color.h">
-      <Filter>Header Files\color</Filter>
+      <Filter>Header Files\models\color</Filter>
     </ClInclude>
     <ClInclude Include="CombinationColor.h">
-      <Filter>Header Files\color</Filter>
+      <Filter>Header Files\models\color</Filter>
     </ClInclude>
     <ClInclude Include="ResultColor.h">
-      <Filter>Header Files\color</Filter>
+      <Filter>Header Files\models\color</Filter>
     </ClInclude>
     <ClInclude Include="CloseInterval.h">
       <Filter>Header Files\utils</Filter>
     </ClInclude>
     <ClInclude Include="StartController.h">
-      <Filter>Header Files\controller</Filter>
+      <Filter>Header Files\controllers</Filter>
     </ClInclude>
     <ClInclude Include="CheckResultController.h">
-      <Filter>Header Files\controller</Filter>
+      <Filter>Header Files\controllers</Filter>
     </ClInclude>
     <ClInclude Include="ClearGameController.h">
-      <Filter>Header Files\controller</Filter>
+      <Filter>Header Files\controllers</Filter>
     </ClInclude>
     <ClInclude Include="AddCombinationController.h">
-      <Filter>Header Files\controller</Filter>
-    </ClInclude>
-    <ClInclude Include="Controller.h">
-      <Filter>Header Files\controller</Filter>
-    </ClInclude>
-    <ClInclude Include="Logic.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\controllers</Filter>
     </ClInclude>
     <ClInclude Include="Combination.h">
-      <Filter>Header Files\combinations</Filter>
+      <Filter>Header Files\models\combinations</Filter>
     </ClInclude>
     <ClInclude Include="PlayerCombination.h">
-      <Filter>Header Files\combinations</Filter>
+      <Filter>Header Files\models\combinations</Filter>
     </ClInclude>
     <ClInclude Include="SecretCombination.h">
-      <Filter>Header Files\combinations</Filter>
+      <Filter>Header Files\models\combinations</Filter>
     </ClInclude>
     <ClInclude Include="Result.h">
-      <Filter>Header Files\combinations</Filter>
+      <Filter>Header Files\models\combinations</Filter>
     </ClInclude>
     <ClInclude Include="EndGameController.h">
-      <Filter>Header Files\controller</Filter>
-    </ClInclude>
-    <ClInclude Include="ControllerState.h">
-      <Filter>Header Files\controller\states</Filter>
+      <Filter>Header Files\controllers</Filter>
     </ClInclude>
     <ClInclude Include="FactoryController.h">
-      <Filter>Header Files\controller\factory</Filter>
+      <Filter>Header Files\controllers\factory</Filter>
     </ClInclude>
     <ClInclude Include="IController.h">
-      <Filter>Header Files\controller\interfaces</Filter>
+      <Filter>Header Files\controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>Header Files\controllers\states</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic.h">
+      <Filter>Header Files\models</Filter>
+    </ClInclude>
+    <ClInclude Include="MasterMind.h">
+      <Filter>Header Files\models</Filter>
+    </ClInclude>
+    <ClInclude Include="MasterMindView.h">
+      <Filter>Header Files\views</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller.h">
+      <Filter>Header Files\controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IOperationControllerVisitor.h">
+      <Filter>Header Files\controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IOperationController.h">
+      <Filter>Header Files\controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="StartControllerView.h">
+      <Filter>Header Files\views</Filter>
+    </ClInclude>
+    <ClInclude Include="AddCombinationView.h">
+      <Filter>Header Files\views</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalStartController.h">
+      <Filter>Header Files\controllers\local</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalOperationController.h">
+      <Filter>Header Files\controllers\local</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -119,17 +158,14 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MasterMind.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Color.cpp">
-      <Filter>Source Files\colors</Filter>
+      <Filter>Source Files\models\colors</Filter>
     </ClCompile>
     <ClCompile Include="CombinationColor.cpp">
-      <Filter>Source Files\colors</Filter>
+      <Filter>Source Files\models\colors</Filter>
     </ClCompile>
     <ClCompile Include="ResultColor.cpp">
-      <Filter>Source Files\colors</Filter>
+      <Filter>Source Files\models\colors</Filter>
     </ClCompile>
     <ClCompile Include="CloseInterval.cpp">
       <Filter>Source Files\utils</Filter>
@@ -144,31 +180,49 @@
       <Filter>Source Files\controllers</Filter>
     </ClCompile>
     <ClCompile Include="Combination.cpp">
-      <Filter>Source Files\combinations</Filter>
+      <Filter>Source Files\models\combinations</Filter>
     </ClCompile>
     <ClCompile Include="Controller.cpp">
       <Filter>Source Files\controllers</Filter>
     </ClCompile>
     <ClCompile Include="PlayerCombination.cpp">
-      <Filter>Source Files\combinations</Filter>
+      <Filter>Source Files\models\combinations</Filter>
     </ClCompile>
     <ClCompile Include="SecretCombination.cpp">
-      <Filter>Source Files\combinations</Filter>
+      <Filter>Source Files\models\combinations</Filter>
     </ClCompile>
     <ClCompile Include="Result.cpp">
-      <Filter>Source Files\combinations</Filter>
+      <Filter>Source Files\models\combinations</Filter>
     </ClCompile>
     <ClCompile Include="ControllerState.cpp">
       <Filter>Source Files\controllers\states</Filter>
-    </ClCompile>
-    <ClCompile Include="Logic.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="EndGameController.cpp">
       <Filter>Source Files\controllers</Filter>
     </ClCompile>
     <ClCompile Include="AddCombinationController.cpp">
       <Filter>Source Files\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="Logic.cpp">
+      <Filter>Source Files\models</Filter>
+    </ClCompile>
+    <ClCompile Include="MasterMind.cpp">
+      <Filter>Source Files\models</Filter>
+    </ClCompile>
+    <ClCompile Include="MasterMindView.cpp">
+      <Filter>Source Files\views</Filter>
+    </ClCompile>
+    <ClCompile Include="StartControllerView.cpp">
+      <Filter>Source Files\views</Filter>
+    </ClCompile>
+    <ClCompile Include="AddCombinationView.cpp">
+      <Filter>Source Files\views</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalStartController.cpp">
+      <Filter>Source Files\controllers\local</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalOperationController.cpp">
+      <Filter>Source Files\controllers\local</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,16 +1,20 @@
 #pragma once
 #include "MasterMind.h"
-#include "IController.h"
-class Controller :
-	public IController
+
+class Controller 
 {
 public:
 	Controller();
 	Controller(MasterMind* game);
 	~Controller();
-	virtual void action();
+
 
 protected:
 	MasterMind* game;
+	void addCombination();
+	//TO-DO: here all methods to be used by controllers to perform the actions.
+	// Controllers have no more action method since them perform them selves the activities using this methods.
+
+
 };
 

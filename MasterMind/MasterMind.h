@@ -2,7 +2,7 @@
 #include <vector>
 #include "PlayerCombination.h"
 #include "SecretCombination.h"
-#include "ControllerState.h"
+#include "GameState.h"
 
 class MasterMind
 {
@@ -16,9 +16,10 @@ public:
 	void clearGame();
 	void checkResult();
 	void changeState();
-	ControllerState getActualState();
+	GameState getActualState();
 	bool isEnd2();
 	void endGame();
+	void printRounds();
 
 private:
 	int turn;
@@ -26,7 +27,7 @@ private:
 	std::vector<PlayerCombination>* rounds;
 	SecretCombination* secret ;
 
-	ControllerState actualState;
+	GameState actualState;
 
 	void printResult();
 

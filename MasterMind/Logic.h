@@ -2,7 +2,7 @@
 #include <map>
 #include "IController.h"
 #include "MasterMind.h"
-#include "ControllerState.h"
+#include "GameState.h"
 
 class Logic
 {
@@ -11,14 +11,14 @@ public:
 	~Logic();
 	bool isEnd();
 	
-	IController* getController(ControllerState state);
+	IController* getController(GameState state);
 	IController* getController();
 	void changeState();
 
 private:
-	std::map<ControllerState, IController*> controllers;
+	std::map<GameState, IController*> controllers;
 	MasterMind game;
-	ControllerState getActualState();
+	GameState getActualState();
 
 	void initializeControllers();
 };

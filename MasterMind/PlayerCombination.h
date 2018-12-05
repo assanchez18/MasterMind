@@ -7,6 +7,7 @@ class PlayerCombination :
 	public Combination
 {
 public:
+	PlayerCombination();
 	PlayerCombination(SecretCombination* secret);
 	~PlayerCombination();
 	void checkResult();

@@ -1,7 +1,7 @@
 #pragma once
 #include <assert.h>
 #include "CloseInterval.h"
-#include "ControllerState.h"
+#include "GameState.h"
 #include "StartController.h"
 #include "ClearGameController.h"
 #include "CheckResultController.h"
@@ -16,11 +16,11 @@ public:
 		static FactoryController instance;
 		return &instance;
 	}
-	Controller* getController(ControllerState state, MasterMind* game)
+	Controller* getController(GameState state, MasterMind* game)
 	{
 		assert(&state != nullptr);
 		assert(game != nullptr);
-		assert(CloseInterval::CloseInterval(0, ControllerState::NUMBER_OF_STATES).contains(state.getState()));
+		assert(CloseInterval::CloseInterval(0, GameState::NUMBER_OF_STATES).contains(state.getState()));
 		
 		switch (state.getState()) {
 		case 0:

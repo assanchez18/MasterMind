@@ -17,4 +17,9 @@ Controller::~Controller()
 {
 }
 
-void Controller::action() {}
+void Controller::addCombination()
+{
+	PlayerCombination possibleCombination = PlayerCombination::PlayerCombination();
+	game->addCombination();
+}
+

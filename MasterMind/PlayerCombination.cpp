@@ -4,6 +4,10 @@
 #include "PlayerCombination.h"
 
 
+PlayerCombination::PlayerCombination()
+{
+	askForCombination();
+}
 
 PlayerCombination::PlayerCombination(SecretCombination* secret)
 {

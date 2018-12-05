@@ -1,6 +1,6 @@
 #pragma once
 #include <vector>
-class ControllerState {
+class GameState {
 public:
 	static const int START = 0;
 	static const int CLEAR = 1;
@@ -9,14 +9,14 @@ public:
 	static const int END_GAME = 4;
 	static const int NUMBER_OF_STATES = 5;
 
-	ControllerState();
-	ControllerState(int state);
-	~ControllerState();
-	static std::vector<ControllerState>* getControllerStates();
+	GameState();
+	GameState(int state);
+	~GameState();
+	static std::vector<GameState>* getControllerStates();
 
 	int getState()const;
-	bool operator< (const ControllerState& state) const;
-	bool operator= (const ControllerState& state) const;
+	bool operator< (const GameState& state) const;
+	bool operator= (const GameState& state) const;
 	void changeState();
 	void setState(const int newState);
 	

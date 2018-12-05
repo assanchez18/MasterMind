@@ -12,17 +12,17 @@ Logic::~Logic()
 }
 
 void Logic::initializeControllers() {
-	std::vector<ControllerState>* controllerState = ControllerState::getControllerStates();
+	std::vector<GameState>* controllerState = GameState::getControllerStates();
 	for (auto& state : *controllerState) {
 		this->controllers.insert_or_assign(state, FactoryController::getInstance()->getController(state, &this->game));
 	}
 }
 
 bool Logic::isEnd() {
-	return this->game.getActualState()=(ControllerState::END_GAME);
+	return this->game.getActualState()=(GameState::END_GAME);
 }
 
-IController* Logic::getController(ControllerState state) {
+IController* Logic::getController(GameState state) {
 	return this->controllers.at(state);
 }
 
@@ -36,7 +36,7 @@ void Logic::changeState()
 	this->game.changeState();
 }
 
-ControllerState Logic::getActualState() {
+GameState Logic::getActualState() {
 	return this->game.getActualState();
 }
 

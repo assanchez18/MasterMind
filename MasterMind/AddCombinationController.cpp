@@ -19,5 +19,10 @@ AddCombinationController::~AddCombinationController()
 
 void AddCombinationController::action()
 {
-	this->game->addCombination();
+	addCombination();
+}
+
+void AddCombinationController::accept(IOperationControllerVisitor* operationControllerVisitor)
+{
+	operationControllerVisitor->visit(this);
 }
