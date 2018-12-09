@@ -30,7 +30,7 @@ public:
 		case 2:
 			return new CheckResultController(game);
 		case 3:
-			return new AddCombinationController(game);
+			return new NewRoundController(game);
 		case 4:
 			return new EndGameController(game);
 		default:

@@ -10,16 +10,11 @@ Controller::Controller(MasterMind * game)
 	this->game = game;
 }
 
-
-
-
 Controller::~Controller()
 {
 }
 
-void Controller::addCombination()
+const int Controller::getNumberOfRounds()
 {
-	PlayerCombination possibleCombination = PlayerCombination::PlayerCombination();
-	game->addCombination();
+	return game->getNumberOfRounds();
 }
-

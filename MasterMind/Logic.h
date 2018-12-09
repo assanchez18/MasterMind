@@ -1,25 +1,30 @@
 #pragma once
 #include <map>
-#include "IController.h"
 #include "MasterMind.h"
 #include "GameState.h"
+#include "LocalStartController.h"
+#include "LocalNewRoundController.h"
 
 class Logic
 {
 public:
 	Logic();
 	~Logic();
-	bool isEnd();
 	
-	IController* getController(GameState state);
-	IController* getController();
+	
+	IOperationController* getController(GameState state);
+	LocalOperationController* getController();
 	void changeState();
+	bool isEnd();
 
 private:
-	std::map<GameState, IController*> controllers;
 	MasterMind game;
-	GameState getActualState();
+	LocalStartController* startController;
+	LocalNewRoundController* addCombinationController;
 
+	int getState();
+
+	std::map<GameState, IOperationController*> controllers;
 	void initializeControllers();
 };
 

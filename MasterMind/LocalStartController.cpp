@@ -1,7 +1,6 @@
 #include "pch.h"
 #include "LocalStartController.h"
 
-
 LocalStartController::LocalStartController(MasterMind * game)
 	: LocalOperationController(game)
 {
@@ -18,5 +17,5 @@ void LocalStartController::accept(IOperationControllerVisitor * operationControl
 
 void LocalStartController::start()
 {
-	//TO-DO: start the game
+	game->startGame();
 }

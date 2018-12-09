@@ -1,8 +1,6 @@
 #pragma once
-#include "IOperationController.h"
 
-class StartController :
-	public IOperationController
+class StartController 
 {
 public:
 	virtual void start() = 0;

@@ -84,25 +84,16 @@
     <ClInclude Include="CloseInterval.h">
       <Filter>Header Files\utils</Filter>
     </ClInclude>
-    <ClInclude Include="StartController.h">
-      <Filter>Header Files\controllers</Filter>
-    </ClInclude>
     <ClInclude Include="CheckResultController.h">
       <Filter>Header Files\controllers</Filter>
     </ClInclude>
     <ClInclude Include="ClearGameController.h">
       <Filter>Header Files\controllers</Filter>
     </ClInclude>
-    <ClInclude Include="AddCombinationController.h">
-      <Filter>Header Files\controllers</Filter>
-    </ClInclude>
     <ClInclude Include="Combination.h">
       <Filter>Header Files\models\combinations</Filter>
     </ClInclude>
     <ClInclude Include="PlayerCombination.h">
-      <Filter>Header Files\models\combinations</Filter>
-    </ClInclude>
-    <ClInclude Include="SecretCombination.h">
       <Filter>Header Files\models\combinations</Filter>
     </ClInclude>
     <ClInclude Include="Result.h">
@@ -114,14 +105,8 @@
     <ClInclude Include="FactoryController.h">
       <Filter>Header Files\controllers\factory</Filter>
     </ClInclude>
-    <ClInclude Include="IController.h">
-      <Filter>Header Files\controllers\interfaces</Filter>
-    </ClInclude>
     <ClInclude Include="GameState.h">
       <Filter>Header Files\controllers\states</Filter>
-    </ClInclude>
-    <ClInclude Include="Logic.h">
-      <Filter>Header Files\models</Filter>
     </ClInclude>
     <ClInclude Include="MasterMind.h">
       <Filter>Header Files\models</Filter>
@@ -141,13 +126,31 @@
     <ClInclude Include="StartControllerView.h">
       <Filter>Header Files\views</Filter>
     </ClInclude>
-    <ClInclude Include="AddCombinationView.h">
-      <Filter>Header Files\views</Filter>
-    </ClInclude>
     <ClInclude Include="LocalStartController.h">
       <Filter>Header Files\controllers\local</Filter>
     </ClInclude>
     <ClInclude Include="LocalOperationController.h">
+      <Filter>Header Files\controllers\local</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic.h">
+      <Filter>Header Files\controllers\local</Filter>
+    </ClInclude>
+    <ClInclude Include="SecretCombination.h">
+      <Filter>Header Files\models\combinations</Filter>
+    </ClInclude>
+    <ClInclude Include="Round.h">
+      <Filter>Header Files\models</Filter>
+    </ClInclude>
+    <ClInclude Include="StartController.h">
+      <Filter>Header Files\controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="NewRoundView.h">
+      <Filter>Header Files\views</Filter>
+    </ClInclude>
+    <ClInclude Include="NewRoundController.h">
+      <Filter>Header Files\controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalNewRoundController.h">
       <Filter>Header Files\controllers\local</Filter>
     </ClInclude>
   </ItemGroup>
@@ -170,15 +173,6 @@
     <ClCompile Include="CloseInterval.cpp">
       <Filter>Source Files\utils</Filter>
     </ClCompile>
-    <ClCompile Include="StartController.cpp">
-      <Filter>Source Files\controllers</Filter>
-    </ClCompile>
-    <ClCompile Include="CheckResultController.cpp">
-      <Filter>Source Files\controllers</Filter>
-    </ClCompile>
-    <ClCompile Include="ClearGameController.cpp">
-      <Filter>Source Files\controllers</Filter>
-    </ClCompile>
     <ClCompile Include="Combination.cpp">
       <Filter>Source Files\models\combinations</Filter>
     </ClCompile>
@@ -188,23 +182,11 @@
     <ClCompile Include="PlayerCombination.cpp">
       <Filter>Source Files\models\combinations</Filter>
     </ClCompile>
-    <ClCompile Include="SecretCombination.cpp">
-      <Filter>Source Files\models\combinations</Filter>
-    </ClCompile>
     <ClCompile Include="Result.cpp">
       <Filter>Source Files\models\combinations</Filter>
     </ClCompile>
     <ClCompile Include="ControllerState.cpp">
       <Filter>Source Files\controllers\states</Filter>
-    </ClCompile>
-    <ClCompile Include="EndGameController.cpp">
-      <Filter>Source Files\controllers</Filter>
-    </ClCompile>
-    <ClCompile Include="AddCombinationController.cpp">
-      <Filter>Source Files\controllers</Filter>
-    </ClCompile>
-    <ClCompile Include="Logic.cpp">
-      <Filter>Source Files\models</Filter>
     </ClCompile>
     <ClCompile Include="MasterMind.cpp">
       <Filter>Source Files\models</Filter>
@@ -215,14 +197,26 @@
     <ClCompile Include="StartControllerView.cpp">
       <Filter>Source Files\views</Filter>
     </ClCompile>
-    <ClCompile Include="AddCombinationView.cpp">
-      <Filter>Source Files\views</Filter>
-    </ClCompile>
     <ClCompile Include="LocalStartController.cpp">
       <Filter>Source Files\controllers\local</Filter>
     </ClCompile>
     <ClCompile Include="LocalOperationController.cpp">
       <Filter>Source Files\controllers\local</Filter>
+    </ClCompile>
+    <ClCompile Include="Logic.cpp">
+      <Filter>Source Files\controllers\local</Filter>
+    </ClCompile>
+    <ClCompile Include="SecretCombination.cpp">
+      <Filter>Source Files\models</Filter>
+    </ClCompile>
+    <ClCompile Include="Round.cpp">
+      <Filter>Source Files\models</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalNewRoundController.cpp">
+      <Filter>Source Files\controllers\local</Filter>
+    </ClCompile>
+    <ClCompile Include="NewRoundView.cpp">
+      <Filter>Source Files\views</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

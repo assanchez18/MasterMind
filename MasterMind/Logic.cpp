@@ -4,7 +4,8 @@
 
 Logic::Logic()
 {
-	initializeControllers();
+	startController = new LocalStartController(&game);
+	//initializeControllers();
 }
 
 Logic::~Logic()
@@ -19,16 +20,24 @@ void Logic::initializeControllers() {
 }
 
 bool Logic::isEnd() {
-	return this->game.getActualState()=(GameState::END_GAME);
+	return this->game.getState()=(GameState::END_GAME);
 }
 
-IController* Logic::getController(GameState state) {
+IOperationController* Logic::getController(GameState state) {
 	return this->controllers.at(state);
 }
 
 
-IController* Logic::getController() {
-	return this->controllers.at(getActualState());
+LocalOperationController* Logic::getController() {
+	switch (getState()) 
+	{
+		case GameState::START:
+			return startController;
+
+		default:
+			return nullptr;
+			break;
+	}
 }
 
 void Logic::changeState()
@@ -36,7 +45,7 @@ void Logic::changeState()
 	this->game.changeState();
 }
 
-GameState Logic::getActualState() {
-	return this->game.getActualState();
+int Logic::getState() {
+	return game.getState();
 }
 

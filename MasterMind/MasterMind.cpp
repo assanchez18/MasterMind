@@ -6,7 +6,7 @@
 #include "FactoryController.h"
 
 MasterMind::MasterMind() :
-	actualState(GameState::START)
+	state(GameState::START)
 {
 }
 
@@ -16,19 +16,34 @@ MasterMind::~MasterMind()
 }
 
 void MasterMind::startGame() {
-	this->secret = new SecretCombination();
-	this->rounds = new std::vector<PlayerCombination>();
 	initTurn();
+	delete secret;
+	delete rounds;
+	secret = new SecretCombination();
+	state.setState(GameState::ADD_COMBINATION);
 }
 
-void MasterMind::addCombination(PlayerCombination* possileCombination) {
-	
-	PlayerCombination possibleCombination = PlayerCombination::PlayerCombination(this->secret);
-	possibleCombination->checkResult();
-	this->rounds->emplace_back(std::move(possibleCombination));
-
-	this->incrementTurn();
+GameState MasterMind::getState() {
+	return state.getState();
 }
+
+const int MasterMind::getNumberOfRounds()
+{
+	return NUMBER_OF_ROUNDS;
+}
+
+void MasterMind::addRound(Round* round) 
+{
+	this->rounds->at(turn) = round;
+	changeState();
+}
+
+SecretCombination* MasterMind::getSecretCombination()
+{
+	return secret;
+}
+
+
 
 bool MasterMind::isEnd() {
 	if (unsigned(this->rounds->size()) < unsigned((this->NUMBER_OF_ROUNDS - 1))
@@ -79,7 +94,7 @@ void MasterMind::clearGame() {
 }
 
 bool MasterMind::isEnd2() {
-	return this->actualState=(GameState::END_GAME);
+	return this->state=(GameState::END_GAME);
 }
 
 void MasterMind::printResult()
@@ -91,16 +106,13 @@ void MasterMind::printResult()
 
 void MasterMind::checkResult() {
 	if (isEnd() || isSolution()) {
-		this->actualState.setState(GameState::END_GAME);
+		this->state.setState(GameState::END_GAME);
 	}
 }
 
-GameState MasterMind::getActualState() {
-	return this->actualState;
-}
 
 void MasterMind::changeState() {
-	this->actualState.changeState();
+	state.changeState();
 }
 
 void MasterMind::endGame() {

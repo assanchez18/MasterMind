@@ -39,7 +39,6 @@ CombinationColor::~CombinationColor() {
 void CombinationColor::randomColor() {
 	int randomColor = rand() % this->NUMBER_OF_COLORS;
 	CombinationColor(convertToChar(randomColor));
-	delete &randomColor;
 }
 
 char CombinationColor::convertToChar(int color) {

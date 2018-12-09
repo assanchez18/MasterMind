@@ -1,8 +1,8 @@
 #pragma once
 #include <vector>
-#include "PlayerCombination.h"
 #include "SecretCombination.h"
 #include "GameState.h"
+#include "Round.h"
 
 class MasterMind
 {
@@ -12,22 +12,29 @@ public:
 	
 	
 	void startGame();
-	void addCombination();
+	GameState getState();
+	const int getNumberOfRounds();
+	SecretCombination* getSecretCombination();
+	void addRound(Round* combination);
+
+
 	void clearGame();
 	void checkResult();
 	void changeState();
-	GameState getActualState();
+	
 	bool isEnd2();
 	void endGame();
 	void printRounds();
+	const int static NUMBER_OF_ROUNDS = 12;
 
 private:
 	int turn;
-	const int NUMBER_OF_ROUNDS = 12;
-	std::vector<PlayerCombination>* rounds;
-	SecretCombination* secret ;
+	SecretCombination* secret;
+	GameState state;
+	std::vector<Round*> rounds[NUMBER_OF_ROUNDS];
+	
 
-	GameState actualState;
+
 
 	void printResult();
 

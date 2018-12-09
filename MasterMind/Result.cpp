@@ -1,45 +1,45 @@
 #include "pch.h"
 #include <iostream>
 #include <assert.h>
-#include <stdlib.h>
 
 #include "Result.h"
-#include "Combination.h"
 #include "CloseInterval.h"
 
+using namespace std;
 
-Result::Result()
+
+//TO-DO: BUILDER FOR RESULT?
+Result::Result(SecretCombination* secret, PlayerCombination* combination)
 {
-}
-
-Result::Result(int size, SecretCombination* secret, std::vector<CombinationColor>* possible) {
-	assert(&size != nullptr);
-	assert(&secret != nullptr);
-	assert(&possible != nullptr);
-	this->SIZE_OF_RESULT = size;
-	this->secret = secret;
-	this->possible = possible;
+	assert(secret != nullptr);
+	SIZE_OF_RESULT = secret->getSizeOfCombination();
+	createResult(secret, combination);
+	fillResult();
 }
 
 Result::~Result()
 {
 }
 
-void Result::check() {
-	std::map<char, std::vector<int>> possiblePositions = {};
-	std::map<char, std::vector<int>> secretPositions = {};
+
+void Result::createResult(SecretCombination * secret, PlayerCombination* playerCombination)
+{
+	assert(secret != nullptr);
+	assert(playerCombination != nullptr);
+
+	map<char, vector<int>> possiblePositions = {};
+	map<char, vector<int>> secretPositions = {};
+	loadSetOfPosition(possiblePositions, playerCombination->getCombination());
+	loadSetOfPosition(secretPositions, secret->getCombination());
 	
-	loadSetOfPosition(possiblePositions, this->possible);
-	loadSetOfPosition(secretPositions, this->secret->getCombination());
-	// CHECK NOT WORKING
-	std::map<char, std::vector<int>>::iterator itPossible;
+	map<char, vector<int>>::iterator itPossible;
 	for (itPossible = possiblePositions.begin(); itPossible != possiblePositions.end(); itPossible++) {
 		if (containsColor(secretPositions, itPossible->first)) {
 			compareVectors(secretPositions.at(itPossible->first), itPossible->second);
 		}
 	}
-	fillResult();
 }
+
 bool Result::isSolution() {
 	for (unsigned i = 0; i < this->result.size(); i++) {
 		if (!this->result.at(i).isEqual(ResultColor::BLACK)) {
@@ -48,12 +48,14 @@ bool Result::isSolution() {
 	}
 	return true;
 }
-void Result::pushIntoMap(std::map<char, std::vector<int>>& map, char color, int position) {
+
+void Result::pushIntoMap(map<char, vector<int>>& map, char color, int position) {
 	assert(&color != nullptr);
 	assert(&position != nullptr);
 	assert(CloseInterval::CloseInterval(0, this->SIZE_OF_RESULT).contains(position));
+
 	if (!containsColor(map, color)) {
-		std::vector<int> tmp;
+		vector<int> tmp;
 		tmp.emplace_back(position);
 		map.insert_or_assign(color, tmp);
 	}
@@ -62,17 +64,19 @@ void Result::pushIntoMap(std::map<char, std::vector<int>>& map, char color, int 
 	}
 }
 
-void Result::loadSetOfPosition(std::map<char, std::vector<int>>& map, std::vector<CombinationColor>* combination) {
+void Result::loadSetOfPosition(map<char, vector<int>>& map, vector<CombinationColor>* combination) {
 	assert(&combination != nullptr);
+
 	for (unsigned int i = 0; i < combination->size(); i++) {
 		pushIntoMap(map, combination->at(i).getColor(), i);
 	}
 }
 
-bool Result::containsPosition(std::vector<int> &positions, int position) {
+bool Result::containsPosition(vector<int> &positions, int position) {
 	assert(&positions != nullptr);
 	assert(&position != nullptr);
 	assert(CloseInterval::CloseInterval(0, this->SIZE_OF_RESULT).contains(position));
+
 	for (unsigned int i = 0; i < positions.size(); i++) {
 		if (positions.at(i) == position) {
 			positions.at(i) = -1;
@@ -82,19 +86,16 @@ bool Result::containsPosition(std::vector<int> &positions, int position) {
 	return false;
 }
 
-bool Result::containsColor(std::map<char, std::vector<int>> map, char color) {
+bool Result::containsColor(map<char, vector<int>> map, char color) {
 	assert(&map != nullptr);
 	assert(&color != nullptr);
-	if (map.count(color) == 1) {
-		return true;
-	}
-	else {
-		return false;
-	}
+
+	return (map.count(color) == 1);
 }
 
-void Result::compareVectors(std::vector<int> secret, std::vector<int> possible) {
+void Result::compareVectors(vector<int> secret, vector<int> possible) {
 	assert(&possible != nullptr); 
+	
 	int itemsAdded = 0;
 	for (unsigned int i = 0; i < possible.size(); i++){
 		if (containsPosition(secret, possible.at(i))) {
@@ -113,6 +114,7 @@ void Result::compareVectors(std::vector<int> secret, std::vector<int> possible) 
 void Result::pushResult(ResultColor color) {
 	assert(&color != nullptr);
 	assert(this->result.size() < unsigned(this->SIZE_OF_RESULT));
+
 	this->result.emplace_back(color);
 }
 
@@ -122,6 +124,8 @@ void Result::fillResult() {
 	}
 }
 
+
+// TO-DO: REMOVE
 void Result::printResult() {
 	for (int i = 0; i < this->SIZE_OF_RESULT; i++) {
 		printf("%c ", this->result.at(i).getColor());

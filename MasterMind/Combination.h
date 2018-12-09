@@ -8,7 +8,7 @@ public:
 	Combination();
 	~Combination();
 
-	void pushColorToCombination(CombinationColor* color);
+	void pushColorToCombination(CombinationColor color);
 
 	std::vector<CombinationColor>* getCombination();
 	CombinationColor getPosition(int position);

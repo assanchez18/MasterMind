@@ -5,7 +5,6 @@
 
 MasterMindView::MasterMindView()
 {
-	addCombinationView = AddCombinationView::AddCombinationView();
 }
 
 
@@ -13,14 +12,19 @@ MasterMindView::~MasterMindView()
 {
 }
 
-void MasterMindView::interact(IOperatioController * controller)
+void MasterMindView::interact(IOperationController * controller)
 {
 	controller->accept(this);
 }
 
-void MasterMindView::visit(AddCombinationController* controller)
+void MasterMindView::visit(NewRoundController* controller)
 {
-	addCombinationView.interact(controller);
+	newRoundView.interact(controller);
+}
+
+void MasterMindView::visit(StartController * controller)
+{
+	startControllerView.interact(controller);
 }
 
 

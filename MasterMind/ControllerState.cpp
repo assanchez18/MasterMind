@@ -3,7 +3,7 @@
 #include "GameState.h"
 
 GameState::GameState() :
-	state(-1)
+	state(GameState::START)
 {
 }
 
@@ -42,19 +42,19 @@ bool GameState::operator=(const GameState & state) const
 }
 
 void GameState::setState(const int newState) {
-	this->state = newState;
+	state = newState;
 }
 
 void GameState::changeState() {
-	switch (this->state) {
+	switch (state) {
 	case START:
-		setState(this->ADD_COMBINATION);
+		setState(ADD_COMBINATION);
 		break;
 	case ADD_COMBINATION:
-		setState(this->CHECK_RESULT);
+		setState(CHECK_RESULT);
 		break;
 	case CHECK_RESULT:
-		setState(this->ADD_COMBINATION);
+		setState(ADD_COMBINATION);
 		break;
 	}
 }

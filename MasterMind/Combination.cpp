@@ -18,9 +18,9 @@ std::vector<CombinationColor>* Combination::getCombination() {
 	return this->combination;
 }
 
-void Combination::pushColorToCombination(CombinationColor* color) {
+void Combination::pushColorToCombination(CombinationColor color) {
 	assert(&color != nullptr);
-	this->combination->emplace_back(*color);
+	this->combination->emplace_back(color);
 }
 
 CombinationColor Combination::getPosition(int position) {
