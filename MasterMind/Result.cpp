@@ -9,12 +9,17 @@ using namespace std;
 
 
 //TO-DO: BUILDER FOR RESULT?
-Result::Result(SecretCombination* secret, PlayerCombination* combination)
+Result::Result(SecretCombination* secret, Combination* playerCombination)
 {
 	assert(secret != nullptr);
-	SIZE_OF_RESULT = secret->getSizeOfCombination();
-	createResult(secret, combination);
-	fillResult();
+	assert(playerCombination != nullptr);
+
+	createResult(secret, playerCombination);
+	if (combination.size() < SIZE_OF_COMBINATION)
+	{
+		fillResult();
+	}
+	
 }
 
 Result::~Result()
@@ -22,7 +27,7 @@ Result::~Result()
 }
 
 
-void Result::createResult(SecretCombination * secret, PlayerCombination* playerCombination)
+void Result::createResult(SecretCombination * secret, Combination* playerCombination)
 {
 	assert(secret != nullptr);
 	assert(playerCombination != nullptr);
@@ -40,9 +45,18 @@ void Result::createResult(SecretCombination * secret, PlayerCombination* playerC
 	}
 }
 
+void Result::fillResult() {
+
+	for (int i = combination.size(); i < SIZE_OF_COMBINATION; i++)
+	{	
+		pushColorToCombination(std::move(new ResultColor(ResultColor::NO_COLOR)));
+	}
+}
+
 bool Result::isSolution() {
-	for (unsigned i = 0; i < this->result.size(); i++) {
-		if (!this->result.at(i).isEqual(ResultColor::BLACK)) {
+	Color c = Color::Color(Color::BLACK);
+	for (unsigned i = 0; i < combination.size(); i++) {
+		if (!combination.at(i)->isEqual(&c)) {
 			return false;
 		}
 	}
@@ -52,30 +66,32 @@ bool Result::isSolution() {
 void Result::pushIntoMap(map<char, vector<int>>& map, char color, int position) {
 	assert(&color != nullptr);
 	assert(&position != nullptr);
-	assert(CloseInterval::CloseInterval(0, this->SIZE_OF_RESULT).contains(position));
+	assert(CloseInterval::CloseInterval(0, SIZE_OF_COMBINATION).contains(position));
 
-	if (!containsColor(map, color)) {
+	if (!containsColor(map, color))
+	{
 		vector<int> tmp;
 		tmp.emplace_back(position);
-		map.insert_or_assign(color, tmp);
+		map.insert_or_assign(color,tmp);
 	}
-	else {
+	else
+	{
 		map.at(color).emplace_back(position);
 	}
 }
 
-void Result::loadSetOfPosition(map<char, vector<int>>& map, vector<CombinationColor>* combination) {
+void Result::loadSetOfPosition(map<char, vector<int>>& map, vector<Color*>& combination) {
 	assert(&combination != nullptr);
 
-	for (unsigned int i = 0; i < combination->size(); i++) {
-		pushIntoMap(map, combination->at(i).getColor(), i);
+	for (unsigned int i = 0; i < combination.size(); i++) {
+		pushIntoMap(map, combination.at(i)->getColor(), i);
 	}
 }
 
 bool Result::containsPosition(vector<int> &positions, int position) {
 	assert(&positions != nullptr);
 	assert(&position != nullptr);
-	assert(CloseInterval::CloseInterval(0, this->SIZE_OF_RESULT).contains(position));
+	assert(CloseInterval::CloseInterval(0, SIZE_OF_COMBINATION).contains(position));
 
 	for (unsigned int i = 0; i < positions.size(); i++) {
 		if (positions.at(i) == position) {
@@ -99,38 +115,14 @@ void Result::compareVectors(vector<int> secret, vector<int> possible) {
 	int itemsAdded = 0;
 	for (unsigned int i = 0; i < possible.size(); i++){
 		if (containsPosition(secret, possible.at(i))) {
-			pushResult(ResultColor::BLACK);
+			pushColorToCombination(std::move(new ResultColor(ResultColor::BLACK)));
 			itemsAdded++;
 		}
 	}
 	if (possible.size() >= secret.size()) {
 		unsigned int absoluteDifference = secret.size() - itemsAdded;
 		for (unsigned int i = 0; i < absoluteDifference; i++) {
-			pushResult(ResultColor::WHITE);
+			pushColorToCombination(std::move(new ResultColor(ResultColor::WHITE)));
 		}
 	}
-}
-
-void Result::pushResult(ResultColor color) {
-	assert(&color != nullptr);
-	assert(this->result.size() < unsigned(this->SIZE_OF_RESULT));
-
-	this->result.emplace_back(color);
-}
-
-void Result::fillResult() {
-	for (int i = this->result.size(); i < this->SIZE_OF_RESULT; i++) {
-		pushResult(ResultColor::NO_COLOR);
-	}
-}
-
-
-// TO-DO: REMOVE
-void Result::printResult() {
-	for (int i = 0; i < this->SIZE_OF_RESULT; i++) {
-		printf("%c ", this->result.at(i).getColor());
-	}
-}
-void Result::printVictory() {
-	printf("FELICIDADES!! HAS GANADO!\n");
 }

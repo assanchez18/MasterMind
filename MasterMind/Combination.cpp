@@ -14,35 +14,31 @@ Combination::~Combination()
 {
 }
 
-std::vector<CombinationColor>* Combination::getCombination() {
+std::vector<Color*>& Combination::getCombination() {
 	return this->combination;
 }
 
-void Combination::pushColorToCombination(CombinationColor color) {
-	assert(&color != nullptr);
-	this->combination->emplace_back(color);
+void Combination::pushColorToCombination(Color* color) {
+	assert(color != nullptr);
+	this->combination.emplace_back(color);
 }
 
-CombinationColor Combination::getPosition(int position) {
-	return this->combination->at(position);
+Color* Combination::getPosition(int position) {
+	return this->combination.at(position);
 }
 
-int Combination::getSizeOfCombination()
-{
-	return this->SIZE_OF_COMBINATION;
-}
 
-CombinationColor Combination::getColorAt(int position)
+Color* Combination::getColorAt(int position)
 {
 	assert(&position != nullptr);
-	return this->combination->at(position);
+	return this->combination.at(position);
 }
 
 bool Combination::comparePositionColor(int position, Combination* combinationToCheck) {
 	assert(&combinationToCheck != nullptr);
 	assert(&position != nullptr);
 	assert(CloseInterval::CloseInterval(0, SIZE_OF_COMBINATION).contains(position));
-	if (getPosition(position).isEqual(combinationToCheck->getPosition(position))) {
+	if (getPosition(position)->isEqual(combinationToCheck->getPosition(position))) {
 		return true;
 	}
 	else {
@@ -56,11 +52,5 @@ bool Combination::isSameSize(Combination* combination) {
 }
 
 int Combination::getSize() {
-	return this->combination->size();
-}
-
-void Combination::printCombination() {
-	for (int i = 0; i < this->SIZE_OF_COMBINATION; i++) {
-		std::cout << this->combination->at(i).getColor() << " ";
-	}
+	return combination.size();
 }

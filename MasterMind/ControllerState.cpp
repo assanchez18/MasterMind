@@ -22,7 +22,7 @@ std::vector<GameState>* GameState::getControllerStates()
 	allControllerStates->emplace_back(GameState::START);
 	allControllerStates->emplace_back(GameState::CLEAR);
 	allControllerStates->emplace_back(GameState::CHECK_RESULT);
-	allControllerStates->emplace_back(GameState::ADD_COMBINATION);
+	allControllerStates->emplace_back(GameState::NEXT_ROUND);
 	return allControllerStates;
 }
 
@@ -41,20 +41,20 @@ bool GameState::operator=(const GameState & state) const
 	return this->state == state.getState();
 }
 
-void GameState::setState(const int newState) {
-	state = newState;
+void GameState::setState(const GameState newState) {
+	state = newState.getState();
 }
 
 void GameState::changeState() {
 	switch (state) {
 	case START:
-		setState(ADD_COMBINATION);
+		setState(NEXT_ROUND);
 		break;
-	case ADD_COMBINATION:
-		setState(CHECK_RESULT);
+	case NEXT_ROUND:
+		setState(NEXT_ROUND);
 		break;
 	case CHECK_RESULT:
-		setState(ADD_COMBINATION);
+		setState(NEXT_ROUND);
 		break;
 	}
 }

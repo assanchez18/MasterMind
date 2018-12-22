@@ -1,11 +1,11 @@
 #pragma once
 #include "StartController.h"
 
-class StartControllerView 
+class StartView 
 {
 public:
-	StartControllerView();
-	~StartControllerView();
+	StartView();
+	~StartView();
 
 	void interact(StartController* startController);
 };

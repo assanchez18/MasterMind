@@ -47,7 +47,7 @@ char Color::convertToChar(int color) {
 }
 
 bool Color::isValid() {
-	if (&this->color != nullptr)
+	if (this->color != NULL)
 	{
 		return true;
 	}
@@ -60,9 +60,9 @@ char Color::getColor() {
 	return this->color;
 }
 
-bool Color::isEqual(Color color) {
+bool Color::isEqual(Color* color) {
 	assert(&color != nullptr);
-	return this->color == color.getColor();
+	return this->color == color->getColor();
 
 }
 

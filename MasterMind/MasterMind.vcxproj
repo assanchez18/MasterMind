@@ -75,6 +75,12 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <SourcePath>$(SourcePath)</SourcePath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -151,44 +157,46 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="NewRoundController.h" />
-    <ClInclude Include="NewRoundView.h" />
-    <ClInclude Include="CheckResultController.h" />
+    <ClInclude Include="BoardController.h" />
     <ClInclude Include="ClearGameController.h" />
+    <ClInclude Include="ColorView.h" />
+    <ClInclude Include="Controller.h" />
+    <ClInclude Include="IOperationController.h" />
+    <ClInclude Include="IOperationControllerVisitor.h" />
+    <ClInclude Include="LocalBoardController.h" />
+    <ClInclude Include="LocalOperationController.h" />
+    <ClInclude Include="LocalRoundController.h" />
+    <ClInclude Include="LocalStartController.h" />
+    <ClInclude Include="Logic.h" />
+    <ClInclude Include="RoundController.h" />
+    <ClInclude Include="RoundView.h" />
     <ClInclude Include="CloseInterval.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="CombinationColor.h" />
     <ClInclude Include="Combination.h" />
-    <ClInclude Include="Controller.h" />
     <ClInclude Include="GameState.h" />
-    <ClInclude Include="EndGameController.h" />
-    <ClInclude Include="FactoryController.h" />
-    <ClInclude Include="IOperationController.h" />
-    <ClInclude Include="IOperationControllerVisitor.h" />
-    <ClInclude Include="LocalNewRoundController.h" />
-    <ClInclude Include="LocalOperationController.h" />
-    <ClInclude Include="LocalStartController.h" />
-    <ClInclude Include="Logic.h" />
     <ClInclude Include="MasterMind.h" />
     <ClInclude Include="MasterMindView.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="PlayerCombination.h" />
     <ClInclude Include="Result.h" />
     <ClInclude Include="ResultColor.h" />
     <ClInclude Include="Round.h" />
+    <ClInclude Include="BoardView.h" />
     <ClInclude Include="SecretCombination.h" />
     <ClInclude Include="StartController.h" />
-    <ClInclude Include="StartControllerView.h" />
+    <ClInclude Include="StartView.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="NewRoundView.cpp" />
+    <ClCompile Include="ColorView.cpp" />
+    <ClCompile Include="LocalBoardController.cpp" />
+    <ClCompile Include="RoundView.cpp" />
     <ClCompile Include="CloseInterval.cpp" />
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="CombinationColor.cpp" />
     <ClCompile Include="Combination.cpp" />
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="ControllerState.cpp" />
-    <ClCompile Include="LocalNewRoundController.cpp" />
+    <ClCompile Include="LocalRoundController.cpp" />
     <ClCompile Include="LocalOperationController.cpp" />
     <ClCompile Include="LocalStartController.cpp" />
     <ClCompile Include="Logic.cpp" />
@@ -201,12 +209,12 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="PlayerCombination.cpp" />
     <ClCompile Include="Result.cpp" />
     <ClCompile Include="ResultColor.cpp" />
     <ClCompile Include="Round.cpp" />
+    <ClCompile Include="BoardView.cpp" />
     <ClCompile Include="SecretCombination.cpp" />
-    <ClCompile Include="StartControllerView.cpp" />
+    <ClCompile Include="StartView.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -8,22 +8,19 @@ public:
 	Combination();
 	~Combination();
 
-	void pushColorToCombination(CombinationColor color);
+	void pushColorToCombination(Color* color);
 
-	std::vector<CombinationColor>* getCombination();
-	CombinationColor getPosition(int position);
-	int getSizeOfCombination();
-	CombinationColor getColorAt(int position);
+	std::vector<Color*>& getCombination();
+	Color* getPosition(int position);
+	static int getSizeOfCombination(){ return SIZE_OF_COMBINATION; }
+	Color* getColorAt(int position);
 	
-	void printCombination();
-
 protected:
 	const static int SIZE_OF_COMBINATION = 5;
-	std::vector<CombinationColor> combination[SIZE_OF_COMBINATION];
+	std::vector<Color*> combination;
 	
 	int getSize();
 	bool isSameSize(Combination* combination);
-	
 	bool comparePositionColor(int position, Combination* combinationToCheck);
 
 };

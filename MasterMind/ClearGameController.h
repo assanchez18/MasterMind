@@ -1,6 +1,6 @@
 #pragma once
 #include "Controller.h"
-
+/*
 class ClearGameController :
 	public Controller
 {
@@ -11,5 +11,5 @@ public:
 
 	void action() override;
 
-};
+};*/
 

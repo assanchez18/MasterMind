@@ -12,7 +12,7 @@ public:
 	~Color();
 
 	char getColor();
-	bool isEqual(Color color);
+	bool isEqual(Color* color);
 	bool isValid();
 
 protected:

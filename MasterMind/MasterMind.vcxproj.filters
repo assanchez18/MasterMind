@@ -40,12 +40,6 @@
     <Filter Include="Header Files\controllers">
       <UniqueIdentifier>{2028e1fc-3a85-45b2-a2b8-a3509a9d0b50}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\controllers\states">
-      <UniqueIdentifier>{c35276ce-8fc9-4ef8-91fd-df152107186c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\controllers\factory">
-      <UniqueIdentifier>{72964491-5974-4a13-a73a-8a2a594e8e00}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\controllers\interfaces">
       <UniqueIdentifier>{1e00ffbc-df9a-4c34-9a97-9b9972af2a6c}</UniqueIdentifier>
     </Filter>
@@ -67,6 +61,9 @@
     <Filter Include="Source Files\controllers\local">
       <UniqueIdentifier>{fcaa2a30-de32-43a6-9586-5fc9c11501ae}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\states">
+      <UniqueIdentifier>{c35276ce-8fc9-4ef8-91fd-df152107186c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -84,29 +81,14 @@
     <ClInclude Include="CloseInterval.h">
       <Filter>Header Files\utils</Filter>
     </ClInclude>
-    <ClInclude Include="CheckResultController.h">
-      <Filter>Header Files\controllers</Filter>
-    </ClInclude>
-    <ClInclude Include="ClearGameController.h">
-      <Filter>Header Files\controllers</Filter>
-    </ClInclude>
     <ClInclude Include="Combination.h">
-      <Filter>Header Files\models\combinations</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerCombination.h">
       <Filter>Header Files\models\combinations</Filter>
     </ClInclude>
     <ClInclude Include="Result.h">
       <Filter>Header Files\models\combinations</Filter>
     </ClInclude>
-    <ClInclude Include="EndGameController.h">
-      <Filter>Header Files\controllers</Filter>
-    </ClInclude>
-    <ClInclude Include="FactoryController.h">
-      <Filter>Header Files\controllers\factory</Filter>
-    </ClInclude>
     <ClInclude Include="GameState.h">
-      <Filter>Header Files\controllers\states</Filter>
+      <Filter>Header Files\states</Filter>
     </ClInclude>
     <ClInclude Include="MasterMind.h">
       <Filter>Header Files\models</Filter>
@@ -114,43 +96,58 @@
     <ClInclude Include="MasterMindView.h">
       <Filter>Header Files\views</Filter>
     </ClInclude>
-    <ClInclude Include="Controller.h">
-      <Filter>Header Files\controllers\interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="IOperationControllerVisitor.h">
-      <Filter>Header Files\controllers\interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="IOperationController.h">
-      <Filter>Header Files\controllers\interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="StartControllerView.h">
-      <Filter>Header Files\views</Filter>
-    </ClInclude>
-    <ClInclude Include="LocalStartController.h">
-      <Filter>Header Files\controllers\local</Filter>
-    </ClInclude>
-    <ClInclude Include="LocalOperationController.h">
-      <Filter>Header Files\controllers\local</Filter>
-    </ClInclude>
-    <ClInclude Include="Logic.h">
-      <Filter>Header Files\controllers\local</Filter>
-    </ClInclude>
     <ClInclude Include="SecretCombination.h">
       <Filter>Header Files\models\combinations</Filter>
     </ClInclude>
     <ClInclude Include="Round.h">
       <Filter>Header Files\models</Filter>
     </ClInclude>
-    <ClInclude Include="StartController.h">
-      <Filter>Header Files\controllers</Filter>
-    </ClInclude>
-    <ClInclude Include="NewRoundView.h">
+    <ClInclude Include="BoardView.h">
       <Filter>Header Files\views</Filter>
     </ClInclude>
-    <ClInclude Include="NewRoundController.h">
-      <Filter>Header Files\controllers</Filter>
+    <ClInclude Include="ColorView.h">
+      <Filter>Header Files\views</Filter>
     </ClInclude>
-    <ClInclude Include="LocalNewRoundController.h">
+    <ClInclude Include="RoundView.h">
+      <Filter>Header Files\views</Filter>
+    </ClInclude>
+    <ClInclude Include="BoardController.h">
+      <Filter>Header Files\controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="ClearGameController.h">
+      <Filter>Header Files\controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller.h">
+      <Filter>Header Files\controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IOperationController.h">
+      <Filter>Header Files\controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IOperationControllerVisitor.h">
+      <Filter>Header Files\controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="RoundController.h">
+      <Filter>Header Files\controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="StartController.h">
+      <Filter>Header Files\controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalOperationController.h">
+      <Filter>Header Files\controllers\local</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalRoundController.h">
+      <Filter>Header Files\controllers\local</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalStartController.h">
+      <Filter>Header Files\controllers\local</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic.h">
+      <Filter>Header Files\controllers\local</Filter>
+    </ClInclude>
+    <ClInclude Include="StartView.h">
+      <Filter>Header Files\views</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalBoardController.h">
       <Filter>Header Files\controllers\local</Filter>
     </ClInclude>
   </ItemGroup>
@@ -179,9 +176,6 @@
     <ClCompile Include="Controller.cpp">
       <Filter>Source Files\controllers</Filter>
     </ClCompile>
-    <ClCompile Include="PlayerCombination.cpp">
-      <Filter>Source Files\models\combinations</Filter>
-    </ClCompile>
     <ClCompile Include="Result.cpp">
       <Filter>Source Files\models\combinations</Filter>
     </ClCompile>
@@ -192,9 +186,6 @@
       <Filter>Source Files\models</Filter>
     </ClCompile>
     <ClCompile Include="MasterMindView.cpp">
-      <Filter>Source Files\views</Filter>
-    </ClCompile>
-    <ClCompile Include="StartControllerView.cpp">
       <Filter>Source Files\views</Filter>
     </ClCompile>
     <ClCompile Include="LocalStartController.cpp">
@@ -212,11 +203,23 @@
     <ClCompile Include="Round.cpp">
       <Filter>Source Files\models</Filter>
     </ClCompile>
-    <ClCompile Include="LocalNewRoundController.cpp">
+    <ClCompile Include="BoardView.cpp">
+      <Filter>Source Files\views</Filter>
+    </ClCompile>
+    <ClCompile Include="ColorView.cpp">
+      <Filter>Source Files\views</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalRoundController.cpp">
       <Filter>Source Files\controllers\local</Filter>
     </ClCompile>
-    <ClCompile Include="NewRoundView.cpp">
+    <ClCompile Include="RoundView.cpp">
       <Filter>Source Files\views</Filter>
+    </ClCompile>
+    <ClCompile Include="StartView.cpp">
+      <Filter>Source Files\views</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalBoardController.cpp">
+      <Filter>Source Files\controllers\local</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

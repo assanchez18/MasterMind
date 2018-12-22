@@ -3,7 +3,7 @@
 #include "CloseInterval.h"
 #include <assert.h>
 
-Round::Round(PlayerCombination* playerCombination)
+Round::Round(Combination* playerCombination)
 {
 	assert(playerCombination != nullptr);
 	this->playerCombination = playerCombination;
@@ -24,4 +24,14 @@ void Round::checkResult(SecretCombination * secret)
 bool Round::isSolution()
 {
 	return result->isSolution();
+}
+
+Result * Round::getResult()
+{
+	return result;
+}
+
+Combination * Round::getPlayerCombination()
+{
+	return playerCombination;
 }

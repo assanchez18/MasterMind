@@ -7,6 +7,8 @@ class SecretCombination :
 public:
 	SecretCombination();
 	~SecretCombination();
+
+private:
 	void randomCombination();
 };
 

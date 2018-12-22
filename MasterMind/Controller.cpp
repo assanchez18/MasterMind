@@ -18,3 +18,13 @@ const int Controller::getNumberOfRounds()
 {
 	return game->getNumberOfRounds();
 }
+
+std::vector<Round*>& Controller::getRounds()
+{
+	return game->getRounds();
+}
+
+int Controller::getPlayedRounds()
+{
+	return game->getPlayedRounds();
+}

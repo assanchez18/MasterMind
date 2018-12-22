@@ -3,14 +3,14 @@
 #include "MasterMind.h"
 #include "GameState.h"
 #include "LocalStartController.h"
-#include "LocalNewRoundController.h"
+#include "LocalRoundController.h"
+#include "LocalBoardController.h"
 
 class Logic
 {
 public:
 	Logic();
 	~Logic();
-	
 	
 	IOperationController* getController(GameState state);
 	LocalOperationController* getController();
@@ -20,11 +20,10 @@ public:
 private:
 	MasterMind game;
 	LocalStartController* startController;
-	LocalNewRoundController* addCombinationController;
-
+	LocalRoundController* roundController;
+	LocalBoardController* boardController;
 	int getState();
 
 	std::map<GameState, IOperationController*> controllers;
-	void initializeControllers();
 };
 

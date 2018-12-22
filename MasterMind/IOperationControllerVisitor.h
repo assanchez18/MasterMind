@@ -1,17 +1,13 @@
 #pragma once
-#include "NewRoundController.h"
 #include "StartController.h"
-#include "EndGameController.h"
-#include "CheckResultController.h"
-#include "ClearGameController.h"
+#include "RoundController.h"
+#include "BoardController.h"
 
 class IOperationControllerVisitor
 {
 public:
-	virtual void visit(NewRoundController* controller) = 0;
-	virtual void visit(EndGameController* controller) = 0;
+	virtual void visit(RoundController* controller) = 0;
 	virtual void visit(StartController* controller) = 0;
-	virtual void visit(CheckResultController* controller) = 0;
-	virtual void visit(ClearGameController* controller) = 0;
+	virtual void visit(BoardController* controller) = 0;
 };
 

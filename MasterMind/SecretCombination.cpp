@@ -19,7 +19,7 @@ void SecretCombination::randomCombination() {
 	srand(time(NULL));
 	for (int i = 0; i < SIZE_OF_COMBINATION; i++) {
 		randomColor = rand() % CombinationColor::NUMBER_OF_COLORS;
-		CombinationColor color = CombinationColor::CombinationColor(randomColor);
+		CombinationColor* color = new CombinationColor(randomColor);
 		pushColorToCombination(std::move(color));
 	}
 }

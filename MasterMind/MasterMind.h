@@ -10,39 +10,31 @@ public:
 	MasterMind();
 	~MasterMind();
 	
-	
+	static int getNumberOfRounds() { return NUMBER_OF_ROUNDS; }
 	void startGame();
-	GameState getState();
-	const int getNumberOfRounds();
-	SecretCombination* getSecretCombination();
 	void addRound(Round* combination);
 
+	GameState getState();
+	void setState(GameState state);
+	SecretCombination* getSecretCombination();
+	std::vector<Round*>& getRounds();
 
+	int getPlayedRounds();
 	void clearGame();
-	void checkResult();
 	void changeState();
+	bool isMaxRounds();
+
 	
-	bool isEnd2();
-	void endGame();
-	void printRounds();
-	const int static NUMBER_OF_ROUNDS = 12;
 
 private:
-	int turn;
+	static const int NUMBER_OF_ROUNDS = 12;
+
+	int playedRounds;
 	SecretCombination* secret;
 	GameState state;
-	std::vector<Round*> rounds[NUMBER_OF_ROUNDS];
-	
+	std::vector<Round*> rounds;
 
+	void initPlayedRounds();
+	void incrementPlayedRound();
 
-
-	void printResult();
-
-	void printRounds();
-	void printEmptyRound();
-	void initTurn();
-	void incrementTurn();
-	int getTurn();
-	bool isEnd();
-	bool isSolution();
 };

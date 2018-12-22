@@ -1,18 +1,18 @@
 #include "pch.h"
-#include "StartControllerView.h"
+#include "StartView.h"
 #include <iostream>
 using namespace std;
 
-StartControllerView::StartControllerView()
+StartView::StartView()
 {
 }
 
 
-StartControllerView::~StartControllerView()
+StartView::~StartView()
 {
 }
 
-void StartControllerView::interact(StartController * startController)
+void StartView::interact(StartController * startController)
 {
 	startController->start();
 	cout << "El juego está a punto de comenzar!\n" <<
