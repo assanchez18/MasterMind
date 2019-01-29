@@ -2,9 +2,10 @@
 #include <memory>
 #include "MasterMind.h"
 #include "StartController.h"
+namespace models {
 
 MasterMind::MasterMind() :
-	state(GameState::START)
+  state_(State::OUT_GAME)
 {
 }
 
@@ -13,66 +14,71 @@ MasterMind::~MasterMind()
 }
 
 void MasterMind::startGame() {
-	initPlayedRounds();
-	secret = new SecretCombination();
-	state.setState(GameState::NEXT_ROUND);
+  initPlayedRounds();
+  secret = new SecretCombination();
+  state_ = State::IN_GAME;
 }
 
-GameState MasterMind::getState() {
-	return state.getState();
+State MasterMind::getState() {
+  return state_;
 }
 
-void MasterMind::setState(GameState newState)
+void MasterMind::changeState()
 {
-	state.setState(newState);
+  if (state_ == State::OUT_GAME) {
+    state_ = State::IN_GAME;
+  }
+  else {
+    state_ = State::OUT_GAME;
+  }
 }
 
-void MasterMind::addRound(Round* round) 
+void models::MasterMind::changeState(State state)
 {
-	rounds.emplace_back(round);
-	incrementPlayedRound();
+  state_ = state;
+}
+
+void MasterMind::addRound(Round* round)
+{
+  rounds.emplace_back(round);
+  incrementPlayedRound();
 }
 
 std::vector<Round*>& MasterMind::getRounds()
 {
-	return rounds;
+  return rounds;
 }
 
 SecretCombination* MasterMind::getSecretCombination()
 {
-	return secret;
+  return secret;
 }
 
 void MasterMind::initPlayedRounds() {
-	playedRounds = 0;
+  playedRounds = 0;
 }
 
 void MasterMind::incrementPlayedRound()
 {
-	playedRounds++;
+  playedRounds++;
 }
 
 int MasterMind::getPlayedRounds() {
-	return playedRounds;
+  return playedRounds;
 }
-
 
 void MasterMind::clearGame() {
-	initPlayedRounds();
-	delete secret;
-}
-
-
-void MasterMind::changeState() {
-	state.changeState();
+  initPlayedRounds();
+  delete secret;
 }
 
 bool MasterMind::isMaxRounds()
 {
-	if (playedRounds == NUMBER_OF_ROUNDS)
-	{
-		state.setState(GameState::END_GAME);
-		return true;
-	}
-	return false;
+  if (playedRounds == NUMBER_OF_ROUNDS)
+  {
+    changeState();
+    return true;
+  }
+  return false;
+}
 }

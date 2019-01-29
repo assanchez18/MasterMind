@@ -3,6 +3,7 @@
 #include "MasterMind.h"
 
 class Command {
+  using MasterMind = models::MasterMind;
 public:
 	Command(std::string title) :
 		title(title),

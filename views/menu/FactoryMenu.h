@@ -1,7 +1,7 @@
 #pragma once
 #include "Menu.h"
 #include "InitialMenu.h"
-#include "GameState.h"
+#include "State.h"
 
 class FactoryMenu {
 
@@ -9,7 +9,7 @@ public:
 	static Menu* createMenu(GameState* state, MasterMind* game) {
 		switch(state->getState())
 		{
-		case GameState::START:
+		/*ase GameState::START:
 			return new InitialMenu(game);
 			break;
 		/*case GameState::NEXT_ROUND:

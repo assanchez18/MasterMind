@@ -3,11 +3,15 @@
 #include "Controller.h"
 #include "MasterMind.h"
 
-class LocalOperationController 
-	: public IOperationController, public Controller
+namespace controllers {
+namespace locals {
+class LocalOperationController
+  : public IOperationController, public Controller
 {
 public:
-	LocalOperationController(MasterMind* game);
-	virtual void accept(IOperationControllerVisitor * operationControllerVisitor) = 0;
-	
+  LocalOperationController(MasterMind* game);
+  virtual void accept(IOperationControllerVisitor * operationControllerVisitor) = 0;
+
 };
+}
+}

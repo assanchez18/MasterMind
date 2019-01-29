@@ -1,6 +1,11 @@
 #include "LocalOperationController.h"
 
+namespace controllers {
+namespace locals {
 LocalOperationController::LocalOperationController(MasterMind* game)
-	: Controller(game)
+  : controllers::Controller(game)
 {
+}
+
+}
 }
