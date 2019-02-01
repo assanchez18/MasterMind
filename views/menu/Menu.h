@@ -6,11 +6,15 @@
 class Menu
 {
 public:
-	Menu();
-	~Menu();
-	std::vector<Command*>& getCommands();
-	Command* getCommand(int position);
-	void execute(int command);
+  Menu();
+  ~Menu();
+
+  //QUITAR ESTE PRINT Y METERLO EN UN MenuView
+  void print();
+
+  std::vector<Command*>& getCommands();
+  Command* selectOption();
+
 protected:
 	std::vector<Command*> commandList;
 	ExitCommand* exitCommand;
