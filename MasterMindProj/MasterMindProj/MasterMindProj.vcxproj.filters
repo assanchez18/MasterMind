@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\controllers">
+      <UniqueIdentifier>{fbc240e2-9732-412f-a740-8c8839f58fa3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\views">
+      <UniqueIdentifier>{c112d4fb-b73b-4dc8-8920-e5d95d215790}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\models">
+      <UniqueIdentifier>{fcd47d16-c4a5-47dd-9df1-7e0e238b9ef0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils">
+      <UniqueIdentifier>{ea71689d-f57b-4821-a860-78b9cfacd1d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\views\menu">
+      <UniqueIdentifier>{1576118b-f0d8-4d18-a820-106d4786836d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\views\menu\commands">
+      <UniqueIdentifier>{2c801da1-03e2-4a50-b911-3fa24cbb3ec4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\models\colors">
+      <UniqueIdentifier>{8618b34c-231d-40c9-9353-0a4cba56e65e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\models\combinations">
+      <UniqueIdentifier>{9f1a2154-030a-473e-9974-5d46329de688}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\controllers\local">
+      <UniqueIdentifier>{13a29b5f-01db-4cbc-899a-2a502d25b113}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\controllers\interfaces">
+      <UniqueIdentifier>{061ab69b-0de2-4979-b4e7-d1aa6a85fb82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\controllers\state">
+      <UniqueIdentifier>{0832aafe-4021-4e7a-b968-27e915ec899e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\controllers\local\logic">
+      <UniqueIdentifier>{53fb30f5-6f59-46c3-8553-76aefeeb3c06}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\utils\CloseInterval.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\views\BoardView.cpp">
+      <Filter>Source Files\views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\views\ColorView.cpp">
+      <Filter>Source Files\views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\views\MasterMindView.cpp">
+      <Filter>Source Files\views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\views\MenuView.cpp">
+      <Filter>Source Files\views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\views\RoundView.cpp">
+      <Filter>Source Files\views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\views\StartView.cpp">
+      <Filter>Source Files\views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\views\menu\Menu.cpp">
+      <Filter>Source Files\views\menu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\views\menu\commands\ExitCommand.cpp">
+      <Filter>Source Files\views\menu\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\views\menu\commands\LoadGameCommand.cpp">
+      <Filter>Source Files\views\menu\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\views\menu\commands\StartGameCommand.cpp">
+      <Filter>Source Files\views\menu\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\models\MasterMind.cpp">
+      <Filter>Source Files\models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\models\combinations\Combination.cpp">
+      <Filter>Source Files\models\combinations</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\models\combinations\Result.cpp">
+      <Filter>Source Files\models\combinations</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\models\combinations\SecretCombination.cpp">
+      <Filter>Source Files\models\combinations</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\models\colors\Color.cpp">
+      <Filter>Source Files\models\colors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\models\colors\CombinationColor.cpp">
+      <Filter>Source Files\models\colors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\models\colors\ResultColor.cpp">
+      <Filter>Source Files\models\colors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\controllers\local\LocalBoardController.cpp">
+      <Filter>Source Files\controllers\local</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\controllers\local\LocalMenuController.cpp">
+      <Filter>Source Files\controllers\local</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\controllers\local\LocalOperationController.cpp">
+      <Filter>Source Files\controllers\local</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\controllers\local\LocalRoundController.cpp">
+      <Filter>Source Files\controllers\local</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\controllers\local\LocalStartController.cpp">
+      <Filter>Source Files\controllers\local</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\controllers\interfaces\Controller.cpp">
+      <Filter>Source Files\controllers\interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\controllers\state\ControllerGameState.cpp">
+      <Filter>Source Files\controllers\state</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\controllers\local\logic\Logic.cpp">
+      <Filter>Source Files\controllers\local\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\views\OutGameView.cpp">
+      <Filter>Source Files\views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\views\InGameView.cpp">
+      <Filter>Source Files\views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\views\menu\OutGameMenu.cpp">
+      <Filter>Source Files\views\menu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\controllers\local\LocalOutGameController.cpp">
+      <Filter>Source Files\controllers\local</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\controllers\local\LocalLoadGameController.cpp">
+      <Filter>Source Files\controllers\local</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\utils\CloseInterval.h">
+      <Filter>Source Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\views\BoardView.h">
+      <Filter>Source Files\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\views\ColorView.h">
+      <Filter>Source Files\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\views\MasterMindView.h">
+      <Filter>Source Files\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\views\MenuView.h">
+      <Filter>Source Files\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\views\RoundView.h">
+      <Filter>Source Files\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\views\StartView.h">
+      <Filter>Source Files\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\views\menu\FactoryMenu.h">
+      <Filter>Source Files\views\menu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\views\menu\Menu.h">
+      <Filter>Source Files\views\menu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\views\menu\commands\Command.h">
+      <Filter>Source Files\views\menu\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\views\menu\commands\ExitCommand.h">
+      <Filter>Source Files\views\menu\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\views\menu\commands\LoadGameCommand.h">
+      <Filter>Source Files\views\menu\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\views\menu\commands\StartGameCommand.h">
+      <Filter>Source Files\views\menu\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\models\MasterMind.h">
+      <Filter>Source Files\models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\models\combinations\Combination.h">
+      <Filter>Source Files\models\combinations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\models\combinations\Result.h">
+      <Filter>Source Files\models\combinations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\models\combinations\SecretCombination.h">
+      <Filter>Source Files\models\combinations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\models\colors\Color.h">
+      <Filter>Source Files\models\colors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\models\colors\CombinationColor.h">
+      <Filter>Source Files\models\colors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\models\colors\ResultColor.h">
+      <Filter>Source Files\models\colors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\local\LocalBoardController.h">
+      <Filter>Source Files\controllers\local</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\local\LocalMenuController.h">
+      <Filter>Source Files\controllers\local</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\local\LocalOperationController.h">
+      <Filter>Source Files\controllers\local</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\local\LocalRoundController.h">
+      <Filter>Source Files\controllers\local</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\local\LocalStartController.h">
+      <Filter>Source Files\controllers\local</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\interfaces\BoardController.h">
+      <Filter>Source Files\controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\interfaces\ClearGameController.h">
+      <Filter>Source Files\controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\interfaces\Controller.h">
+      <Filter>Source Files\controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\interfaces\IOperationController.h">
+      <Filter>Source Files\controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\interfaces\IOperationControllerVisitor.h">
+      <Filter>Source Files\controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\interfaces\MenuController.h">
+      <Filter>Source Files\controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\interfaces\RoundController.h">
+      <Filter>Source Files\controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\interfaces\StartController.h">
+      <Filter>Source Files\controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\models\State.h">
+      <Filter>Source Files\models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\local\GameState.h">
+      <Filter>Source Files\controllers\state</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\local\logic\Logic.h">
+      <Filter>Source Files\controllers\local\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\interfaces\InGameController.h">
+      <Filter>Source Files\controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\views\InGameView.h">
+      <Filter>Source Files\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\views\OutGameView.h">
+      <Filter>Source Files\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\interfaces\OutGameController.h">
+      <Filter>Source Files\controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\views\menu\OutGameMenu.h">
+      <Filter>Source Files\views\menu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\local\LocalOutGameController.h">
+      <Filter>Source Files\controllers\local</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\interfaces\LoadGameController.h">
+      <Filter>Source Files\controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\local\LocalLoadGameController.h">
+      <Filter>Source Files\controllers\local</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
