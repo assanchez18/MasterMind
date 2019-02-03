@@ -1,39 +1,34 @@
 #include "LocalMenuController.h"
 
 #include "FactoryMenu.h"
-namespace controllers {
-namespace locals {
 
 LocalMenuController::LocalMenuController(MasterMind * game)
-  : LocalOperationController(game)
+	: LocalOperationController(game)
 {
 }
 
 LocalMenuController::~LocalMenuController()
 {
-  delete menu;
+	delete menu;
 }
 
 void LocalMenuController::createMenu()
 {
-  delete menu;
-  menu = FactoryMenu::createMenu(&game->getState(), game);
+	delete menu;
+	menu = FactoryMenu::createMenu(&game->getState(), game);
 }
 
-std::vector<Command*> LocalMenuController::getCommands()
+inline std::vector<Command*> LocalMenuController::getCommands()
 {
-  return menu->getCommands();
+	return menu->getCommands();
 }
 
 void LocalMenuController::accept(IOperationControllerVisitor * operationControllerVisitor)
 {
-  operationControllerVisitor->visit(this);
+	operationControllerVisitor->visit(this);
 }
 
 void LocalMenuController::execute(int command)
 {
-  menu->execute(command);
-}
-
-}
+	menu->execute(command);
 }

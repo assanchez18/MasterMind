@@ -5,7 +5,6 @@
 #include "Logic.h"
 #include "MasterMindView.h"
 
-using namespace controllers;
 int main()
 {
 	Logic logic = Logic::Logic();

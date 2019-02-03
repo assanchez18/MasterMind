@@ -1,10 +1,9 @@
 #pragma once
 #include <vector>
 class Combination;
-namespace controllers {
-class RoundController
+
+class RoundController 
 {
 public:
-  virtual void addRound(Combination* playerCombination) = 0;
+	virtual void addRound(Combination* playerCombination) = 0;
 };
-}

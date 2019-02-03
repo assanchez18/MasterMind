@@ -1,5 +1,4 @@
 #include "Controller.h"
-namespace controllers {
 
 Controller::Controller()
 {
@@ -7,7 +6,7 @@ Controller::Controller()
 
 Controller::Controller(MasterMind * game)
 {
-  this->game = game;
+	this->game = game;
 }
 
 Controller::~Controller()
@@ -16,16 +15,15 @@ Controller::~Controller()
 
 const int Controller::getNumberOfRounds()
 {
-  return game->getNumberOfRounds();
+	return game->getNumberOfRounds();
 }
 
 std::vector<Round*>& Controller::getRounds()
 {
-  return game->getRounds();
+	return game->getRounds();
 }
 
 int Controller::getPlayedRounds()
 {
-  return game->getPlayedRounds();
-}
+	return game->getPlayedRounds();
 }

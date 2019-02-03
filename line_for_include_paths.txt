@@ -1,4 +1,0 @@
-from HomePath includes
-
-
-$(HOMEPATH)\source\repos\MasterMind\;$(HOMEPATH)\source\repos\MasterMind\controllers;$(HOMEPATH)\source\repos\MasterMind\controllers\interfaces;$(HOMEPATH)\source\repos\MasterMind\controllers\local;$(HOMEPATH)\source\repos\MasterMind\controllers\state;$(HOMEPATH)\source\repos\MasterMind\models;$(HOMEPATH)\source\repos\MasterMind\models\combinations;$(HOMEPATH)\source\repos\MasterMind\models\colors;$(HOMEPATH)\source\repos\MasterMind\utils;$(HOMEPATH)\source\repos\MasterMind\views;$(HOMEPATH)\source\repos\MasterMind\views\menu;$(HOMEPATH)\source\repos\MasterMind\views\menu\commands

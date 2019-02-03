@@ -1,9 +1,9 @@
 #pragma once
-namespace controllers {
-class StartController
+
+class StartController 
 {
 public:
-  virtual void start() = 0;
-  virtual int getNumberOfRounds() = 0;
+	virtual void start() = 0;
+	virtual int getNumberOfRounds() = 0;
 };
-}
+

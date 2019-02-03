@@ -1,7 +1,6 @@
 #include "CloseInterval.h"
 #include <assert.h>
 
-using namespace utils;
 CloseInterval::CloseInterval(int min, int max)
 {
 	assert(&min != nullptr);

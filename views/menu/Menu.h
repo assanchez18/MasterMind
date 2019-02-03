@@ -15,6 +15,6 @@ protected:
 	std::vector<Command*> commandList;
 	ExitCommand* exitCommand;
 	virtual void createExitCommand();
-	virtual void setGame(models::MasterMind* game);
+	virtual void setGame(MasterMind* game);
 };
 
