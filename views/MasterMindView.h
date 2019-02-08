@@ -18,6 +18,7 @@ public:
 	void visit(RoundController* controller);
 	void visit(BoardController* controller);
 	void visit(MenuController* menuView);
+	void visit(OutGameController* menuView);
 	//void visit(ClearGameController* controller);
 private :
 	RoundView roundView;

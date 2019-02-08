@@ -35,3 +35,8 @@ void MasterMindView::visit(MenuController* controller)
 {
 	menuView.interact(controller);
 }
+
+void MasterMindView::visit(OutGameController* controller)
+{
+//	menuView.interact(controller);
+}

@@ -30,5 +30,5 @@ void LocalMenuController::accept(IOperationControllerVisitor * operationControll
 
 void LocalMenuController::execute(int command)
 {
-	menu->execute(command);
+	//menu->execute(command);
 }

@@ -11,10 +11,7 @@ Menu::~Menu()
 	delete exitCommand;
 }
 
-void Menu::execute(int command)
-{
-	commandList.at(command)->execute();
-}
+
 
 void Menu::setGame(MasterMind* game)
 {
@@ -35,7 +32,3 @@ std::vector<Command*>& Menu::getCommands()
 	return commandList;
 }
 
-Command* Menu::getCommand(int position)
-{
-	return commandList.at(position);
-}

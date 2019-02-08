@@ -132,9 +132,6 @@
     <ClCompile Include="..\..\controllers\local\logic\Logic.cpp">
       <Filter>Source Files\controllers\local\logic</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\views\OutGameView.cpp">
-      <Filter>Source Files\views</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\views\InGameView.cpp">
       <Filter>Source Files\views</Filter>
     </ClCompile>
@@ -144,8 +141,8 @@
     <ClCompile Include="..\..\controllers\local\LocalOutGameController.cpp">
       <Filter>Source Files\controllers\local</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\controllers\local\LocalLoadGameController.cpp">
-      <Filter>Source Files\controllers\local</Filter>
+    <ClCompile Include="..\..\views\OutGameView.cpp">
+      <Filter>Source Files\views</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -263,9 +260,6 @@
     <ClInclude Include="..\..\views\InGameView.h">
       <Filter>Source Files\views</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\views\OutGameView.h">
-      <Filter>Source Files\views</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\controllers\interfaces\OutGameController.h">
       <Filter>Source Files\controllers\interfaces</Filter>
     </ClInclude>
@@ -278,8 +272,8 @@
     <ClInclude Include="..\..\controllers\interfaces\LoadGameController.h">
       <Filter>Source Files\controllers\interfaces</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\controllers\local\LocalLoadGameController.h">
-      <Filter>Source Files\controllers\local</Filter>
+    <ClInclude Include="..\..\views\OutGameView.h">
+      <Filter>Source Files\views</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

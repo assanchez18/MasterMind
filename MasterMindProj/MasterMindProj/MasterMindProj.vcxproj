@@ -125,7 +125,6 @@
   <ItemGroup>
     <ClCompile Include="..\..\controllers\interfaces\Controller.cpp" />
     <ClCompile Include="..\..\controllers\local\LocalBoardController.cpp" />
-    <ClCompile Include="..\..\controllers\local\LocalLoadGameController.cpp" />
     <ClCompile Include="..\..\controllers\local\LocalOutGameController.cpp" />
     <ClCompile Include="..\..\controllers\local\LocalMenuController.cpp" />
     <ClCompile Include="..\..\controllers\local\LocalOperationController.cpp" />
@@ -170,7 +169,6 @@
     <ClInclude Include="..\..\controllers\interfaces\StartController.h" />
     <ClInclude Include="..\..\controllers\local\GameState.h" />
     <ClInclude Include="..\..\controllers\local\LocalBoardController.h" />
-    <ClInclude Include="..\..\controllers\local\LocalLoadGameController.h" />
     <ClInclude Include="..\..\controllers\local\LocalOutGameController.h" />
     <ClInclude Include="..\..\controllers\local\LocalMenuController.h" />
     <ClInclude Include="..\..\controllers\local\LocalOperationController.h" />

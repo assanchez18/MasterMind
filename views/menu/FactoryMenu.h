@@ -6,18 +6,7 @@
 class FactoryMenu {
 
 public:
-	static Menu* createMenu(GameState* state, MasterMind* game) {
-		switch(state->getState())
-		{
-		case GameState::START:
-			return new InitialMenu(game);
-			break;
-		/*case GameState::NEXT_ROUND:
-			break;
-		case GameState::CHECK_RESULT:
-			
-			break;
-		*/
-		}
+	static Menu* createMenu(OutGameController* controller) {
+		//return new OutGameMenu();
 	}
 };

@@ -3,7 +3,7 @@
 #include "RoundController.h"
 #include "BoardController.h"
 #include "MenuController.h"
-
+#include "OutGameController.h"
 class IOperationControllerVisitor
 {
 public:
@@ -11,5 +11,7 @@ public:
 	virtual void visit(StartController* controller) = 0;
 	virtual void visit(BoardController* controller) = 0;
 	virtual void visit(MenuController* controller) = 0;
+
+	virtual void visit(OutGameController* controller) = 0;
 };
 
