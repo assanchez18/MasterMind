@@ -257,9 +257,6 @@
     <ClInclude Include="..\..\controllers\local\logic\Logic.h">
       <Filter>Source Files\controllers\local\logic</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\controllers\interfaces\InGameController.h">
-      <Filter>Source Files\controllers\interfaces</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\views\InGameView.h">
       <Filter>Source Files\views</Filter>
     </ClInclude>
@@ -275,11 +272,14 @@
     <ClInclude Include="..\..\controllers\local\LocalOutGameController.h">
       <Filter>Source Files\controllers\local</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\controllers\interfaces\LoadGameController.h">
-      <Filter>Source Files\controllers\interfaces</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\controllers\local\LocalLoadGameController.h">
       <Filter>Source Files\controllers\local</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\MasterMind\controllers\interfaces\LoadGameController.h">
+      <Filter>Source Files\controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\MasterMind\controllers\interfaces\InGameController.h">
+      <Filter>Source Files\controllers\interfaces</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

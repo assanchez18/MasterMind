@@ -14,10 +14,10 @@ LocalRoundController::~LocalRoundController()
 
 void LocalRoundController::addRound(Combination* playerCombination)
 {
-	Round* round = new Round(playerCombination);
+/*	Round* round = new Round(playerCombination);
 	round->checkResult(game->getSecretCombination());
 	game->addRound(std::move(round));
-	game->setState(GameState::CHECK_RESULT);
+	game->setState(GameState::CHECK_RESULT);*/
 }
 
 void LocalRoundController::accept(IOperationControllerVisitor * operationControllerVisitor)

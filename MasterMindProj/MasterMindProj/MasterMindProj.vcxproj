@@ -157,13 +157,13 @@
     <ClCompile Include="..\..\views\StartView.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\MasterMind\controllers\interfaces\InGameController.h" />
+    <ClInclude Include="..\..\..\MasterMind\controllers\interfaces\LoadGameController.h" />
     <ClInclude Include="..\..\controllers\interfaces\BoardController.h" />
     <ClInclude Include="..\..\controllers\interfaces\ClearGameController.h" />
     <ClInclude Include="..\..\controllers\interfaces\Controller.h" />
-    <ClInclude Include="..\..\controllers\interfaces\InGameController.h" />
     <ClInclude Include="..\..\controllers\interfaces\IOperationController.h" />
     <ClInclude Include="..\..\controllers\interfaces\IOperationControllerVisitor.h" />
-    <ClInclude Include="..\..\controllers\interfaces\LoadGameController.h" />
     <ClInclude Include="..\..\controllers\interfaces\MenuController.h" />
     <ClInclude Include="..\..\controllers\interfaces\OutGameController.h" />
     <ClInclude Include="..\..\controllers\interfaces\RoundController.h" />
