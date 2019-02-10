@@ -18,7 +18,7 @@ const int Controller::getNumberOfRounds()
 	return game->getNumberOfRounds();
 }
 
-std::vector<Round*>& Controller::getRounds()
+std::vector<pair<Combination*, Result*>>& Controller::getRounds()
 {
 	return game->getRounds();
 }

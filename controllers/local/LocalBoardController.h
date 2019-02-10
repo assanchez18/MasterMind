@@ -9,7 +9,7 @@ public:
 	LocalBoardController(MasterMind* game);
 	~LocalBoardController();
 
-	virtual std::vector<Round*>& getRounds() override;
+	virtual std::vector<pair<Combination*, Result*>>& getRounds() override;
 	virtual int getPlayedRounds() override;
 	virtual void action(bool victory) override;
 	virtual void accept(IOperationControllerVisitor * operationControllerVisitor) override;

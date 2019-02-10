@@ -1,95 +1,12 @@
 ﻿  Controller.cpp
   LocalBoardController.cpp
-c:\users\enassre\source\repos\mastermind\views\menu\commands\startgamecommand.h(9): error C2061: syntax error: identifier 'OutGameController'
-c:\users\enassre\source\repos\mastermind\views\menu\commands\loadgamecommand.h(8): error C2061: syntax error: identifier 'OutGameController'
-  LocalLoadGameController.cpp
-c:\users\enassre\source\repos\mastermind\views\menu\commands\startgamecommand.h(9): error C2061: syntax error: identifier 'OutGameController'
-c:\users\enassre\source\repos\mastermind\views\menu\commands\loadgamecommand.h(8): error C2061: syntax error: identifier 'OutGameController'
-c:\users\enassre\source\repos\mastermind\controllers\local\localloadgamecontroller.cpp(5): error C2512: 'LocalOperationController': no appropriate default constructor available
-  c:\users\enassre\source\repos\mastermind\controllers\local\localoperationcontroller.h(5): note: see declaration of 'LocalOperationController'
   LocalOutGameController.cpp
-c:\users\enassre\source\repos\mastermind\views\menu\commands\startgamecommand.h(9): error C2061: syntax error: identifier 'OutGameController'
-c:\users\enassre\source\repos\mastermind\views\menu\commands\loadgamecommand.h(8): error C2061: syntax error: identifier 'OutGameController'
-c:\users\enassre\source\repos\mastermind\controllers\local\localoutgamecontroller.cpp(5): error C2512: 'LocalOperationController': no appropriate default constructor available
-  c:\users\enassre\source\repos\mastermind\controllers\local\localoperationcontroller.h(5): note: see declaration of 'LocalOperationController'
   LocalMenuController.cpp
-c:\users\enassre\source\repos\mastermind\views\menu\commands\startgamecommand.h(9): error C2061: syntax error: identifier 'OutGameController'
-c:\users\enassre\source\repos\mastermind\views\menu\commands\loadgamecommand.h(8): error C2061: syntax error: identifier 'OutGameController'
-c:\users\enassre\source\repos\mastermind\controllers\local\localmenucontroller.cpp(13): error C2509: 'createMenu': member function not declared in 'LocalMenuController'
-  c:\users\enassre\source\repos\mastermind\controllers\local\localmenucontroller.h(7): note: see declaration of 'LocalMenuController'
-c:\users\enassre\source\repos\mastermind\controllers\local\localmenucontroller.cpp(18): error C2509: 'getCommands': member function not declared in 'LocalMenuController'
-  c:\users\enassre\source\repos\mastermind\controllers\local\localmenucontroller.h(7): note: see declaration of 'LocalMenuController'
-c:\users\enassre\source\repos\mastermind\controllers\local\localmenucontroller.cpp(26): error C2509: 'execute': member function not declared in 'LocalMenuController'
-  c:\users\enassre\source\repos\mastermind\controllers\local\localmenucontroller.h(7): note: see declaration of 'LocalMenuController'
   LocalOperationController.cpp
-c:\users\enassre\source\repos\mastermind\views\menu\commands\startgamecommand.h(9): error C2061: syntax error: identifier 'OutGameController'
-c:\users\enassre\source\repos\mastermind\views\menu\commands\loadgamecommand.h(8): error C2061: syntax error: identifier 'OutGameController'
   LocalRoundController.cpp
-c:\users\enassre\source\repos\mastermind\views\menu\commands\startgamecommand.h(9): error C2061: syntax error: identifier 'OutGameController'
-c:\users\enassre\source\repos\mastermind\views\menu\commands\loadgamecommand.h(8): error C2061: syntax error: identifier 'OutGameController'
   LocalStartController.cpp
-c:\users\enassre\source\repos\mastermind\views\menu\commands\startgamecommand.h(9): error C2061: syntax error: identifier 'OutGameController'
-c:\users\enassre\source\repos\mastermind\views\menu\commands\loadgamecommand.h(8): error C2061: syntax error: identifier 'OutGameController'
   Logic.cpp
-c:\users\enassre\source\repos\mastermind\views\menu\commands\startgamecommand.h(9): error C2061: syntax error: identifier 'OutGameController'
-c:\users\enassre\source\repos\mastermind\views\menu\commands\loadgamecommand.h(8): error C2061: syntax error: identifier 'OutGameController'
-c:\users\enassre\source\repos\mastermind\controllers\local\logic\logic.cpp(36): error C2039: 'changeState': is not a member of 'model::MasterMind'
-  c:\users\enassre\source\repos\mastermind\models\mastermind.h(8): note: see declaration of 'model::MasterMind'
-  ControllerGameState.cpp
   Main.cpp
-c:\users\enassre\source\repos\mastermind\views\menu\commands\startgamecommand.h(9): error C2061: syntax error: identifier 'OutGameController'
-c:\users\enassre\source\repos\mastermind\views\menu\commands\loadgamecommand.h(8): error C2061: syntax error: identifier 'OutGameController'
-c:\users\enassre\source\repos\mastermind\main.cpp(12): error C2259: 'MasterMindView': cannot instantiate abstract class
-  c:\users\enassre\source\repos\mastermind\main.cpp(12): note: due to following members:
-  c:\users\enassre\source\repos\mastermind\main.cpp(12): note: 'void IOperationControllerVisitor::visit(LoadGameController *)': is abstract
-  c:\users\enassre\source\repos\mastermind\controllers\interfaces\ioperationcontrollervisitor.h(15): note: see declaration of 'IOperationControllerVisitor::visit'
-  Color.cpp
-  CombinationColor.cpp
-  ResultColor.cpp
-  Combination.cpp
-  Result.cpp
-  SecretCombination.cpp
   MasterMind.cpp
-  CloseInterval.cpp
-  BoardView.cpp
-  Generating Code...
-  Compiling...
-  ColorView.cpp
-  InGameView.cpp
-  MasterMindView.cpp
-c:\users\enassre\source\repos\mastermind\views\menu\commands\startgamecommand.h(9): error C2061: syntax error: identifier 'OutGameController'
-c:\users\enassre\source\repos\mastermind\views\menu\commands\loadgamecommand.h(8): error C2061: syntax error: identifier 'OutGameController'
-  MenuView.cpp
-  ExitCommand.cpp
-  LoadGameCommand.cpp
-c:\users\enassre\source\repos\mastermind\views\menu\commands\startgamecommand.h(9): error C2061: syntax error: identifier 'OutGameController'
-c:\users\enassre\source\repos\mastermind\controllers\interfaces\outgamecontroller.h(10): error C2061: syntax error: identifier 'LoadGameCommand'
-c:\users\enassre\source\repos\mastermind\views\menu\commands\loadgamecommand.cpp(5): error C2664: 'LoadGameController *OutGameController::getController(void)': cannot convert argument 1 from 'LoadGameCommand *' to 'StartGameCommand *'
-  c:\users\enassre\source\repos\mastermind\views\menu\commands\loadgamecommand.cpp(5): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-  StartGameCommand.cpp
-c:\users\enassre\source\repos\mastermind\views\menu\commands\loadgamecommand.h(8): error C2061: syntax error: identifier 'OutGameController'
-c:\users\enassre\source\repos\mastermind\controllers\interfaces\outgamecontroller.h(9): error C2061: syntax error: identifier 'StartGameCommand'
-c:\users\enassre\source\repos\mastermind\views\menu\commands\startgamecommand.cpp(6): error C2664: 'LoadGameController *OutGameController::getController(LoadGameCommand *)': cannot convert argument 1 from 'StartGameCommand *' to 'LoadGameCommand *'
-  c:\users\enassre\source\repos\mastermind\views\menu\commands\startgamecommand.cpp(6): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-  OutGameMenu.cpp
-c:\users\enassre\source\repos\mastermind\views\menu\commands\startgamecommand.h(9): error C2061: syntax error: identifier 'OutGameController'
-c:\users\enassre\source\repos\mastermind\views\menu\commands\loadgamecommand.h(8): error C2061: syntax error: identifier 'OutGameController'
-c:\users\enassre\source\repos\mastermind\views\menu\outgamemenu.cpp(6): error C2661: 'StartGameCommand::StartGameCommand': no overloaded function takes 2 arguments
-c:\users\enassre\source\repos\mastermind\views\menu\outgamemenu.cpp(6): error C2672: 'std::vector<Command *,std::allocator<_Ty>>::emplace_back': no matching overloaded function found
-          with
-          [
-              _Ty=Command *
-          ]
-c:\users\enassre\source\repos\mastermind\views\menu\outgamemenu.cpp(7): error C2661: 'LoadGameCommand::LoadGameCommand': no overloaded function takes 2 arguments
-c:\users\enassre\source\repos\mastermind\views\menu\outgamemenu.cpp(7): error C2672: 'std::vector<Command *,std::allocator<_Ty>>::emplace_back': no matching overloaded function found
-          with
-          [
-              _Ty=Command *
-          ]
-  Menu.cpp
-  OutGameView.cpp
-c:\users\enassre\source\repos\mastermind\views\menu\commands\startgamecommand.h(9): error C2061: syntax error: identifier 'OutGameController'
-c:\users\enassre\source\repos\mastermind\views\menu\commands\loadgamecommand.h(8): error C2061: syntax error: identifier 'OutGameController'
-  RoundView.cpp
-  StartView.cpp
-  Generating Code...
+  Generando código...
+  MasterMindProj.vcxproj -> C:\Users\Sergio\source\repos\MasterMind\MasterMindProj\Debug\MasterMindProj.exe

@@ -12,15 +12,6 @@ Menu::~Menu()
 }
 
 
-
-void Menu::setGame(MasterMind* game)
-{
-	for (Command* c : commandList) 
-	{
-		c->setGame(game);
-	}
-}
-
 void Menu::createExitCommand()
 {
 	exitCommand = new ExitCommand("Salir de MasterMind.");

@@ -7,6 +7,6 @@ class FactoryMenu {
 
 public:
 	static Menu* createMenu(OutGameController* controller) {
-		//return new OutGameMenu();
+		return nullptr;
 	}
 };

@@ -17,11 +17,6 @@ void LocalBoardController::accept(IOperationControllerVisitor * operationControl
 	operationControllerVisitor->visit(this);
 }
 
-std::vector<Round*>& LocalBoardController::getRounds()
-{
-	return game->getRounds();
-}
-
 int LocalBoardController::getPlayedRounds()
 {
 	return game->getPlayedRounds();
@@ -29,6 +24,11 @@ int LocalBoardController::getPlayedRounds()
 
 bool LocalBoardController::isFinished() {
 	return finished;
+}
+
+std::vector<pair<Combination*, Result*>>& LocalBoardController::getRounds()
+{
+	return game->getRounds();
 }
 
 void LocalBoardController::action(bool victory)

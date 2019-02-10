@@ -1,0 +1,8 @@
+﻿  InGameView.cpp
+c1xx : fatal error C1083: No se puede abrir el archivo origen: '..\..\views\InGameView.cpp': No such file or directory
+  MasterMindView.cpp
+  OutGameMenu.cpp
+c1xx : fatal error C1083: No se puede abrir el archivo origen: '..\..\views\menu\OutGameMenu.cpp': No such file or directory
+  OutGameView.cpp
+c1xx : fatal error C1083: No se puede abrir el archivo origen: '..\..\views\OutGameView.cpp': No such file or directory
+  Generando código...

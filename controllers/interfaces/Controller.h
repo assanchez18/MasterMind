@@ -9,7 +9,7 @@ public:
 	~Controller();
 
 	const int getNumberOfRounds();
-	std::vector<Round*>& getRounds();
+	std::vector<std::pair<Combination*, Result*>>& getRounds();
 	int getPlayedRounds();
 protected:
 	MasterMind* game;

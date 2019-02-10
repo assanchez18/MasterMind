@@ -22,12 +22,12 @@ void BoardView::interact(BoardController* controller)
 	for (int i = 0; i < controller->getPlayedRounds(); i++)
 	{
 		cout << i + 1 << "\t|\t";
-		Round* round = controller->getRounds().at(i);
-		printRound(round->getPlayerCombination());
+		pair<Combination*, Result*> round = controller->getRounds().at(i);
+		printRound(round.first);
 		cout << "\t|\t";
-		printRound(round->getResult());
+		printRound(round.second);
 		cout << endl;
-		if (round->isSolution())
+		if (round.second->isSolution())
 		{
 			victory = true;
 		}

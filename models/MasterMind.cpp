@@ -27,13 +27,13 @@ void MasterMind::setState(GameState newState)
 	state.setState(newState);
 }
 
-void MasterMind::addRound(Round* round) 
+void MasterMind::addRound(pair<Combination*,Result*> round) 
 {
 	rounds.emplace_back(round);
 	incrementPlayedRound();
 }
 
-std::vector<Round*>& MasterMind::getRounds()
+vector<pair<Combination*, Result*>>& MasterMind::getRounds()
 {
 	return rounds;
 }

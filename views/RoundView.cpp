@@ -1,7 +1,8 @@
 #include "RoundView.h"
 #include "BoardView.h"
 #include <iostream>
-
+#include "CombinationColor.h"
+#include "Combination.h"
 using namespace std;
 
 RoundView::RoundView()

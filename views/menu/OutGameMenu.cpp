@@ -2,9 +2,9 @@
 #include "StartGameCommand.h"
 #include "LoadGameCommand.h"
 
-OutGameMenu::OutGameMenu(OutGameController* controller) {
-  commandList.emplace_back(new StartGameCommand("Empezar nueva partida.", controller));
-  commandList.emplace_back(new LoadGameCommand("Cargar partida guardada.", controller));
+OutGameMenu::OutGameMenu() {
+  commandList.emplace_back(new StartGameCommand("Empezar nueva partida."));
+  commandList.emplace_back(new LoadGameCommand("Cargar partida guardada."));
   createExitCommand();
 }
 

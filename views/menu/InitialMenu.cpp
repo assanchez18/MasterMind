@@ -2,12 +2,11 @@
 #include "StartGameCommand.h"
 #include "LoadGameCommand.h"
 
-InitialMenu::InitialMenu(MasterMind* game)
+InitialMenu::InitialMenu()
 {
 	commandList.emplace_back(new StartGameCommand("Empezar nueva partida."));
 	commandList.emplace_back(new LoadGameCommand("Cargar partida guardada."));
 	createExitCommand();
-	setGame(game);
 }
 
 

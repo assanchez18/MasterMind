@@ -15,7 +15,7 @@ SecretCombination::~SecretCombination()
 
 void SecretCombination::randomCombination() {
 	int randomColor;
-	srand(time(NULL));
+	srand(unsigned(time(NULL)));
 	for (int i = 0; i < SIZE_OF_COMBINATION; i++) {
 		randomColor = rand() % CombinationColor::NUMBER_OF_COLORS;
 		CombinationColor* color = new CombinationColor(randomColor);

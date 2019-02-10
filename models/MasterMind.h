@@ -4,6 +4,7 @@
 #include "GameState.h"
 #include "Round.h"
 
+using namespace std;
 class MasterMind
 {
 public:
@@ -12,19 +13,19 @@ public:
 	
 	static int getNumberOfRounds() { return NUMBER_OF_ROUNDS; }
 	void startGame();
-	void addRound(Round* combination);
+	void addRound(pair<Combination*, Result*> combination);
 
 	GameState getState();
 	void setState(GameState state);
 	SecretCombination* getSecretCombination();
-	std::vector<Round*>& getRounds();
+	vector<pair<Combination*, Result*>>& getRounds();
 
 	int getPlayedRounds();
 	void clearGame();
 	void changeState();
 	bool isMaxRounds();
 
-	
+	 
 
 private:
 	static const int NUMBER_OF_ROUNDS = 12;
@@ -32,7 +33,7 @@ private:
 	int playedRounds;
 	SecretCombination* secret;
 	GameState state;
-	std::vector<Round*> rounds;
+	vector<pair<Combination*, Result*>> rounds;
 
 	void initPlayedRounds();
 	void incrementPlayedRound();

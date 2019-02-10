@@ -4,7 +4,7 @@ class InitialMenu :
 	public Menu
 {
 public:
-	InitialMenu(MasterMind* game);
+	InitialMenu();
 	~InitialMenu();
 };
 

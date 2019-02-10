@@ -15,7 +15,7 @@ LocalMenuController::~LocalMenuController()
 void LocalMenuController::createMenu()
 {
 	delete menu;
-	menu = FactoryMenu::createMenu(&game->getState(), game);
+	menu = FactoryMenu::createMenu(nullptr);
 }
 
 inline std::vector<Command*> LocalMenuController::getCommands()
