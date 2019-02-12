@@ -1,17 +1,12 @@
 #include "LocalStartController.h"
 
 LocalStartController::LocalStartController(MasterMind * game)
-	: LocalOperationController(game)
+	: Controller(game)
 {
 }
 
 LocalStartController::~LocalStartController()
 {
-}
-
-void LocalStartController::accept(IOperationControllerVisitor * operationControllerVisitor)
-{
-	operationControllerVisitor->visit(this);
 }
 
 void LocalStartController::start()

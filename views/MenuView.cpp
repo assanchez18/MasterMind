@@ -1,10 +1,11 @@
-#include "CloseInterval.h"
 #include "MenuView.h"
+#include "CloseInterval.h"
 #include <iostream>
-#include <string>
+#include <assert.h>
+using namespace std;
 
-
-MenuView::MenuView()
+MenuView::MenuView(Menu* menu)
+  : menu_(menu)
 {
 }
 
@@ -13,28 +14,19 @@ MenuView::~MenuView()
 {
 }
 
-void MenuView::interact(MenuController* menuController)
-{
-	menuController->createMenu();
-	printMenu(menuController->getCommands());
-	menuController->execute(getCommandToExecute());
+void MenuView::print() {
+  int i = 1;
+  for (Command* command : menu_->getCommandList()) {
+    cout << i << " - " << command->getTitle() << endl;
+    i++;
+  }
 }
 
-void MenuView::printMenu(vector<Command*> commands)
-{
-	numberOfCommands = commands.size();
-	for (int i = 0; i < numberOfCommands; i++)
-	{
-		cout << i + 1 << ".- " << commands.at(i)->getTitle() << endl;
-	}
-}
-
-int MenuView::getCommandToExecute()
-{	
-	int option = 0;
-	while (!CloseInterval::CloseInterval(1,numberOfCommands).contains(option)) {
-		cout << "Select a command: ";
-		cin >> option;
-	}
-	return (option - 1);
+int MenuView::getOption() {
+  int option = -1;
+  do {
+    cout << "Select an option: ";
+    cin >> option;
+  } while (CloseInterval::CloseInterval(0, unsigned(menu_->getCommandList().size())).contains(option));
+  return option;
 }

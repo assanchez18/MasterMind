@@ -2,8 +2,8 @@
 #include "LocalStartController.h"
 
 
-LocalOutGameController::LocalOutGameController(MasterMind* game) :
-	LocalOperationController(game) {
+LocalOutGameController::LocalOutGameController(MasterMind* game)
+  : Controller(game) {
   startController_ = new LocalStartController(game);
   //LoadGameController = new LoadGameController(game);
 }

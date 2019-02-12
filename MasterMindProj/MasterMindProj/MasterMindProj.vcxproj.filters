@@ -11,12 +11,6 @@
     <ClCompile Include="..\..\controllers\local\LocalBoardController.cpp">
       <Filter>controllers\local</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\controllers\local\LocalMenuController.cpp">
-      <Filter>controllers\local</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\controllers\local\LocalOperationController.cpp">
-      <Filter>controllers\local</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\controllers\local\LocalOutGameController.cpp">
       <Filter>controllers\local</Filter>
     </ClCompile>
@@ -95,8 +89,11 @@
     <ClCompile Include="..\..\models\Round.cpp">
       <Filter>models</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\views\menu\InitialMenu.cpp">
-      <Filter>views\menu</Filter>
+    <ClCompile Include="..\..\views\menu\commands\OutGameCommand.cpp">
+      <Filter>views\menu\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\controllers\local\LocalLoadGameController.cpp">
+      <Filter>controllers\local</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -125,9 +122,6 @@
       <Filter>controllers\local</Filter>
     </ClInclude>
     <ClInclude Include="..\..\controllers\local\LocalBoardController.h">
-      <Filter>controllers\local</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\controllers\local\LocalMenuController.h">
       <Filter>controllers\local</Filter>
     </ClInclude>
     <ClInclude Include="..\..\controllers\local\LocalOperationController.h">
@@ -229,8 +223,11 @@
     <ClInclude Include="..\..\models\Round.h">
       <Filter>models</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\views\menu\InitialMenu.h">
-      <Filter>views\menu</Filter>
+    <ClInclude Include="..\..\views\menu\commands\OutGameCommand.h">
+      <Filter>views\menu\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\local\LocalLoadGameController.h">
+      <Filter>controllers\local</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

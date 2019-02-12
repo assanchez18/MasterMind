@@ -2,9 +2,7 @@
 #include <map>
 #include "MasterMind.h"
 #include "GameState.h"
-#include "LocalStartController.h"
-#include "LocalRoundController.h"
-#include "LocalBoardController.h"
+#include "LocalOutGameController.h"
 
 class Logic
 {
@@ -19,9 +17,8 @@ public:
 
 private:
 	MasterMind game;
-	LocalStartController* startController;
-	LocalRoundController* roundController;
-	LocalBoardController* boardController;
+	LocalOutGameController* outGameController_;
+	
 	int getState();
 
 	std::map<GameState, IOperationController*> controllers;

@@ -1,15 +1,14 @@
 #pragma once
 #include "RoundController.h"
-#include "LocalOperationController.h"
+#include "Controller.h"
 
 class LocalRoundController 
-	: public RoundController, public LocalOperationController
+	: public RoundController, public Controller
 {
 public:
 	LocalRoundController(MasterMind* game);
 	~LocalRoundController();
 
 	virtual void addRound(Combination* playerCombination) override;
-	virtual void accept(IOperationControllerVisitor * operationControllerVisitor) override;
 };
 

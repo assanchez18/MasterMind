@@ -4,10 +4,8 @@
 #include "MasterMind.h"
 
 class LocalOperationController 
-	: public IOperationController, public Controller
+	: public IOperationController 
 {
 public:
-	LocalOperationController(MasterMind* game);
 	virtual void accept(IOperationControllerVisitor * operationControllerVisitor) = 0;
-	
 };

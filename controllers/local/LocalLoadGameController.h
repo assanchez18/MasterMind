@@ -1,15 +1,12 @@
 #pragma once
 #include "LoadGameController.h"
-#include "LocalOperationController.h"
-
-class LocalLoadGameController
-  : public LoadGameController, public LocalOperationController
-{
+#include "Controller.h"
+class LocalLoadGameController :
+  public LoadGameController, Controller {
 public:
-  LocalLoadGameController();
+  LocalLoadGameController(MasterMind* game);
   ~LocalLoadGameController();
 
-  virtual void accept(IOperationControllerVisitor * operationControllerVisitor) override;
-  virtual void load() override;
-
+  virtual void loadGame() override;
 };
+

@@ -125,9 +125,8 @@
   <ItemGroup>
     <ClCompile Include="..\..\controllers\interfaces\Controller.cpp" />
     <ClCompile Include="..\..\controllers\local\LocalBoardController.cpp" />
+    <ClCompile Include="..\..\controllers\local\LocalLoadGameController.cpp" />
     <ClCompile Include="..\..\controllers\local\LocalOutGameController.cpp" />
-    <ClCompile Include="..\..\controllers\local\LocalMenuController.cpp" />
-    <ClCompile Include="..\..\controllers\local\LocalOperationController.cpp" />
     <ClCompile Include="..\..\controllers\local\LocalRoundController.cpp" />
     <ClCompile Include="..\..\controllers\local\LocalStartController.cpp" />
     <ClCompile Include="..\..\controllers\local\logic\Logic.cpp" />
@@ -149,8 +148,8 @@
     <ClCompile Include="..\..\views\MenuView.cpp" />
     <ClCompile Include="..\..\views\menu\commands\ExitCommand.cpp" />
     <ClCompile Include="..\..\views\menu\commands\LoadGameCommand.cpp" />
+    <ClCompile Include="..\..\views\menu\commands\OutGameCommand.cpp" />
     <ClCompile Include="..\..\views\menu\commands\StartGameCommand.cpp" />
-    <ClCompile Include="..\..\views\menu\InitialMenu.cpp" />
     <ClCompile Include="..\..\views\menu\OutGameMenu.cpp" />
     <ClCompile Include="..\..\views\menu\Menu.cpp" />
     <ClCompile Include="..\..\views\OutGameView.cpp" />
@@ -171,8 +170,8 @@
     <ClInclude Include="..\..\controllers\interfaces\StartController.h" />
     <ClInclude Include="..\..\controllers\local\GameState.h" />
     <ClInclude Include="..\..\controllers\local\LocalBoardController.h" />
+    <ClInclude Include="..\..\controllers\local\LocalLoadGameController.h" />
     <ClInclude Include="..\..\controllers\local\LocalOutGameController.h" />
-    <ClInclude Include="..\..\controllers\local\LocalMenuController.h" />
     <ClInclude Include="..\..\controllers\local\LocalOperationController.h" />
     <ClInclude Include="..\..\controllers\local\LocalRoundController.h" />
     <ClInclude Include="..\..\controllers\local\LocalStartController.h" />
@@ -194,9 +193,9 @@
     <ClInclude Include="..\..\views\menu\commands\Command.h" />
     <ClInclude Include="..\..\views\menu\commands\ExitCommand.h" />
     <ClInclude Include="..\..\views\menu\commands\LoadGameCommand.h" />
+    <ClInclude Include="..\..\views\menu\commands\OutGameCommand.h" />
     <ClInclude Include="..\..\views\menu\commands\StartGameCommand.h" />
     <ClInclude Include="..\..\views\menu\FactoryMenu.h" />
-    <ClInclude Include="..\..\views\menu\InitialMenu.h" />
     <ClInclude Include="..\..\views\menu\OutGameMenu.h" />
     <ClInclude Include="..\..\views\menu\Menu.h" />
     <ClInclude Include="..\..\views\OutGameView.h" />

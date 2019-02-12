@@ -4,7 +4,7 @@
 using namespace std;
 
 LocalRoundController::LocalRoundController(MasterMind* game)
-	: LocalOperationController(game)
+	: Controller(game)
 {
 }
 
@@ -18,9 +18,4 @@ void LocalRoundController::addRound(Combination* playerCombination)
 	round->checkResult(game->getSecretCombination());
 	game->addRound(std::move(round));
 	game->setState(GameState::CHECK_RESULT);*/
-}
-
-void LocalRoundController::accept(IOperationControllerVisitor * operationControllerVisitor)
-{
-	operationControllerVisitor->visit(this);
 }

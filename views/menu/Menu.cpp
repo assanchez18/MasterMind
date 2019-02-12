@@ -8,18 +8,18 @@ Menu::Menu()
 
 Menu::~Menu()
 {
-	delete exitCommand;
+	delete exitCommand_;
 }
 
 
 void Menu::createExitCommand()
 {
-	exitCommand = new ExitCommand("Salir de MasterMind.");
-	commandList.emplace_back(exitCommand);
+	exitCommand_ = new ExitCommand("Salir de MasterMind.");
+	commandList_.emplace_back(exitCommand_);
 }
 
-std::vector<Command*>& Menu::getCommands()
+std::vector<Command*> Menu::getCommandList()
 {
-	return commandList;
+	return commandList_;
 }
 

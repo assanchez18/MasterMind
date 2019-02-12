@@ -3,7 +3,7 @@
 #include "LocalOperationController.h"
 
 class LocalBoardController
-	: public BoardController, public LocalOperationController
+	: public BoardController, public Controller
 {
 public:
 	LocalBoardController(MasterMind* game);
@@ -12,7 +12,6 @@ public:
 	virtual std::vector<pair<Combination*, Result*>>& getRounds() override;
 	virtual int getPlayedRounds() override;
 	virtual void action(bool victory) override;
-	virtual void accept(IOperationControllerVisitor * operationControllerVisitor) override;
 	bool isFinished();
 
 private:

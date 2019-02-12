@@ -1,12 +1,13 @@
 #pragma once
-#include "Command.h"
+#include "OutGameCommand.h"
+
 class LoadGameCommand :
-	public Command
+	public OutGameCommand
 {
 public:
-	LoadGameCommand(std::string title);
+	LoadGameCommand(std::string title, OutGameController* controller);
 	~LoadGameCommand();
 
-	virtual void execute() override;
+	void execute();
 };
 

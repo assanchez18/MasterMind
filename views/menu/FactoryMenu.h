@@ -1,12 +1,12 @@
 #pragma once
 #include "Menu.h"
-#include "InitialMenu.h"
-#include "GameState.h"
+
+#include "OutGameMenu.h"
 
 class FactoryMenu {
 
 public:
 	static Menu* createMenu(OutGameController* controller) {
-		return nullptr;
+		return new OutGameMenu(controller);
 	}
 };

@@ -2,9 +2,7 @@
 
 Logic::Logic()
 {
-	startController = new LocalStartController(&game);
-	roundController = new LocalRoundController(&game);
-	boardController = new LocalBoardController(&game);
+	outGameController_ = new LocalOutGameController(&game);
 }
 
 Logic::~Logic()
@@ -23,11 +21,8 @@ LocalOperationController* Logic::getController() {
 	switch (getState()) 
 	{
 		case GameState::START:
-			return startController;
-		case GameState::NEXT_ROUND:
-			return roundController;
-		case GameState::CHECK_RESULT:
-			return boardController;
+			return outGameController_;
+      //TO-DO NEW STATE
 		default:
 			return nullptr;
 			break;

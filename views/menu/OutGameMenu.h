@@ -5,7 +5,7 @@
 class OutGameMenu :
   public Menu {
 public:
-  OutGameMenu();
+  OutGameMenu(OutGameController* controller);
   ~OutGameMenu();
 };
 

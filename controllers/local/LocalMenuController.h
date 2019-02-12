@@ -5,7 +5,7 @@
 #include "StartGameCommand.h"
 
 class LocalMenuController
-	: public MenuController, public LocalOperationController
+	: public MenuController
 {
 public:
 	LocalMenuController(MasterMind* game);

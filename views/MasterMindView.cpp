@@ -11,32 +11,11 @@ MasterMindView::~MasterMindView()
 {
 }
 
-void MasterMindView::interact(IOperationController * controller)
-{
-	controller->accept(this);
-}
-
-void MasterMindView::visit(RoundController* controller)
-{	
-	roundView.interact(controller);
-}
-
-void MasterMindView::visit(StartController* controller)
-{
-	startView.interact(controller);
-}
-
-void MasterMindView::visit(BoardController * controller)
-{
-	boardView.interact(controller);
-}
-
-void MasterMindView::visit(MenuController* controller)
-{
-	menuView.interact(controller);
+void MasterMindView::interact(IOperationController * controller) {
+  controller->accept(this);
 }
 
 void MasterMindView::visit(OutGameController* controller)
 {
-//	menuView.interact(controller);
+	outGameView_.interact(controller);
 }

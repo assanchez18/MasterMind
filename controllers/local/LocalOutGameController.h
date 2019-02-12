@@ -6,7 +6,7 @@
 
 class LoadGameController;
 class LocalOutGameController
-  : public OutGameController, public LocalOperationController {
+  : public OutGameController, public LocalOperationController, Controller {
 public:
   LocalOutGameController(MasterMind* game);
   ~LocalOutGameController();

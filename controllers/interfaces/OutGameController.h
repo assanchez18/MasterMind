@@ -1,8 +1,6 @@
 #pragma once
 #include "StartController.h"
 #include "LoadGameController.h"
-#include "StartGameCommand.h"
-#include "LoadGameCommand.h"
 
 class OutGameController {
 public:
@@ -12,4 +10,5 @@ public:
 protected:
   StartController* startController_;
   LoadGameController* loadController_;
+
 };

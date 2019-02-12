@@ -9,12 +9,12 @@ public:
   Menu();
   ~Menu();
 
-  std::vector<Command*>& getCommands();
-
+  std::vector<Command*> getCommandList();
 
 protected:
-	std::vector<Command*> commandList;
-	ExitCommand* exitCommand;
+	std::vector<Command*> commandList_;
+	ExitCommand* exitCommand_;
+
 	virtual void createExitCommand();
 };
 

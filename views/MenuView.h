@@ -1,20 +1,16 @@
 #pragma once
-#include "MenuController.h"
-#include "Command.h"
-#include <vector>
-using namespace std;
+#include "Menu.h"
 
 
 class MenuView
 {
 public:
-	MenuView();
+	MenuView(Menu* menu);
 	~MenuView();
 
-	void interact(MenuController* menuController);
+	void print();
+  int getOption();
 private:
-	int numberOfCommands;
-	void printMenu(vector<Command*> commands);
-	int getCommandToExecute();
+  Menu* menu_;
 };
 

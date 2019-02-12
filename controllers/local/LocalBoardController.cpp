@@ -2,7 +2,7 @@
 
 
 LocalBoardController::LocalBoardController(MasterMind* game) :
-	LocalOperationController(game),
+	Controller(game),
 	finished(false)
 {
 }
@@ -10,11 +10,6 @@ LocalBoardController::LocalBoardController(MasterMind* game) :
 
 LocalBoardController::~LocalBoardController()
 {
-}
-
-void LocalBoardController::accept(IOperationControllerVisitor * operationControllerVisitor)
-{
-	operationControllerVisitor->visit(this);
 }
 
 int LocalBoardController::getPlayedRounds()

@@ -1,18 +1,12 @@
 #include "LocalLoadGameController.h"
 
-
-
-LocalLoadGameController::LocalLoadGameController() {
+LocalLoadGameController::LocalLoadGameController(MasterMind* game)
+  : Controller(game) {
 }
 
 
 LocalLoadGameController::~LocalLoadGameController() {
 }
 
-void LocalLoadGameController::accept(IOperationControllerVisitor * operationControllerVisitor) {
-  operationControllerVisitor->visit(this);
-}
-
-void LocalLoadGameController::load() {
-
+void LocalLoadGameController::loadGame() {
 }
