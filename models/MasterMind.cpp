@@ -4,7 +4,7 @@
 #include "StartController.h"
 
 MasterMind::MasterMind() :
-	state(GameState::START)
+	state_(State::OUT_GAME)
 {
 }
 
@@ -15,16 +15,16 @@ MasterMind::~MasterMind()
 void MasterMind::startGame() {
 	initPlayedRounds();
 	secret = new SecretCombination();
-	state.setState(GameState::NEXT_ROUND);
+	setState(State::IN_GAME);
 }
 
-GameState MasterMind::getState() {
-	return state.getState();
+State MasterMind::getState() {
+	return state_;
 }
 
-void MasterMind::setState(GameState newState)
+void MasterMind::setState(const State newState)
 {
-	state.setState(newState);
+	state_ = newState;
 }
 
 void MasterMind::addRound(pair<Combination*,Result*> round) 
@@ -62,16 +62,11 @@ void MasterMind::clearGame() {
 	delete secret;
 }
 
-
-void MasterMind::changeState() {
-	state.changeState();
-}
-
 bool MasterMind::isMaxRounds()
 {
 	if (playedRounds == NUMBER_OF_ROUNDS)
 	{
-		state.setState(GameState::END_GAME);
+		setState(State::OUT_GAME);
 		return true;
 	}
 	return false;

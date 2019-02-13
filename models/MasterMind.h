@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 #include "SecretCombination.h"
-#include "GameState.h"
+#include "State.h"
 #include "Round.h"
 
 using namespace std;
@@ -15,14 +15,13 @@ public:
 	void startGame();
 	void addRound(pair<Combination*, Result*> combination);
 
-	GameState getState();
-	void setState(GameState state);
+	State getState();
+	void setState(const State state);
 	SecretCombination* getSecretCombination();
 	vector<pair<Combination*, Result*>>& getRounds();
 
 	int getPlayedRounds();
 	void clearGame();
-	void changeState();
 	bool isMaxRounds();
 
 	 
@@ -32,8 +31,8 @@ private:
 
 	int playedRounds;
 	SecretCombination* secret;
-	GameState state;
 	vector<pair<Combination*, Result*>> rounds;
+  State state_;
 
 	void initPlayedRounds();
 	void incrementPlayedRound();

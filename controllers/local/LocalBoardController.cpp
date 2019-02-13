@@ -30,11 +30,7 @@ void LocalBoardController::action(bool victory)
 {
 	if (victory || game->isMaxRounds())
 	{
-		game->setState(GameState::END_GAME);
+		game->setState(State::OUT_GAME);
 		finished = true;
-	}
-	else
-	{
-		game->setState(GameState::NEXT_ROUND);
 	}
 }

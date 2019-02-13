@@ -10,31 +10,25 @@ Logic::~Logic()
 }
 
 bool Logic::isEnd() {
-	return this->game.getState()=(GameState::END_GAME);
-}
-
-IOperationController* Logic::getController(GameState state) {
-	return this->controllers.at(state);
+//	return this->game.getState()=(GameState::END_GAME);
+  //TO-DO EXIT COMMAND WILL END GAME
+  return false;
 }
 
 LocalOperationController* Logic::getController() {
 	switch (getState()) 
 	{
-		case GameState::START:
+		case State::OUT_GAME:
 			return outGameController_;
-      //TO-DO NEW STATE
+    //case State::IN_GAME:
+     // return inGameController_;
 		default:
 			return nullptr;
 			break;
 	}
 }
 
-void Logic::changeState()
-{
-	this->game.changeState();
-}
-
-int Logic::getState() {
-	return game.getState().getState();
+State Logic::getState() {
+	return game.getState();
 }
 
