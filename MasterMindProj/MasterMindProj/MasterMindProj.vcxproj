@@ -125,6 +125,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\controllers\interfaces\Controller.cpp" />
     <ClCompile Include="..\..\controllers\local\LocalBoardController.cpp" />
+    <ClCompile Include="..\..\controllers\local\LocalExitController.cpp" />
     <ClCompile Include="..\..\controllers\local\LocalLoadGameController.cpp" />
     <ClCompile Include="..\..\controllers\local\LocalOutGameController.cpp" />
     <ClCompile Include="..\..\controllers\local\LocalRoundController.cpp" />
@@ -161,6 +162,7 @@
     <ClInclude Include="..\..\controllers\interfaces\BoardController.h" />
     <ClInclude Include="..\..\controllers\interfaces\ClearGameController.h" />
     <ClInclude Include="..\..\controllers\interfaces\Controller.h" />
+    <ClInclude Include="..\..\controllers\interfaces\ExitController.h" />
     <ClInclude Include="..\..\controllers\interfaces\InGameController.h" />
     <ClInclude Include="..\..\controllers\interfaces\IOperationController.h" />
     <ClInclude Include="..\..\controllers\interfaces\IOperationControllerVisitor.h" />
@@ -168,8 +170,8 @@
     <ClInclude Include="..\..\controllers\interfaces\OutGameController.h" />
     <ClInclude Include="..\..\controllers\interfaces\RoundController.h" />
     <ClInclude Include="..\..\controllers\interfaces\StartController.h" />
-    <ClInclude Include="..\..\controllers\local\GameState.h" />
     <ClInclude Include="..\..\controllers\local\LocalBoardController.h" />
+    <ClInclude Include="..\..\controllers\local\LocalExitController.h" />
     <ClInclude Include="..\..\controllers\local\LocalLoadGameController.h" />
     <ClInclude Include="..\..\controllers\local\LocalOutGameController.h" />
     <ClInclude Include="..\..\controllers\local\LocalOperationController.h" />

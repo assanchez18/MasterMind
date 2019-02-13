@@ -14,7 +14,7 @@ LocalBoardController::~LocalBoardController()
 
 int LocalBoardController::getPlayedRounds()
 {
-	return game->getPlayedRounds();
+	return game_->getPlayedRounds();
 }
 
 bool LocalBoardController::isFinished() {
@@ -23,14 +23,14 @@ bool LocalBoardController::isFinished() {
 
 std::vector<pair<Combination*, Result*>>& LocalBoardController::getRounds()
 {
-	return game->getRounds();
+	return game_->getRounds();
 }
 
 void LocalBoardController::action(bool victory)
 {
-	if (victory || game->isMaxRounds())
+	if (victory || game_->isMaxRounds())
 	{
-		game->setState(State::OUT_GAME);
+		game_->setState(State::OUT_GAME);
 		finished = true;
 	}
 }

@@ -6,7 +6,7 @@ Controller::Controller()
 
 Controller::Controller(MasterMind * game)
 {
-	this->game = game;
+	this->game_ = game;
 }
 
 Controller::~Controller()
@@ -15,15 +15,15 @@ Controller::~Controller()
 
 const int Controller::getNumberOfRounds()
 {
-	return game->getNumberOfRounds();
+	return game_->getNumberOfRounds();
 }
 
 std::vector<pair<Combination*, Result*>>& Controller::getRounds()
 {
-	return game->getRounds();
+	return game_->getRounds();
 }
 
 int Controller::getPlayedRounds()
 {
-	return game->getPlayedRounds();
+	return game_->getPlayedRounds();
 }

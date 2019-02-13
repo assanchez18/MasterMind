@@ -14,7 +14,7 @@ public:
 	bool isEnd();
 
 private:
-	MasterMind game;
+	MasterMind game_;
 	LocalOutGameController* outGameController_;
   //LocalInGameController* inGameController_;
 	

@@ -95,6 +95,9 @@
     <ClCompile Include="..\..\controllers\local\LocalLoadGameController.cpp">
       <Filter>controllers\local</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\controllers\local\LocalExitController.cpp">
+      <Filter>controllers\local</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\controllers\interfaces\BoardController.h">
@@ -214,9 +217,6 @@
     <ClInclude Include="..\..\views\menu\Menu.h">
       <Filter>views\menu</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\controllers\local\GameState.h">
-      <Filter>models</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\controllers\interfaces\InGameController.h">
       <Filter>controllers\interfaces</Filter>
     </ClInclude>
@@ -231,6 +231,12 @@
     </ClInclude>
     <ClInclude Include="..\..\models\State.h">
       <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\interfaces\ExitController.h">
+      <Filter>controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\local\LocalExitController.h">
+      <Filter>controllers\local</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

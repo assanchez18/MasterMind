@@ -2,7 +2,7 @@
 
 Logic::Logic()
 {
-	outGameController_ = new LocalOutGameController(&game);
+	outGameController_ = new LocalOutGameController(&game_);
 }
 
 Logic::~Logic()
@@ -10,9 +10,7 @@ Logic::~Logic()
 }
 
 bool Logic::isEnd() {
-//	return this->game.getState()=(GameState::END_GAME);
-  //TO-DO EXIT COMMAND WILL END GAME
-  return false;
+  return (game_.getState() == State::EXIT_GAME);
 }
 
 LocalOperationController* Logic::getController() {
@@ -29,6 +27,6 @@ LocalOperationController* Logic::getController() {
 }
 
 State Logic::getState() {
-	return game.getState();
+	return game_.getState();
 }
 

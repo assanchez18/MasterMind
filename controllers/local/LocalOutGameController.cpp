@@ -1,10 +1,11 @@
 #include "LocalOutGameController.h"
 #include "LocalStartController.h"
-
+#include "LocalExitController.h"
 
 LocalOutGameController::LocalOutGameController(MasterMind* game)
   : Controller(game) {
   startController_ = new LocalStartController(game);
+  exitController_ = new LocalExitController(game);
   //LoadGameController = new LoadGameController(game);
 }
 
@@ -22,5 +23,9 @@ void LocalOutGameController::startGame() {
 
 void LocalOutGameController::loadGame() {
   loadController_->loadGame();
+}
+
+void LocalOutGameController::exitGame() {
+  exitController_->exitGame();
 }
 

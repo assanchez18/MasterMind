@@ -12,6 +12,6 @@ public:
 	std::vector<std::pair<Combination*, Result*>>& getRounds();
 	int getPlayedRounds();
 protected:
-	MasterMind* game;
+	MasterMind* game_;
 };
 

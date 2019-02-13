@@ -1,16 +1,14 @@
 #include "ExitCommand.h"
 
 
-ExitCommand::ExitCommand(std::string title)
-	: Command(title)
-{
+ExitCommand::ExitCommand(std::string title, OutGameController* controller)
+  : OutGameCommand(title, controller){
 }
 
 
-ExitCommand::~ExitCommand()
-{
+ExitCommand::~ExitCommand() {
 }
 
-void ExitCommand::execute()
-{
+void ExitCommand::execute() {
+  controller_->exitGame();
 }

@@ -4,17 +4,19 @@
 #include "StartController.h"
 
 MasterMind::MasterMind() :
-	state_(State::OUT_GAME)
+	state_(State::OUT_GAME),
+  exit_(false)
 {
 }
 
 MasterMind::~MasterMind()
 {
+  delete secret_;
 }
 
 void MasterMind::startGame() {
 	initPlayedRounds();
-	secret = new SecretCombination();
+	secret_ = new SecretCombination();
 	setState(State::IN_GAME);
 }
 
@@ -29,45 +31,49 @@ void MasterMind::setState(const State newState)
 
 void MasterMind::addRound(pair<Combination*,Result*> round) 
 {
-	rounds.emplace_back(round);
+	rounds_.emplace_back(round);
 	incrementPlayedRound();
 }
 
 vector<pair<Combination*, Result*>>& MasterMind::getRounds()
 {
-	return rounds;
+	return rounds_;
 }
 
 SecretCombination* MasterMind::getSecretCombination()
 {
-	return secret;
+	return secret_;
 }
 
 void MasterMind::initPlayedRounds() {
-	playedRounds = 0;
+	playedRounds_ = 0;
 }
 
 void MasterMind::incrementPlayedRound()
 {
-	playedRounds++;
+	playedRounds_++;
 }
 
 int MasterMind::getPlayedRounds() {
-	return playedRounds;
+	return playedRounds_;
 }
 
 
 void MasterMind::clearGame() {
 	initPlayedRounds();
-	delete secret;
+	delete secret_;
 }
 
 bool MasterMind::isMaxRounds()
 {
-	if (playedRounds == NUMBER_OF_ROUNDS)
+	if (playedRounds_ == NUMBER_OF_ROUNDS)
 	{
 		setState(State::OUT_GAME);
 		return true;
 	}
 	return false;
+}
+
+void MasterMind::exitGame() {
+  state_ = State::EXIT_GAME;
 }

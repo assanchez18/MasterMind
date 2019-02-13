@@ -13,8 +13,5 @@ public:
 
 protected:
 	std::vector<Command*> commandList_;
-	ExitCommand* exitCommand_;
-
-	virtual void createExitCommand();
 };
 

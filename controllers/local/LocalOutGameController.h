@@ -15,5 +15,6 @@ public:
   
   virtual void startGame() override;
   virtual void loadGame() override;
+  virtual void exitGame() override;
 
 };

@@ -11,10 +11,10 @@ LocalStartController::~LocalStartController()
 
 void LocalStartController::start()
 {
-	game->startGame();
+	game_->startGame();
 }
 
 int LocalStartController::getNumberOfRounds()
 {
-	return game->getNumberOfRounds();
+	return game_->getNumberOfRounds();
 }
