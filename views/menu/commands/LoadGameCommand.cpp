@@ -1,14 +1,10 @@
 #include "LoadGameCommand.h"
 
-
 LoadGameCommand::LoadGameCommand(std::string title, OutGameController* controller)
-  : OutGameCommand(title, controller)
-{
+  : OutGameCommand(title, controller) {
 }
 
-
-LoadGameCommand::~LoadGameCommand()
-{
+LoadGameCommand::~LoadGameCommand() {
 }
 
 void LoadGameCommand::execute() {

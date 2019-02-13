@@ -19,3 +19,7 @@ void MasterMindView::visit(OutGameController* controller)
 {
 	outGameView_.interact(controller);
 }
+
+void MasterMindView::visit(InGameController* controller) {
+  inGameView_.interact(controller);
+}

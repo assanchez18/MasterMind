@@ -1,12 +1,11 @@
 #pragma once
-#include "RoundController.h"
+#include "Combination.h"
 
-class RoundView
-{
+class RoundView {
 public:
-	RoundView();
-	~RoundView();
+  RoundView();
+  ~RoundView();
 
-	void interact(RoundController* controller);
+  Combination* requestCombination();
 };
 

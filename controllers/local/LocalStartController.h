@@ -1,7 +1,6 @@
 #pragma once
 #include "StartController.h"
-#include "MasterMind.h"
-#include "LocalOperationController.h"
+#include "Controller.h"
 
 class LocalStartController 
 	: public StartController, Controller

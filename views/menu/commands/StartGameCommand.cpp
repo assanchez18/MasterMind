@@ -1,16 +1,13 @@
 #include "StartGameCommand.h"
 
-
 StartGameCommand::StartGameCommand(std::string title, OutGameController* controller)
-	: OutGameCommand(title, controller)
-{
+  : OutGameCommand(title, controller) {
 }
 
-
-StartGameCommand::~StartGameCommand()
-{
+StartGameCommand::~StartGameCommand() {
 }
 
 void StartGameCommand::execute() {
   controller_->startGame();
+  printf("El juego se ha iniciado!\n");
 }

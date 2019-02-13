@@ -1,12 +1,11 @@
 #include "Logic.h"
 
-Logic::Logic()
-{
-	outGameController_ = new LocalOutGameController(&game_);
+Logic::Logic() {
+  outGameController_ = new LocalOutGameController(&game_);
+  inGameController_ = new LocalInGameController(&game_);
 }
 
-Logic::~Logic()
-{
+Logic::~Logic() {
 }
 
 bool Logic::isEnd() {
@@ -14,19 +13,18 @@ bool Logic::isEnd() {
 }
 
 LocalOperationController* Logic::getController() {
-	switch (getState()) 
-	{
-		case State::OUT_GAME:
-			return outGameController_;
-    //case State::IN_GAME:
-     // return inGameController_;
-		default:
-			return nullptr;
-			break;
-	}
+  switch (getState()) {
+    case State::OUT_GAME:
+      return outGameController_;
+    case State::IN_GAME:
+      return inGameController_;
+    default:
+      return nullptr;
+      break;
+  }
 }
 
 State Logic::getState() {
-	return game_.getState();
+  return game_.getState();
 }
 

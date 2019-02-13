@@ -2,12 +2,11 @@
 #include "OutGameCommand.h"
 
 class LoadGameCommand :
-	public OutGameCommand
-{
+  public OutGameCommand {
 public:
-	LoadGameCommand(std::string title, OutGameController* controller);
-	~LoadGameCommand();
+  LoadGameCommand(std::string title, OutGameController* controller);
+  ~LoadGameCommand();
 
-	void execute();
+  void execute();
 };
 

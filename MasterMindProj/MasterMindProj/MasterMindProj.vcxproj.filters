@@ -98,6 +98,18 @@
     <ClCompile Include="..\..\controllers\local\LocalExitController.cpp">
       <Filter>controllers\local</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\controllers\local\LocalInGameController.cpp">
+      <Filter>controllers\local</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\views\menu\InGameMenu.cpp">
+      <Filter>views\menu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\views\menu\commands\AddRoundCommand.cpp">
+      <Filter>views\menu\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\views\menu\commands\InGameCommand.cpp">
+      <Filter>views\menu\commands</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\controllers\interfaces\BoardController.h">
@@ -120,9 +132,6 @@
     </ClInclude>
     <ClInclude Include="..\..\controllers\interfaces\RoundController.h">
       <Filter>controllers\interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\MasterMind\controllers\interfaces\LoadGameController.h">
-      <Filter>controllers\local</Filter>
     </ClInclude>
     <ClInclude Include="..\..\controllers\local\LocalBoardController.h">
       <Filter>controllers\local</Filter>
@@ -237,6 +246,21 @@
     </ClInclude>
     <ClInclude Include="..\..\controllers\local\LocalExitController.h">
       <Filter>controllers\local</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\local\LocalInGameController.h">
+      <Filter>controllers\local</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\MasterMind\controllers\interfaces\LoadGameController.h">
+      <Filter>controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\views\menu\InGameMenu.h">
+      <Filter>views\menu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\views\menu\commands\AddRoundCommand.h">
+      <Filter>views\menu\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\views\menu\commands\InGameCommand.h">
+      <Filter>views\menu\commands</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

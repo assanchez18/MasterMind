@@ -1,6 +1,7 @@
 #pragma once
 #include "LoadGameController.h"
 #include "Controller.h"
+
 class LocalLoadGameController :
   public LoadGameController, Controller {
 public:

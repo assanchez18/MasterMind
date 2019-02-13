@@ -1,10 +1,7 @@
 #pragma once
 #include "IOperationController.h"
-#include "StartView.h"
-#include "RoundView.h"
-#include "BoardView.h"
-#include "MenuView.h"
 #include "OutGameView.h"
+#include "InGameView.h"
 
 class MasterMindView 
 	: public IOperationControllerVisitor
@@ -15,10 +12,10 @@ public:
 
 	void interact(IOperationController* controller);
 	void visit(OutGameController* controller);
-	//void visit(ClearGameController* controller);
-private :
+	void visit(InGameController* controller);
 
+private :
   OutGameView outGameView_;
-	
+  InGameView inGameView_;
 };
 

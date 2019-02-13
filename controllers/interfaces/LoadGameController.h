@@ -1,9 +1,8 @@
 #pragma once
 
-
 class LoadGameController {
 
 public:
-	virtual void loadGame() = 0;
+  virtual void loadGame() = 0;
 
 };

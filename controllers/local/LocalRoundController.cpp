@@ -1,4 +1,5 @@
 #include "LocalRoundController.h"
+#include "Result.h"
 #include <iostream>
 
 using namespace std;
@@ -14,8 +15,10 @@ LocalRoundController::~LocalRoundController()
 
 void LocalRoundController::addRound(Combination* playerCombination)
 {
-/*	Round* round = new Round(playerCombination);
-	round->checkResult(game->getSecretCombination());
-	game->addRound(std::move(round));
-	game->setState(GameState::CHECK_RESULT);*/
+  Result* result = new Result(game_->getSecretCombination(), playerCombination);
+  std::pair<Combination*, Result*> round(move(playerCombination), move(result));
+  game_->addRound(move(round));
+  if (result->isSolution()) {
+  }
+  //TO-DO: verify if game is finished or max rounds quizás desde el comando.
 }

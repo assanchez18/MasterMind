@@ -1,10 +1,8 @@
 #pragma once
 #include "LocalOperationController.h"
 #include "OutGameController.h"
-#include "StartController.h"
-#include "LoadGameCommand.h"
+#include "Controller.h"
 
-class LoadGameController;
 class LocalOutGameController
   : public OutGameController, public LocalOperationController, Controller {
 public:

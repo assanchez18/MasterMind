@@ -1,10 +1,8 @@
 #pragma once
 #include "Command.h"
-#include "ExitCommand.h"
 #include <vector>
 
-class Menu
-{
+class Menu {
 public:
   Menu();
   ~Menu();
@@ -12,6 +10,6 @@ public:
   std::vector<Command*> getCommandList();
 
 protected:
-	std::vector<Command*> commandList_;
+  std::vector<Command*> commandList_;
 };
 
