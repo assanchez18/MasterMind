@@ -184,6 +184,7 @@
     <ClInclude Include="..\..\models\combinations\SecretCombination.h" />
     <ClInclude Include="..\..\models\MasterMind.h" />
     <ClInclude Include="..\..\models\Round.h" />
+    <ClInclude Include="..\..\models\State.h" />
     <ClInclude Include="..\..\utils\CloseInterval.h" />
     <ClInclude Include="..\..\views\BoardView.h" />
     <ClInclude Include="..\..\views\ColorView.h" />

@@ -27,6 +27,6 @@ int MenuView::getOption() {
   do {
     cout << "Select an option: ";
     cin >> option;
-  } while (CloseInterval::CloseInterval(0, unsigned(menu_->getCommandList().size())).contains(option));
-  return option;
+  } while (!CloseInterval::CloseInterval(0, unsigned(menu_->getCommandList().size())).contains(option));
+  return (option -1);
 }

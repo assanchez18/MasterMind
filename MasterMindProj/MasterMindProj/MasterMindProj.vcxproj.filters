@@ -229,6 +229,9 @@
     <ClInclude Include="..\..\controllers\local\LocalLoadGameController.h">
       <Filter>controllers\local</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\models\State.h">
+      <Filter>models</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="controllers">
