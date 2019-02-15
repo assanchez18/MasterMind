@@ -4,74 +4,65 @@
 #include "StartController.h"
 
 MasterMind::MasterMind() :
-	state_(State::OUT_GAME),
-  exit_(false)
-{
+  state_(State::OUT_GAME),
+  exit_(false) {
 }
 
-MasterMind::~MasterMind()
-{
+MasterMind::~MasterMind() {
   delete secret_;
 }
 
 void MasterMind::startGame() {
-	initPlayedRounds();
-	secret_ = new SecretCombination();
-	setState(State::IN_GAME);
+  initPlayedRounds();
+  secret_ = new SecretCombination();
+  setState(State::IN_GAME);
 }
 
 State MasterMind::getState() {
-	return state_;
+  return state_;
 }
 
-void MasterMind::setState(const State newState)
-{
-	state_ = newState;
+void MasterMind::setState(const State newState) {
+  state_ = newState;
 }
 
-void MasterMind::addRound(pair<Combination*,Result*> round) 
-{
-	rounds_.emplace_back(round);
-	incrementPlayedRound();
+void MasterMind::addRound(pair<Combination*, Result*> round) {
+  rounds_.emplace_back(round);
+  incrementPlayedRound();
 }
 
-vector<pair<Combination*, Result*>>& MasterMind::getRounds()
-{
-	return rounds_;
+vector<pair<Combination*, Result*>>& MasterMind::getRounds() {
+  return rounds_;
 }
 
-SecretCombination* MasterMind::getSecretCombination()
-{
-	return secret_;
+SecretCombination* MasterMind::getSecretCombination() {
+  return secret_;
 }
 
 void MasterMind::initPlayedRounds() {
-	playedRounds_ = 0;
+  playedRounds_ = 0;
 }
 
-void MasterMind::incrementPlayedRound()
-{
-	playedRounds_++;
+void MasterMind::incrementPlayedRound() {
+  playedRounds_++;
 }
 
 int MasterMind::getPlayedRounds() {
-	return playedRounds_;
+  return playedRounds_;
 }
 
 
 void MasterMind::clearGame() {
-	initPlayedRounds();
-	delete secret_;
+  initPlayedRounds();
+  delete secret_;
 }
 
-bool MasterMind::isMaxRounds()
-{
-	if (playedRounds_ == NUMBER_OF_ROUNDS)
-	{
-		setState(State::OUT_GAME);
-		return true;
-	}
-	return false;
+bool MasterMind::isMaxRounds() {
+  if (playedRounds_ == NUMBER_OF_ROUNDS) {
+    setState(State::OUT_GAME);
+    return true;
+  }
+  return false;
 }
 
 void MasterMind::exitGame() {

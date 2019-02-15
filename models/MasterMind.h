@@ -24,15 +24,14 @@ public:
 	void clearGame();
 	bool isMaxRounds();
   void exitGame();
-	 
 
 private:
 	static const int NUMBER_OF_ROUNDS = 12;
-
-	int playedRounds_;
+  int playedRounds_;
 	SecretCombination* secret_;
 	vector<pair<Combination*, Result*>> rounds_;
   State state_;
+
   bool exit_;
 
 	void initPlayedRounds();

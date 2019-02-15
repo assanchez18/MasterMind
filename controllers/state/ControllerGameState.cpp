@@ -20,7 +20,6 @@ int GameState::getState() const
 	return this->state;
 }
 
-
 bool GameState::operator<(const GameState& state) const {
 	return this->state < state.state;
 }

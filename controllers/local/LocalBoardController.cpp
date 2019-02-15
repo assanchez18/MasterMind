@@ -2,35 +2,34 @@
 
 
 LocalBoardController::LocalBoardController(MasterMind* game) :
-	Controller(game),
-	finished(false)
-{
+  Controller(game),
+  internalState_(InternalState::NONE) {
 }
 
 
-LocalBoardController::~LocalBoardController()
-{
+LocalBoardController::~LocalBoardController() {
 }
 
-int LocalBoardController::getPlayedRounds()
-{
-	return game_->getPlayedRounds();
+int LocalBoardController::getPlayedRounds() {
+  return game_->getPlayedRounds();
 }
 
-bool LocalBoardController::isFinished() {
-	return finished;
+void LocalBoardController::checkState(Result * lastResult) {
+  if (lastResult->isSolution()) {
+    internalState_ = InternalState::VICTORY;
+  }
+  else if (game_->isMaxRounds()) {
+    internalState_ = InternalState::DEFEAT;
+  }
+  if (internalState_ != InternalState::NONE) {
+    game_->setState(State::OUT_GAME);
+  }
 }
 
-std::vector<pair<Combination*, Result*>>& LocalBoardController::getRounds()
-{
-	return game_->getRounds();
+const InternalState LocalBoardController::getInternalState() {
+  return internalState_;
 }
 
-void LocalBoardController::action(bool victory)
-{
-	if (victory || game_->isMaxRounds())
-	{
-		game_->setState(State::OUT_GAME);
-		finished = true;
-	}
+std::vector<pair<Combination*, Result*>>& LocalBoardController::getRounds() {
+  return game_->getRounds();
 }

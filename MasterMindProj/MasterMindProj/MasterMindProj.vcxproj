@@ -132,7 +132,6 @@
     <ClCompile Include="..\..\controllers\local\LocalRoundController.cpp" />
     <ClCompile Include="..\..\controllers\local\LocalStartController.cpp" />
     <ClCompile Include="..\..\controllers\local\logic\Logic.cpp" />
-    <ClCompile Include="..\..\controllers\state\ControllerGameState.cpp" />
     <ClCompile Include="..\..\Main.cpp" />
     <ClCompile Include="..\..\models\colors\Color.cpp" />
     <ClCompile Include="..\..\models\colors\CombinationColor.cpp" />
@@ -189,6 +188,7 @@
     <ClInclude Include="..\..\models\combinations\Combination.h" />
     <ClInclude Include="..\..\models\combinations\Result.h" />
     <ClInclude Include="..\..\models\combinations\SecretCombination.h" />
+    <ClInclude Include="..\..\models\InternalState.h" />
     <ClInclude Include="..\..\models\MasterMind.h" />
     <ClInclude Include="..\..\models\Round.h" />
     <ClInclude Include="..\..\models\State.h" />

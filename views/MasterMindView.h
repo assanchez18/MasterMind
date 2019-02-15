@@ -3,18 +3,17 @@
 #include "OutGameView.h"
 #include "InGameView.h"
 
-class MasterMindView 
-	: public IOperationControllerVisitor
-{
+class MasterMindView
+  : public IOperationControllerVisitor {
 public:
-	MasterMindView();
-	~MasterMindView();
+  MasterMindView();
+  ~MasterMindView();
 
-	void interact(IOperationController* controller);
-	void visit(OutGameController* controller);
-	void visit(InGameController* controller);
+  void interact(IOperationController* controller);
+  void visit(OutGameController* controller);
+  void visit(InGameController* controller);
 
-private :
+private:
   OutGameView outGameView_;
   InGameView inGameView_;
 };

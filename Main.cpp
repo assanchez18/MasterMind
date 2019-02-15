@@ -2,11 +2,15 @@
 //
 
 #include <iostream>
+#include <locale.h>
+
 #include "Logic.h"
 #include "MasterMindView.h"
 
 int main()
 {
+  setlocale(LC_ALL, "");
+
 	Logic logic = Logic::Logic();
 	MasterMindView view = MasterMindView::MasterMindView();
 	do {

@@ -11,10 +11,9 @@ public:
 
   virtual std::vector<pair<Combination*, Result*>>& getRounds() override;
   virtual int getPlayedRounds() override;
-  virtual void action(bool victory) override;
-  bool isFinished();
-
+  virtual void checkState(Result* lastResult) override;
+  virtual const InternalState getInternalState() override;
 private:
-  bool finished;
+  InternalState internalState_;
 };
 

@@ -15,6 +15,6 @@ public:
   virtual void saveGame() override;
   virtual void closeGame() override;
   virtual void exitGame() override;
-
+  virtual BoardController* getBoardController() override;
 };
 
