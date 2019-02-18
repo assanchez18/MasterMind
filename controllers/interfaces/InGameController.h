@@ -11,6 +11,7 @@ public:
   virtual void closeGame() = 0;
   virtual void exitGame() = 0;
   virtual BoardController* getBoardController() = 0;
+  virtual ExitController* getExitController() = 0;
 
 protected:
   RoundController* roundController_;

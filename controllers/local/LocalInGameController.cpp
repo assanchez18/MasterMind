@@ -1,11 +1,13 @@
 #include "LocalInGameController.h"
 #include "LocalRoundController.h"
 #include "LocalBoardController.h"
+#include "LocalExitController.h"
 
 LocalInGameController::LocalInGameController(MasterMind* game)
   : Controller(game) {
   roundController_ = new LocalRoundController(game);
   boardController_ = new LocalBoardController(game);
+  exitController_ = new LocalExitController(game);
 }
 
 
@@ -27,6 +29,10 @@ void LocalInGameController::exitGame() {
 
 BoardController* LocalInGameController::getBoardController() {
   return boardController_;
+}
+
+ExitController * LocalInGameController::getExitController() {
+  return exitController_;
 }
 
 void LocalInGameController::accept(IOperationControllerVisitor * operationControllerVisitor) {

@@ -29,3 +29,7 @@ void LocalOutGameController::exitGame() {
   exitController_->exitGame();
 }
 
+ExitController * LocalOutGameController::getExitController() {
+  return exitController_;
+}
+

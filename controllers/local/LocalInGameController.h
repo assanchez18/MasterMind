@@ -16,5 +16,6 @@ public:
   virtual void closeGame() override;
   virtual void exitGame() override;
   virtual BoardController* getBoardController() override;
+  virtual ExitController * getExitController() override;
 };
 

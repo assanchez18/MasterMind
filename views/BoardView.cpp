@@ -25,9 +25,9 @@ void BoardView::interact(BoardController* controller) {
     cout << "\t|\t";
     printRound(round.second);
     cout << endl;
-
   }
-  controller->checkState(controller->getRounds().at(i).second);
+
+  controller->checkState(controller->getRounds().at(i-1).second);
   switch (controller->getInternalState()) {
     case InternalState::VICTORY:
       printVictory();

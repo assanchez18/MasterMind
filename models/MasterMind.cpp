@@ -66,5 +66,10 @@ bool MasterMind::isMaxRounds() {
 }
 
 void MasterMind::exitGame() {
-  state_ = State::EXIT_GAME;
+  if (state_ == State::IN_GAME) {
+    state_ = State::OUT_GAME;
+  }
+  else {
+    state_ = State::EXIT_GAME;
+  }
 }
