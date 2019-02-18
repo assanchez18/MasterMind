@@ -11,6 +11,7 @@ public:
 	const int getNumberOfRounds();
 	std::vector<std::pair<Combination*, Result*>>& getRounds();
 	int getPlayedRounds();
+
 protected:
 	MasterMind* game_;
 };

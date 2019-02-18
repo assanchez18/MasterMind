@@ -1,7 +1,8 @@
 #include "ExitCommand.h"
 
-ExitCommand::ExitCommand(std::string title, OutGameController* controller)
-  : OutGameCommand(title, controller) {
+ExitCommand::ExitCommand(std::string title, ExitController* controller)
+  : controller_(controller),
+    Command(title) {
 }
 
 ExitCommand::~ExitCommand() {

@@ -1,12 +1,16 @@
 #pragma once
-#include "OutGameCommand.h"
+#include "Command.h"
+#include "ExitController.h"
 
 class ExitCommand :
-  public OutGameCommand {
+  public Command {
 public:
-  ExitCommand(std::string title, OutGameController* controller);
+  ExitCommand(std::string title, ExitController* controller);
   ~ExitCommand();
 
-  virtual void execute() override;
+  void execute();
+
+private:
+  ExitController* controller_;
 };
 

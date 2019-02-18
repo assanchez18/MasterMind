@@ -29,6 +29,10 @@ BoardController* LocalInGameController::getBoardController() {
   return boardController_;
 }
 
+ExitController * LocalInGameController::getExitController() {
+  return exitController_;
+}
+
 void LocalInGameController::accept(IOperationControllerVisitor * operationControllerVisitor) {
   operationControllerVisitor->visit(this);
 }
