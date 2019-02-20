@@ -6,10 +6,16 @@
 
 #include "Logic.h"
 #include "MasterMindView.h"
-
-int main()
+#include "FileIO.h"
+#include "Config.h"
+int main(int argc, char *argv[])
 {
   setlocale(LC_ALL, "");
+  Config* config = Config::getInstance(argv[1]);
+  config->loadConfig();
+
+  FileIO file;
+  file.saveGame(nullptr, "example.txt");
 
 	Logic logic = Logic::Logic();
 	MasterMindView view = MasterMindView::MasterMindView();

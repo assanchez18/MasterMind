@@ -58,15 +58,19 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="MasterMindProperties.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="MasterMindProperties.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="MasterMindProperties.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="MasterMindProperties.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup />
@@ -142,6 +146,8 @@
     <ClCompile Include="..\..\models\MasterMind.cpp" />
     <ClCompile Include="..\..\models\Round.cpp" />
     <ClCompile Include="..\..\utils\CloseInterval.cpp" />
+    <ClCompile Include="..\..\utils\Config.cpp" />
+    <ClCompile Include="..\..\utils\FileIO.cpp" />
     <ClCompile Include="..\..\views\BoardView.cpp" />
     <ClCompile Include="..\..\views\ColorView.cpp" />
     <ClCompile Include="..\..\views\InGameView.cpp" />
@@ -193,6 +199,8 @@
     <ClInclude Include="..\..\models\Round.h" />
     <ClInclude Include="..\..\models\State.h" />
     <ClInclude Include="..\..\utils\CloseInterval.h" />
+    <ClInclude Include="..\..\utils\Config.h" />
+    <ClInclude Include="..\..\utils\FileIO.h" />
     <ClInclude Include="..\..\views\BoardView.h" />
     <ClInclude Include="..\..\views\ColorView.h" />
     <ClInclude Include="..\..\views\InGameView.h" />

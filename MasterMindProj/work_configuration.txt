@@ -1,0 +1,3 @@
+SaveGamePath=C:\Users\enassre\source\repos\MasterMind\savedGame\
+otherConfig=otherData
+otherConfig=new

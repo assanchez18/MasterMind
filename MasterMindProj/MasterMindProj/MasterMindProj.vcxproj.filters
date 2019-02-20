@@ -107,6 +107,12 @@
     <ClCompile Include="..\..\views\menu\commands\InGameCommand.cpp">
       <Filter>views\menu\commands</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\utils\Config.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\FileIO.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\controllers\interfaces\BoardController.h">
@@ -261,6 +267,12 @@
     </ClInclude>
     <ClInclude Include="..\..\models\InternalState.h">
       <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\Config.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\FileIO.h">
+      <Filter>utils</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
