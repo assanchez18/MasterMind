@@ -1,13 +1,14 @@
 #pragma once
 #include "RoundController.h"
 #include "BoardController.h"
+#include "SaveGameController.h"
 #include "ExitController.h"
 #include "Combination.h"
 
 class InGameController {
 public:
   virtual void addRound(Combination* combination) = 0;
-  virtual void saveGame() = 0;
+  virtual void saveGame(std::string gameName) = 0;
   virtual void closeGame() = 0;
   virtual void exitGame() = 0;
   virtual BoardController* getBoardController() = 0;
@@ -16,7 +17,7 @@ public:
 protected:
   RoundController* roundController_;
   BoardController* boardController_;
-  //SaveGameController* saveController_;
+  SaveGameController* saveController_;
   //CloseGameController* closeCotroller_;
   ExitController* exitController_;
 };

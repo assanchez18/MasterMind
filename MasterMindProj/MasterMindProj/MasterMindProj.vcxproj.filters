@@ -113,6 +113,15 @@
     <ClCompile Include="..\..\utils\FileIO.cpp">
       <Filter>utils</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\controllers\local\LocalSaveGameController.cpp">
+      <Filter>controllers\local</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\views\menu\commands\SaveGameCommand.cpp">
+      <Filter>views\menu\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\views\SaveGameView.cpp">
+      <Filter>views</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\controllers\interfaces\BoardController.h">
@@ -275,6 +284,18 @@
       <Filter>utils</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Main.h" />
+    <ClInclude Include="..\..\controllers\interfaces\SaveGameController.h">
+      <Filter>controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\local\LocalSaveGameController.h">
+      <Filter>controllers\local</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\views\menu\commands\SaveGameCommand.h">
+      <Filter>views\menu\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\views\SaveGameView.h">
+      <Filter>views</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="controllers">

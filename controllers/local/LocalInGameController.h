@@ -12,7 +12,7 @@ public:
   virtual void accept(IOperationControllerVisitor * operationControllerVisitor) override;
 
   virtual void addRound(Combination* combination) override;
-  virtual void saveGame() override;
+  virtual void saveGame(std::string gameName) override;
   virtual void closeGame() override;
   virtual void exitGame() override;
   virtual BoardController* getBoardController() override;

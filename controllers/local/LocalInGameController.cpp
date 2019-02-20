@@ -1,12 +1,14 @@
 #include "LocalInGameController.h"
 #include "LocalRoundController.h"
 #include "LocalBoardController.h"
+#include "LocalSaveGameController.h"
 #include "LocalExitController.h"
 
 LocalInGameController::LocalInGameController(MasterMind* game)
   : Controller(game) {
   roundController_ = new LocalRoundController(game);
   boardController_ = new LocalBoardController(game);
+  saveController_ = new LocalSaveGameController(game);
   exitController_ = new LocalExitController(game);
 }
 
@@ -18,7 +20,8 @@ void LocalInGameController::addRound(Combination* combination) {
   roundController_->addRound(combination);
 }
 
-void LocalInGameController::saveGame() {
+void LocalInGameController::saveGame(std::string gameName) {
+  saveController_->saveGame(gameName);
 }
 
 void LocalInGameController::closeGame() {

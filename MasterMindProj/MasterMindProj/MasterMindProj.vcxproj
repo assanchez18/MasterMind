@@ -134,6 +134,7 @@
     <ClCompile Include="..\..\controllers\local\LocalLoadGameController.cpp" />
     <ClCompile Include="..\..\controllers\local\LocalOutGameController.cpp" />
     <ClCompile Include="..\..\controllers\local\LocalRoundController.cpp" />
+    <ClCompile Include="..\..\controllers\local\LocalSaveGameController.cpp" />
     <ClCompile Include="..\..\controllers\local\LocalStartController.cpp" />
     <ClCompile Include="..\..\controllers\local\logic\Logic.cpp" />
     <ClCompile Include="..\..\Main.cpp" />
@@ -158,12 +159,14 @@
     <ClCompile Include="..\..\views\menu\commands\InGameCommand.cpp" />
     <ClCompile Include="..\..\views\menu\commands\LoadGameCommand.cpp" />
     <ClCompile Include="..\..\views\menu\commands\OutGameCommand.cpp" />
+    <ClCompile Include="..\..\views\menu\commands\SaveGameCommand.cpp" />
     <ClCompile Include="..\..\views\menu\commands\StartGameCommand.cpp" />
     <ClCompile Include="..\..\views\menu\InGameMenu.cpp" />
     <ClCompile Include="..\..\views\menu\OutGameMenu.cpp" />
     <ClCompile Include="..\..\views\menu\Menu.cpp" />
     <ClCompile Include="..\..\views\OutGameView.cpp" />
     <ClCompile Include="..\..\views\RoundView.cpp" />
+    <ClCompile Include="..\..\views\SaveGameView.cpp" />
     <ClCompile Include="..\..\views\StartView.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -178,6 +181,7 @@
     <ClInclude Include="..\..\controllers\interfaces\MenuController.h" />
     <ClInclude Include="..\..\controllers\interfaces\OutGameController.h" />
     <ClInclude Include="..\..\controllers\interfaces\RoundController.h" />
+    <ClInclude Include="..\..\controllers\interfaces\SaveGameController.h" />
     <ClInclude Include="..\..\controllers\interfaces\StartController.h" />
     <ClInclude Include="..\..\controllers\local\LocalBoardController.h" />
     <ClInclude Include="..\..\controllers\local\LocalExitController.h" />
@@ -186,6 +190,7 @@
     <ClInclude Include="..\..\controllers\local\LocalOutGameController.h" />
     <ClInclude Include="..\..\controllers\local\LocalOperationController.h" />
     <ClInclude Include="..\..\controllers\local\LocalRoundController.h" />
+    <ClInclude Include="..\..\controllers\local\LocalSaveGameController.h" />
     <ClInclude Include="..\..\controllers\local\LocalStartController.h" />
     <ClInclude Include="..\..\controllers\local\logic\Logic.h" />
     <ClInclude Include="..\..\Main.h" />
@@ -213,6 +218,7 @@
     <ClInclude Include="..\..\views\menu\commands\InGameCommand.h" />
     <ClInclude Include="..\..\views\menu\commands\LoadGameCommand.h" />
     <ClInclude Include="..\..\views\menu\commands\OutGameCommand.h" />
+    <ClInclude Include="..\..\views\menu\commands\SaveGameCommand.h" />
     <ClInclude Include="..\..\views\menu\commands\StartGameCommand.h" />
     <ClInclude Include="..\..\views\menu\FactoryMenu.h" />
     <ClInclude Include="..\..\views\menu\InGameMenu.h" />
@@ -220,6 +226,7 @@
     <ClInclude Include="..\..\views\menu\Menu.h" />
     <ClInclude Include="..\..\views\OutGameView.h" />
     <ClInclude Include="..\..\views\RoundView.h" />
+    <ClInclude Include="..\..\views\SaveGameView.h" />
     <ClInclude Include="..\..\views\StartView.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

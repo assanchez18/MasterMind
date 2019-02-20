@@ -13,10 +13,8 @@ FileIO::~FileIO() {
 
 void FileIO::saveGame(MasterMind * game, string name) {
   ofstream myFile;
-  const char* pathForGames("");
-  
   myFile.open(name);
-  myFile << "example sentence\n";
+  myFile << "example sentence2\n";
   myFile.close();
 }
 

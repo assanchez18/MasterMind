@@ -14,7 +14,8 @@ int main(int argc, char *argv[])
 {
   setlocale(LC_ALL, "");
   loadGame(argv[1]);
-
+  FileIO io;
+  io.saveGame(nullptr, Config::getInstance()->getSaveGamePath() + "example.txt");
 	Logic logic = Logic::Logic();
 	MasterMindView view = MasterMindView::MasterMindView();
 	do {
