@@ -274,6 +274,7 @@
     <ClInclude Include="..\..\utils\FileIO.h">
       <Filter>utils</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Main.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="controllers">

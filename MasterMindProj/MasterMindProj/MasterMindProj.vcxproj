@@ -188,6 +188,7 @@
     <ClInclude Include="..\..\controllers\local\LocalRoundController.h" />
     <ClInclude Include="..\..\controllers\local\LocalStartController.h" />
     <ClInclude Include="..\..\controllers\local\logic\Logic.h" />
+    <ClInclude Include="..\..\Main.h" />
     <ClInclude Include="..\..\models\colors\Color.h" />
     <ClInclude Include="..\..\models\colors\CombinationColor.h" />
     <ClInclude Include="..\..\models\colors\ResultColor.h" />

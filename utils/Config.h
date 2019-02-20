@@ -5,15 +5,17 @@ using namespace std;
 
 class Config {
 private:
-  Config(string file);
+  Config();
   static Config* config_;
   map<string, string> configuration;
+  string configFile_;
 
 public:
-  static Config* getInstance(string file);
+  static Config* getInstance();
   ~Config();
-  const string configFile_;
   void loadConfig();
   string getSaveGamePath();
+  void setConfigFile(string file);
+
 };
 

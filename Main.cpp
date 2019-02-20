@@ -6,16 +6,14 @@
 
 #include "Logic.h"
 #include "MasterMindView.h"
+#include "Main.h"
+
 #include "FileIO.h"
 #include "Config.h"
 int main(int argc, char *argv[])
 {
   setlocale(LC_ALL, "");
-  Config* config = Config::getInstance(argv[1]);
-  config->loadConfig();
-
-  FileIO file;
-  file.saveGame(nullptr, config->getSaveGamePath() + "example.txt");
+  loadGame(argv[1]);
 
 	Logic logic = Logic::Logic();
 	MasterMindView view = MasterMindView::MasterMindView();
@@ -24,6 +22,12 @@ int main(int argc, char *argv[])
 		view.interact(controller);
 	} while (!logic.isEnd());
 	std::cout << "THE END!!";
+}
+
+void loadGame(char* param) {
+  Config* config = Config::getInstance();
+  config->setConfigFile(param);
+  config->loadConfig();
 }
 
 // TODO:	Clase turno --> Libera a MasterMind de funcionalidad.
