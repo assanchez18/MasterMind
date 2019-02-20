@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
   config->loadConfig();
 
   FileIO file;
-  file.saveGame(nullptr, "example.txt");
+  file.saveGame(nullptr, config->getSaveGamePath() + "example.txt");
 
 	Logic logic = Logic::Logic();
 	MasterMindView view = MasterMindView::MasterMindView();

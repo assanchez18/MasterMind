@@ -14,7 +14,8 @@ FileIO::~FileIO() {
 void FileIO::saveGame(MasterMind * game, string name) {
   ofstream myFile;
   const char* pathForGames("");
-  myFile.open("$(FileSavePath)" + name);
+  
+  myFile.open(name);
   myFile << "example sentence\n";
   myFile.close();
 }
@@ -41,7 +42,7 @@ int FileIO::readConfig(string fileName, const char splitter, map<string,string> 
     }
     config.insert_or_assign(key, value);
   }
-  
+  return 0;
 }
 
 

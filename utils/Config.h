@@ -14,5 +14,6 @@ public:
   ~Config();
   const string configFile_;
   void loadConfig();
+  string getSaveGamePath();
 };
 

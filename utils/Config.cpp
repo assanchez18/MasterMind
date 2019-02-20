@@ -15,12 +15,14 @@ Config::Config(string file)
 }
 
 Config::~Config() {
+  delete config_;
 }
 void Config::loadConfig() {
   FileIO fio;
   fio.readConfig(configFile_, '=', configuration);
+  
+}
 
-
-  //TO-DO: LOAD CONFIGURATION FROM FILE
-
+string Config::getSaveGamePath() {
+  return config_->configuration.at("gamesPath");
 }
