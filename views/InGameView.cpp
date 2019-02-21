@@ -12,7 +12,6 @@ InGameView::~InGameView() {
 }
 
 void InGameView::interact(InGameController * controller) {
-  //TO-DO: GENERIC INTERACT FOR InGameView and OutGameView
   Menu* menu = FactoryMenu::createMenu(controller);
   MenuView* view = new MenuView(menu);
   view->print();

@@ -14,6 +14,7 @@ FileIO::~FileIO() {
 void FileIO::saveGame(MasterMind * game, string name) {
   ofstream myFile;
   myFile.open(name);
+  //TO-DO: save game structure
   myFile << "example sentence2\n";
   myFile.close();
 }
@@ -34,10 +35,10 @@ int FileIO::readConfig(string fileName, const char splitter, map<string,string> 
     pos = line.find(splitter);
     key = line.substr(0, pos);
     value = line.substr(pos + 1, line.size());
-    if (config.count(key) > 0) {
-      cout << "Duplicated config attribute " << key << endl;
-      return -1;
-    }
+//    if (config.count(key) > 0) {
+  //    cout << "Duplicated config attribute " << key << endl;
+    //  return -1;
+    //}
     config.insert_or_assign(key, value);
   }
   return 0;

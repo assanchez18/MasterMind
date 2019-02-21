@@ -9,7 +9,9 @@ public:
   SaveGameCommand(std::string title, InGameController* controller);
   ~SaveGameCommand();
 
-  // Inherited via InGameCommand
   virtual void execute() override;
+
+private:
+  int checkIfFileExists(const std::string &gameName);
 };
 
