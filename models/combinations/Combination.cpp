@@ -33,6 +33,15 @@ Color* Combination::getColorAt(int position)
 	return this->combination.at(position);
 }
 
+std::string Combination::toString() {
+  std::string combination;
+  for (auto c : this->combination) {
+    combination += c->getColor();
+  }
+  
+  return combination;
+}
+
 bool Combination::comparePositionColor(int position, Combination* combinationToCheck) {
 	assert(&combinationToCheck != nullptr);
 	assert(&position != nullptr);

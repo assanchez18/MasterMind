@@ -1,0 +1,4 @@
+Name: C:\Users\enassre\source\repos\MasterMind\savedGame\gameTest.txt
+Secret combination: BRBBB
+Number of rounds: 1
+Round 0: RRRRR-B----

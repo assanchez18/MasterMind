@@ -14,7 +14,8 @@ public:
 	Color* getPosition(int position);
 	static int getSizeOfCombination(){ return SIZE_OF_COMBINATION; }
 	Color* getColorAt(int position);
-	
+  virtual std::string toString();
+
 protected:
 	const static int SIZE_OF_COMBINATION = 5;
 	std::vector<Color*> combination;

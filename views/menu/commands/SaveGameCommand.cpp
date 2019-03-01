@@ -21,6 +21,7 @@ void SaveGameCommand::execute() {
     if (result != 0 || view->askIfOverride()) {
       string pathForGame = Config::getInstance()->getSaveGamePath() + gameName + ".txt";
       controller_->saveGame(pathForGame);
+      printf("Game saved correctly.");
     }
     else {
       printf("Game was not saved.");
