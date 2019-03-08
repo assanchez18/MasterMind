@@ -8,5 +8,8 @@ public:
   ~LoadGameCommand();
 
   void execute();
+private:
+  std::string selectFileToLoad();
+  int askForOption(int maxOption);
 };
 

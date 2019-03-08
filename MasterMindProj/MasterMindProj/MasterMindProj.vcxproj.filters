@@ -71,9 +71,6 @@
     <ClCompile Include="..\..\views\menu\commands\StartGameCommand.cpp">
       <Filter>views\menu\commands</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\views\menu\commands\LoadGameCommand.cpp">
-      <Filter>views\menu\commands</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\models\combinations\SecretCombination.cpp">
       <Filter>models\combinations</Filter>
     </ClCompile>
@@ -121,6 +118,9 @@
     </ClCompile>
     <ClCompile Include="..\..\views\SaveGameView.cpp">
       <Filter>views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\views\menu\commands\LoadGameCommand.cpp">
+      <Filter>views\menu\commands</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -220,9 +220,6 @@
     <ClInclude Include="..\..\views\menu\commands\StartGameCommand.h">
       <Filter>views\menu\commands</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\views\menu\commands\LoadGameCommand.h">
-      <Filter>views\menu\commands</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\controllers\interfaces\StartController.h">
       <Filter>controllers\interfaces</Filter>
     </ClInclude>
@@ -295,6 +292,9 @@
     </ClInclude>
     <ClInclude Include="..\..\views\SaveGameView.h">
       <Filter>views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\views\menu\commands\LoadGameCommand.h">
+      <Filter>views\menu\commands</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

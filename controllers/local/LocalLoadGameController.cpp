@@ -9,4 +9,5 @@ LocalLoadGameController::~LocalLoadGameController() {
 }
 
 void LocalLoadGameController::loadGame() {
+
 }
