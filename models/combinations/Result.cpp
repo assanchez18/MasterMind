@@ -17,6 +17,13 @@ Result::Result(SecretCombination* secret, Combination* playerCombination) {
 
 }
 
+Result::Result(std::string result) {
+  for (char a : result) {
+    ResultColor* color = new ResultColor(a);
+    pushColorToCombination(std::move(color));
+  }
+}
+
 Result::~Result() {
 }
 

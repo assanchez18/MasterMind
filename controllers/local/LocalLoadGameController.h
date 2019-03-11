@@ -8,6 +8,6 @@ public:
   LocalLoadGameController(MasterMind* game);
   ~LocalLoadGameController();
 
-  virtual void loadGame() override;
+  virtual void loadGame(std::string gameName) override;
 };
 

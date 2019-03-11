@@ -24,6 +24,9 @@ public:
 	void clearGame();
 	bool isMaxRounds();
   void exitGame();
+  void setSecretCombination(SecretCombination* secret);
+  void setPlayedRounds(int playedRounds);
+  void setRound(string round);
 
 private:
 	static const int NUMBER_OF_ROUNDS = 12;

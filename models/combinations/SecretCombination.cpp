@@ -3,22 +3,25 @@
 #include "SecretCombination.h"
 #include <time.h>
 
-SecretCombination::SecretCombination()
-{
-	randomCombination();
+SecretCombination::SecretCombination() {
+  randomCombination();
+}
+
+SecretCombination::SecretCombination(std::string secret) :
+  Combination(secret) {
+
 }
 
 
-SecretCombination::~SecretCombination()
-{
+SecretCombination::~SecretCombination() {
 }
 
 void SecretCombination::randomCombination() {
-	int randomColor;
-	srand(unsigned(time(NULL)));
-	for (int i = 0; i < SIZE_OF_COMBINATION; i++) {
-		randomColor = rand() % CombinationColor::NUMBER_OF_COLORS;
-		CombinationColor* color = new CombinationColor(randomColor);
-		pushColorToCombination(std::move(color));
-	}
+  int randomColor;
+  srand(unsigned(time(NULL)));
+  for (int i = 0; i < SIZE_OF_COMBINATION; i++) {
+    randomColor = rand() % CombinationColor::NUMBER_OF_COLORS;
+    CombinationColor* color = new CombinationColor(randomColor);
+    pushColorToCombination(std::move(color));
+  }
 }

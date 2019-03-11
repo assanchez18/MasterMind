@@ -6,6 +6,7 @@ class SecretCombination :
 {
 public:
 	SecretCombination();
+	SecretCombination(std::string secret);
 	~SecretCombination();
 
 private:

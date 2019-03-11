@@ -12,7 +12,7 @@ public:
   virtual void accept(IOperationControllerVisitor * operationControllerVisitor) override;
   
   virtual void startGame() override;
-  virtual void loadGame() override;
+  virtual void loadGame(std::string gameName) override;
   virtual void exitGame() override;
   virtual ExitController * getExitController() override;
 

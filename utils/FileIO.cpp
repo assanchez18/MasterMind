@@ -1,7 +1,8 @@
 #include "FileIO.h"
 #include <iostream>
-#include <fstream>
 #include <stdlib.h>
+#include "Config.h"
+
 using namespace std;
 #include <assert.h>
 
@@ -42,13 +43,48 @@ int FileIO::readConfig(string fileName, const char splitter, map<string, string>
     pos = line.find(splitter);
     key = line.substr(0, pos);
     value = line.substr(pos + 1, line.size());
-    //    if (config.count(key) > 0) {
-      //    cout << "Duplicated config attribute " << key << endl;
-        //  return -1;
-        //}
     config.insert_or_assign(key, value);
   }
   return 0;
 }
 
+void FileIO::loadGame(string name, MasterMind* game) {
+  string fileName = Config::getInstance()->getSaveGamePath() + name;
+  map<string, string> configuration;
+  ifstream file;
+  file.open(fileName);
+  if (!file.is_open()) {
+    cout << "Unable to open the selected game file " << name << endl;
+    game->setState(State::OUT_GAME);
+    return;
+  }
+  game->setState(State::IN_GAME);
+  string line, value;
+  int lineNumber = 1;
+  getline(file, line);
+  getline(file, line);
+  value = getNextValue(line);
+  SecretCombination *secret = new SecretCombination(value);
+  game->setSecretCombination(secret);
+  getline(file, line);
+  value = getNextValue(line);
+  int playedRounds = std::stoi(value);
+  game->setPlayedRounds(playedRounds);
+  for (int i = 0; i < playedRounds; i++) {
+    if (getline(file, line)) {
+      value = getNextValue(line);
+      game->setRound(value);
+    }
+    else {
+      cout << "Error loading the game:" << name << endl;
+      game->setState(State::OUT_GAME);
+    }
+  }
+}
 
+string FileIO::getNextValue(string line) {
+  string splitter = ":";
+  size_t pos = line.find(splitter);
+  string aux = line.substr(pos + 1, line.size());
+  return aux;
+}

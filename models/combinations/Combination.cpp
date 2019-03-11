@@ -9,6 +9,13 @@ Combination::Combination()
 {
 }
 
+Combination::Combination(std::string combination) {
+  for (char a : combination) {
+    CombinationColor* color = new CombinationColor(a);
+    pushColorToCombination(std::move(color));
+  }
+}
+
 Combination::~Combination()
 {
 }

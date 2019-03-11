@@ -6,6 +6,7 @@ class Combination
 {
 public:
 	Combination();
+	Combination(std::string combination);
 	~Combination();
 
 	void pushColorToCombination(Color* color);

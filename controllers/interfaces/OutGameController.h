@@ -6,7 +6,7 @@
 class OutGameController {
 public:
   virtual void startGame() = 0;
-  virtual void loadGame() = 0;
+  virtual void loadGame(std::string gameName) = 0;
   virtual void exitGame() = 0;
   virtual ExitController* getExitController() = 0;
 

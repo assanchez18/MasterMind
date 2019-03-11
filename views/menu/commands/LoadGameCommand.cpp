@@ -15,7 +15,7 @@ LoadGameCommand::~LoadGameCommand() {
 void LoadGameCommand::execute() {
   std::string gameName = selectFileToLoad();
   if (gameName.compare(".") != 0) {
-    controller_->loadGame();
+    controller_->loadGame(gameName);
   }
 }
 

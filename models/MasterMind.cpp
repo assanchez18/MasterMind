@@ -73,3 +73,22 @@ void MasterMind::exitGame() {
     state_ = State::EXIT_GAME;
   }
 }
+
+void MasterMind::setSecretCombination(SecretCombination * secret) {
+  this->secret_ = secret;
+}
+
+void MasterMind::setPlayedRounds(int playedRounds) {
+  this->playedRounds_ = playedRounds;
+}
+
+void MasterMind::setRound(string combWithResult) {
+  string splitter = "*";
+  size_t pos = combWithResult.find(splitter);
+  string aux = combWithResult.substr(0, pos);
+  Combination *comb = new Combination(aux);
+  aux = combWithResult.substr(pos + 1, combWithResult.size());
+  Result *result = new Result(aux);
+  std::pair<Combination*, Result*> round(comb, result);
+  rounds_.emplace_back(round);
+}

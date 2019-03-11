@@ -10,6 +10,7 @@ class Result
 {
 public:
 	Result(SecretCombination* secret, Combination* player);
+  Result(std::string result);
 	~Result();
 	
 	bool isSolution();
