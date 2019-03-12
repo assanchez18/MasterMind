@@ -1,7 +1,8 @@
 #include "LoadGameCommand.h"
-#include <dirent.h>
 #include "Config.h"
 #include "CloseInterval.h"
+#include "BoardView.h"
+#include <dirent.h>
 #include <vector>
 #include <iostream>
 
@@ -16,6 +17,9 @@ void LoadGameCommand::execute() {
   std::string gameName = selectFileToLoad();
   if (gameName.compare(".") != 0) {
     controller_->loadGame(gameName);
+    BoardView* boardView = new BoardView();
+    boardView->interact(controller_->getBoardController());
+    delete boardView;
   }
 }
 

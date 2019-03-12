@@ -15,5 +15,6 @@ public:
   virtual void loadGame(std::string gameName) override;
   virtual void exitGame() override;
   virtual ExitController * getExitController() override;
+  virtual BoardController * getBoardController() override;
 
 };

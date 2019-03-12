@@ -1,0 +1,6 @@
+TODOs:
+ - Refactor exit command.
+ - Load and save game have duplicated code.
+ - Board Controller is a bit weird.
+ - Maybe add exception management.
+ - Better config file.
