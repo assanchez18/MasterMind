@@ -6,3 +6,5 @@ To make dirent.h available for all C/C++ programs, simply copy the include/diren
 the system include directory. System include directory contains header files such as assert.h 
 and windows.h. In Visual Studio 2008, for example, the system include may be found at 
 C:\Program Files\Microsoft Visual Studio 9.0\VC\include
+
+search for assert.h in microsoft visual studio directory 
