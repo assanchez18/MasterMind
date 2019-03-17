@@ -332,4 +332,7 @@
       <UniqueIdentifier>{e7a8a483-35e6-4b10-b9e5-ce918a6c1338}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="MasterMindProperties.props" />
+  </ItemGroup>
 </Project>

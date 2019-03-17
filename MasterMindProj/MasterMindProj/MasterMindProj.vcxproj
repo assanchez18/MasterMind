@@ -229,6 +229,9 @@
     <ClInclude Include="..\..\views\SaveGameView.h" />
     <ClInclude Include="..\..\views\StartView.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="MasterMindProperties.props" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

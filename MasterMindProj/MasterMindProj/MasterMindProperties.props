@@ -3,12 +3,17 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
     <CONFIG_FILE_WORK>$(SolutionDir)work_configuration.txt</CONFIG_FILE_WORK>
+    <CONFIG_FILE_HOME>$(SolutionDir)home_configuration.txt</CONFIG_FILE_HOME>
   </PropertyGroup>
   <PropertyGroup />
   <ItemDefinitionGroup />
   <ItemGroup>
     <BuildMacro Include="CONFIG_FILE_WORK">
       <Value>$(CONFIG_FILE_WORK)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="CONFIG_FILE_HOME">
+      <Value>$(CONFIG_FILE_HOME)</Value>
       <EnvironmentVariable>true</EnvironmentVariable>
     </BuildMacro>
   </ItemGroup>
