@@ -17,11 +17,11 @@ void FileIO::saveGame(MasterMind * game, string name) {
   assert(game != nullptr);
   ofstream myFile;
   myFile.open(name);
-  myFile << "Name: " << name << "\n";
-  myFile << "Secret combination: " << game->getSecretCombination()->toString() << "\n";
-  myFile << "Number of rounds: " << game->getPlayedRounds() << "\n";
+  myFile << "Name:" << name << "\n";
+  myFile << "Secret combination:" << game->getSecretCombination()->toString() << "\n";
+  myFile << "Number of rounds:" << game->getPlayedRounds() << "\n";
   for (int i = 0; i < game->getPlayedRounds(); i++) {
-    myFile << "Round " << i << ": " << game->getRounds().at(i).first->toString() 
+    myFile << "Round " << i << ":" << game->getRounds().at(i).first->toString() 
            << "*" << game->getRounds().at(i).second->toString();
   }
   myFile.close();

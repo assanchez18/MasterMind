@@ -1,5 +1,6 @@
 #include "SaveGameCommand.h"
 #include "SaveGameView.h"
+#include "BoardView.h"
 #include <dirent.h>
 #include "Config.h"
 
@@ -26,6 +27,8 @@ void SaveGameCommand::execute() {
     else {
       printf("Game was not saved.\n");
     }
+	BoardView* boardView = new BoardView();
+	boardView->interact(controller_->getBoardController());
   }
   delete view;
 }
