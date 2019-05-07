@@ -1,0 +1,4 @@
+Name:C:\Users\Sergio\source\repos\MasterMind\savedGame\example_3.txt
+Secret combination:BRBBB
+Number of rounds:1
+Round 0:RRRRR*B----

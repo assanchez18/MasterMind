@@ -6,9 +6,10 @@ class LocalRoundController
 	: public RoundController, public Controller
 {
 public:
-	LocalRoundController(MasterMind* game);
+	LocalRoundController(Session* session);
 	~LocalRoundController();
 
 	virtual void addRound(Combination* playerCombination) override;
+	virtual bool isGameFinished() override;
 };
 

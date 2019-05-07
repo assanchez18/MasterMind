@@ -5,7 +5,7 @@
 class LocalLoadGameController :
   public LoadGameController, Controller {
 public:
-  LocalLoadGameController(MasterMind* game);
+  LocalLoadGameController(Session* session);
   ~LocalLoadGameController();
 
   virtual void loadGame(std::string gameName) override;

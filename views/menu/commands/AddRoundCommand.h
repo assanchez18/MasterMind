@@ -8,4 +8,5 @@ public:
   ~AddRoundCommand();
 
   void execute();
+  virtual bool isActive() override;
 };

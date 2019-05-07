@@ -2,7 +2,7 @@
 #include "ColorView.h"
 #include "Combination.h"
 #include "Result.h"
-#include "InternalState.h"
+#include "State.h"
 #include <iostream>
 using namespace std;
 
@@ -14,11 +14,11 @@ BoardView::BoardView() {
 BoardView::~BoardView() {
 }
 
-void BoardView::interact(BoardController* controller) {
+void BoardView::interact(IController* controller) {
   bool victory = false;
   cout << "ROUND\t|\tCOMBINATION\t|\tRESULT" << endl;
   int i = 0;
-  for (i; i < controller->getPlayedRounds(); i++) {
+  for (i; i < controller->getRounds().size(); i++) {
     cout << i + 1 << "\t|\t";
     pair<Combination*, Result*> round = controller->getRounds().at(i);
     printRound(round.first);
@@ -27,15 +27,14 @@ void BoardView::interact(BoardController* controller) {
     cout << endl;
   }
 
-  controller->checkState(controller->getRounds().at(i-1).second);
-  switch (controller->getInternalState()) {
-    case InternalState::VICTORY:
+  switch (controller->getState()) {
+    case StateValue::WON:
       printVictory();
       break;
-    case InternalState::DEFEAT:
+    case StateValue::DEFEAT:
       printLoose();
       break;
-    case InternalState::NONE:
+    case StateValue::IN_GAME:
       cheerPlayer();
       break;
   }

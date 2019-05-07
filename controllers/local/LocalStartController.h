@@ -6,11 +6,11 @@ class LocalStartController
 	: public StartController, Controller
 {
 public:
-	LocalStartController(MasterMind* game);
+	LocalStartController(Session* session);
 	~LocalStartController();
-
-
 	virtual void start() override;
-	virtual int getNumberOfRounds() override;
+
+	// Heredado vía StartController
+	virtual const int getNumberOfRounds() override;
 };
 

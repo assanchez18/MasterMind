@@ -1,7 +1,6 @@
 #pragma once
 #include <map>
-#include "MasterMind.h"
-#include "State.h"
+#include "Session.h"
 #include "LocalOutGameController.h"
 #include "LocalInGameController.h"
 
@@ -10,16 +9,15 @@ class Logic
 public:
 	Logic();
 	~Logic();
-	
+
 	LocalOperationController* getController();
 	bool isEnd();
 
 private:
-	MasterMind game_;
+	Session session_;
+	std::map<StateValue, IOperationController*> controllers_;
 	LocalOutGameController* outGameController_;
-  LocalInGameController* inGameController_;
-	
-	State getState();
+	LocalInGameController* inGameController_;
 
 };
 

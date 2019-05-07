@@ -1,7 +1,6 @@
 #pragma once
 #include <vector>
 
-class Menu;
 class Command;
 class MenuController
 {

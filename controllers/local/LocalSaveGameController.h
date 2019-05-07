@@ -5,7 +5,7 @@
 class LocalSaveGameController 
 : public SaveGameController, Controller{
 public:
-  LocalSaveGameController(MasterMind * game);
+  LocalSaveGameController(Session * session);
   ~LocalSaveGameController();
 
   virtual void saveGame(std::string gameName) override;

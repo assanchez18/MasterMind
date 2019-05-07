@@ -1,23 +1,26 @@
 #pragma once
+#include "Controller.h"
 #include "RoundController.h"
-#include "BoardController.h"
 #include "SaveGameController.h"
 #include "ExitController.h"
-#include "Combination.h"
+#include "RedoController.h"
+#include "UndoController.h"
 
-class InGameController {
+class InGameController 
+	: public Controller {
 public:
   virtual void addRound(Combination* combination) = 0;
+  virtual bool isGameFinished() = 0;
+  virtual bool redoable() = 0;
+  virtual bool undoable() = 0;
   virtual void saveGame(std::string gameName) = 0;
   virtual void closeGame() = 0;
   virtual void exitGame() = 0;
-  virtual BoardController* getBoardController() = 0;
-  virtual ExitController* getExitController() = 0;
-
+  
 protected:
-  RoundController* roundController_;
-  BoardController* boardController_;
-  SaveGameController* saveController_;
-  //CloseGameController* closeCotroller_;
-  ExitController* exitController_;
+	RoundController* roundController_;
+	SaveGameController* saveController_;
+	ExitController* exitController_;
+	RedoController* redoController_;
+	UndoController* undoController_;
 };

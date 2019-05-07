@@ -1,7 +1,7 @@
 #include "LocalStartController.h"
 
-LocalStartController::LocalStartController(MasterMind * game)
-	: Controller(game)
+LocalStartController::LocalStartController(Session * session)
+	: Controller(session)
 {
 }
 
@@ -11,10 +11,10 @@ LocalStartController::~LocalStartController()
 
 void LocalStartController::start()
 {
-	game_->startGame();
+	session_->startGame();
 }
 
-int LocalStartController::getNumberOfRounds()
-{
-	return game_->getNumberOfRounds();
+const int LocalStartController::getNumberOfRounds() {
+	return session_->getMaxRounds();
 }
+

@@ -4,91 +4,92 @@
 #include "StartController.h"
 
 MasterMind::MasterMind() :
-  state_(State::OUT_GAME),
-  exit_(false) {
-}
+	playedRounds_(0),
+	secret_(nullptr)
+{}
 
 MasterMind::~MasterMind() {
-  delete secret_;
+	delete secret_;
 }
 
 void MasterMind::startGame() {
-  initPlayedRounds();
-  secret_ = new SecretCombination();
-  setState(State::IN_GAME);
+	initPlayedRounds();
+	secret_ = new SecretCombination();
+	setState(StateValue::IN_GAME);
 }
 
-State MasterMind::getState() {
-  return state_;
+StateValue MasterMind::getState() {
+	return state_;
 }
 
-void MasterMind::setState(const State newState) {
-  state_ = newState;
+void MasterMind::setState(const StateValue newState) {
+	state_ = newState;
 }
 
 void MasterMind::addRound(pair<Combination*, Result*> round) {
-  rounds_.emplace_back(round);
-  incrementPlayedRound();
+	rounds_.emplace_back(round);
+	incrementPlayedRound();
+}
+
+bool MasterMind::isWinner() {
+	return rounds_.at(playedRounds_-1).second->isSolution();
+}
+
+bool MasterMind::isLooser() {
+	return (playedRounds_ == NUMBER_OF_ROUNDS);
 }
 
 vector<pair<Combination*, Result*>>& MasterMind::getRounds() {
-  return rounds_;
-}
-
-SecretCombination* MasterMind::getSecretCombination() {
-  return secret_;
-}
-
-void MasterMind::initPlayedRounds() {
-  playedRounds_ = 0;
-}
-
-void MasterMind::incrementPlayedRound() {
-  playedRounds_++;
+	return rounds_;
 }
 
 int MasterMind::getPlayedRounds() {
-  return playedRounds_;
+	return playedRounds_;
 }
 
+SecretCombination* MasterMind::getSecretCombination() {
+	return secret_;
+}
+
+void MasterMind::initPlayedRounds() {
+	playedRounds_ = 0;
+}
+
+void MasterMind::incrementPlayedRound() {
+	playedRounds_++;
+}
 
 void MasterMind::clearGame() {
-  initPlayedRounds();
-  delete secret_;
-}
-
-bool MasterMind::isMaxRounds() {
-  if (playedRounds_ == NUMBER_OF_ROUNDS) {
-    setState(State::OUT_GAME);
-    return true;
-  }
-  return false;
-}
-
-void MasterMind::exitGame() {
-  if (state_ == State::IN_GAME) {
-    state_ = State::OUT_GAME;
-  }
-  else {
-    state_ = State::EXIT_GAME;
-  }
+	initPlayedRounds();
+	rounds_.clear();
+	delete secret_;
 }
 
 void MasterMind::setSecretCombination(SecretCombination * secret) {
-  this->secret_ = secret;
+	this->secret_ = secret;
 }
 
 void MasterMind::setPlayedRounds(int playedRounds) {
-  this->playedRounds_ = playedRounds;
+	this->playedRounds_ = playedRounds;
 }
 
-void MasterMind::setRound(string combWithResult) {
-  string splitter = "*";
-  size_t pos = combWithResult.find(splitter);
-  string aux = combWithResult.substr(0, pos);
-  Combination *comb = new Combination(aux);
-  aux = combWithResult.substr(pos + 1, combWithResult.size());
-  Result *result = new Result(aux);
-  std::pair<Combination*, Result*> round(comb, result);
-  rounds_.emplace_back(round);
+void MasterMind::setRound(std::pair<Combination*, Result*>& round) {
+	rounds_.emplace_back(round);
+}
+
+bool MasterMind::isGameFinished()
+{
+	if (isEnd() || isWinner() || isLooser()) {
+		return true;
+	}
+	return false;
+}
+
+
+void MasterMind::redo() {
+	//TO-DO
+}
+
+void MasterMind::undo() {
+	//TO-DO
 }

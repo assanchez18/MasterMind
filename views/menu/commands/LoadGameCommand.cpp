@@ -18,7 +18,7 @@ void LoadGameCommand::execute() {
   if (gameName.compare(".") != 0) {
     controller_->loadGame(gameName);
     BoardView* boardView = new BoardView();
-    boardView->interact(controller_->getBoardController());
+    boardView->interact(controller_);
     delete boardView;
   }
 }
@@ -61,4 +61,8 @@ int LoadGameCommand::askForOption(int maxOption) {
   }while (!CloseInterval::CloseInterval(0, maxOption).contains(option)); 
   
   return option-1;
+}
+
+bool LoadGameCommand::isActive() {
+	return true;
 }

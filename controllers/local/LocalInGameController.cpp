@@ -1,15 +1,17 @@
 #include "LocalInGameController.h"
 #include "LocalRoundController.h"
-#include "LocalBoardController.h"
 #include "LocalSaveGameController.h"
 #include "LocalExitController.h"
+#include "LocalRedoController.h"
+#include "LocalUndoController.h"
 
-LocalInGameController::LocalInGameController(MasterMind* game)
-  : Controller(game) {
-  roundController_ = new LocalRoundController(game);
-  boardController_ = new LocalBoardController(game);
-  saveController_ = new LocalSaveGameController(game);
-  exitController_ = new LocalExitController(game);
+LocalInGameController::LocalInGameController(Session* session)
+	: Controller(session) {
+	roundController_ = new LocalRoundController(session);
+	saveController_ = new LocalSaveGameController(session);
+	redoController_ = new LocalRedoController(session);
+	undoController_ = new LocalUndoController(session);
+	exitController_ = new LocalExitController(session);
 }
 
 
@@ -17,27 +19,29 @@ LocalInGameController::~LocalInGameController() {
 }
 
 void LocalInGameController::addRound(Combination* combination) {
-  roundController_->addRound(combination);
+	roundController_->addRound(combination);
+}
+
+bool LocalInGameController::isGameFinished() {
+	return roundController_->isGameFinished();
 }
 
 void LocalInGameController::saveGame(std::string gameName) {
-  saveController_->saveGame(gameName);
-}
-
-void LocalInGameController::closeGame() {
+	saveController_->saveGame(gameName);
 }
 
 void LocalInGameController::exitGame() {
+	exitController_->exitGame();
 }
 
-BoardController* LocalInGameController::getBoardController() {
-  return boardController_;
+bool LocalInGameController::redoable() {
+	return redoController_->redoable();
 }
 
-ExitController * LocalInGameController::getExitController() {
-  return exitController_;
+bool LocalInGameController::undoable() {
+	return undoController_->undoable();
 }
 
 void LocalInGameController::accept(IOperationControllerVisitor * operationControllerVisitor) {
-  operationControllerVisitor->visit(this);
+	operationControllerVisitor->visit(this);
 }

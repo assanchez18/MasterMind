@@ -2,8 +2,8 @@
 
 
 
-LocalExitController::LocalExitController(MasterMind* game)
-  : Controller(game)
+LocalExitController::LocalExitController(Session* session)
+  : Controller(session)
 {
 }
 
@@ -12,5 +12,5 @@ LocalExitController::~LocalExitController() {
 }
 
 void LocalExitController::exitGame() {
-  game_->exitGame();
+  session_->next();
 }

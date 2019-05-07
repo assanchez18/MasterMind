@@ -3,13 +3,13 @@
 
 class SaveGameView {
 public:
-  SaveGameView();
-  ~SaveGameView();
+	SaveGameView();
+	~SaveGameView();
 
-  std::string requestGameName();
-  bool askIfOverride();
+	std::string requestGameName();
+	bool askIfOverride();
 
 private:
-  void printOptions();
+	void printOptions();
 };
 

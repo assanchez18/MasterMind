@@ -3,21 +3,22 @@
 Controller::Controller() {
 }
 
-Controller::Controller(MasterMind * game) {
-  this->game_ = game;
+Controller::Controller(Session * session) {
+	this->session_ = session;
 }
 
 Controller::~Controller() {
 }
 
 const int Controller::getNumberOfRounds() {
-  return game_->getNumberOfRounds();
+	return session_->getNumberOfRounds();
 }
 
 std::vector<pair<Combination*, Result*>>& Controller::getRounds() {
-  return game_->getRounds();
+	return session_->getRounds();
 }
 
-int Controller::getPlayedRounds() {
-  return game_->getPlayedRounds();
+StateValue Controller::getState() {
+	return session_->getState();
 }
+

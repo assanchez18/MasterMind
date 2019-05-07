@@ -11,10 +11,7 @@ Result::Result(SecretCombination* secret, Combination* playerCombination) {
   assert(secret != nullptr);
   assert(playerCombination != nullptr);
   createResult(secret, playerCombination);
-  if (combination.size() < SIZE_OF_COMBINATION) {
-    fillResult();
-  }
-
+  fillResult();
 }
 
 Result::Result(std::string result) {
@@ -46,7 +43,6 @@ void Result::createResult(SecretCombination * secret, Combination* playerCombina
 }
 
 void Result::fillResult() {
-
   for (int i = combination.size(); i < SIZE_OF_COMBINATION; i++) {
     pushColorToCombination(std::move(new ResultColor(ResultColor::NO_COLOR)));
   }

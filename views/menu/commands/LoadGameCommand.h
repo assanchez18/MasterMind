@@ -8,6 +8,8 @@ public:
   ~LoadGameCommand();
 
   void execute();
+  virtual bool isActive() override;
+
 private:
   std::string selectFileToLoad();
   int askForOption(int maxOption);

@@ -9,5 +9,7 @@ public:
 
   void execute();
 
+  virtual bool isActive() override;
+
 };
 

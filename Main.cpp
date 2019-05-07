@@ -12,8 +12,8 @@
 
 int main(int argc, char *argv[])
 {
-  setlocale(LC_ALL, "");
-  loadGame(argv[1]);
+	setlocale(LC_ALL, "");
+	loadGame(argv[1]);
 
 
 	Logic logic = Logic::Logic();
@@ -26,9 +26,9 @@ int main(int argc, char *argv[])
 }
 
 void loadGame(char* param) {
-  Config* config = Config::getInstance();
-  config->setConfigFile(param);
-  config->loadConfig();
+	Config* config = Config::getInstance();
+	config->setConfigFile(param);
+	config->loadConfig();
 }
 
 // TODO:	Clase turno --> Libera a MasterMind de funcionalidad.

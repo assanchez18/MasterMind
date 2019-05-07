@@ -128,14 +128,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\controllers\interfaces\Controller.cpp" />
-    <ClCompile Include="..\..\controllers\local\LocalBoardController.cpp" />
     <ClCompile Include="..\..\controllers\local\LocalExitController.cpp" />
     <ClCompile Include="..\..\controllers\local\LocalInGameController.cpp" />
     <ClCompile Include="..\..\controllers\local\LocalLoadGameController.cpp" />
     <ClCompile Include="..\..\controllers\local\LocalOutGameController.cpp" />
+    <ClCompile Include="..\..\controllers\local\LocalRedoController.cpp" />
     <ClCompile Include="..\..\controllers\local\LocalRoundController.cpp" />
     <ClCompile Include="..\..\controllers\local\LocalSaveGameController.cpp" />
     <ClCompile Include="..\..\controllers\local\LocalStartController.cpp" />
+    <ClCompile Include="..\..\controllers\local\LocalUndoController.cpp" />
     <ClCompile Include="..\..\controllers\local\logic\Logic.cpp" />
     <ClCompile Include="..\..\Main.cpp" />
     <ClCompile Include="..\..\models\colors\Color.cpp" />
@@ -145,7 +146,11 @@
     <ClCompile Include="..\..\models\combinations\Result.cpp" />
     <ClCompile Include="..\..\models\combinations\SecretCombination.cpp" />
     <ClCompile Include="..\..\models\MasterMind.cpp" />
-    <ClCompile Include="..\..\models\Round.cpp" />
+    <ClCompile Include="..\..\models\Memento.cpp" />
+    <ClCompile Include="..\..\models\ParserFile.cpp" />
+    <ClCompile Include="..\..\models\Registry.cpp" />
+    <ClCompile Include="..\..\models\Session.cpp" />
+    <ClCompile Include="..\..\models\State.cpp" />
     <ClCompile Include="..\..\utils\CloseInterval.cpp" />
     <ClCompile Include="..\..\utils\Config.cpp" />
     <ClCompile Include="..\..\utils\FileIO.cpp" />
@@ -159,8 +164,10 @@
     <ClCompile Include="..\..\views\menu\commands\InGameCommand.cpp" />
     <ClCompile Include="..\..\views\menu\commands\LoadGameCommand.cpp" />
     <ClCompile Include="..\..\views\menu\commands\OutGameCommand.cpp" />
+    <ClCompile Include="..\..\views\menu\commands\RedoCommand.cpp" />
     <ClCompile Include="..\..\views\menu\commands\SaveGameCommand.cpp" />
     <ClCompile Include="..\..\views\menu\commands\StartGameCommand.cpp" />
+    <ClCompile Include="..\..\views\menu\commands\UndoCommand.cpp" />
     <ClCompile Include="..\..\views\menu\InGameMenu.cpp" />
     <ClCompile Include="..\..\views\menu\OutGameMenu.cpp" />
     <ClCompile Include="..\..\views\menu\Menu.cpp" />
@@ -171,27 +178,29 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\MasterMind\controllers\interfaces\LoadGameController.h" />
-    <ClInclude Include="..\..\controllers\interfaces\BoardController.h" />
-    <ClInclude Include="..\..\controllers\interfaces\ClearGameController.h" />
     <ClInclude Include="..\..\controllers\interfaces\Controller.h" />
     <ClInclude Include="..\..\controllers\interfaces\ExitController.h" />
+    <ClInclude Include="..\..\controllers\interfaces\IController.h" />
     <ClInclude Include="..\..\controllers\interfaces\InGameController.h" />
     <ClInclude Include="..\..\controllers\interfaces\IOperationController.h" />
     <ClInclude Include="..\..\controllers\interfaces\IOperationControllerVisitor.h" />
     <ClInclude Include="..\..\controllers\interfaces\MenuController.h" />
     <ClInclude Include="..\..\controllers\interfaces\OutGameController.h" />
+    <ClInclude Include="..\..\controllers\interfaces\RedoController.h" />
     <ClInclude Include="..\..\controllers\interfaces\RoundController.h" />
     <ClInclude Include="..\..\controllers\interfaces\SaveGameController.h" />
     <ClInclude Include="..\..\controllers\interfaces\StartController.h" />
-    <ClInclude Include="..\..\controllers\local\LocalBoardController.h" />
+    <ClInclude Include="..\..\controllers\interfaces\UndoController.h" />
     <ClInclude Include="..\..\controllers\local\LocalExitController.h" />
     <ClInclude Include="..\..\controllers\local\LocalInGameController.h" />
     <ClInclude Include="..\..\controllers\local\LocalLoadGameController.h" />
     <ClInclude Include="..\..\controllers\local\LocalOutGameController.h" />
     <ClInclude Include="..\..\controllers\local\LocalOperationController.h" />
+    <ClInclude Include="..\..\controllers\local\LocalRedoController.h" />
     <ClInclude Include="..\..\controllers\local\LocalRoundController.h" />
     <ClInclude Include="..\..\controllers\local\LocalSaveGameController.h" />
     <ClInclude Include="..\..\controllers\local\LocalStartController.h" />
+    <ClInclude Include="..\..\controllers\local\LocalUndoController.h" />
     <ClInclude Include="..\..\controllers\local\logic\Logic.h" />
     <ClInclude Include="..\..\Main.h" />
     <ClInclude Include="..\..\models\colors\Color.h" />
@@ -200,10 +209,13 @@
     <ClInclude Include="..\..\models\combinations\Combination.h" />
     <ClInclude Include="..\..\models\combinations\Result.h" />
     <ClInclude Include="..\..\models\combinations\SecretCombination.h" />
-    <ClInclude Include="..\..\models\InternalState.h" />
     <ClInclude Include="..\..\models\MasterMind.h" />
-    <ClInclude Include="..\..\models\Round.h" />
+    <ClInclude Include="..\..\models\Memento.h" />
+    <ClInclude Include="..\..\models\ParserFile.h" />
+    <ClInclude Include="..\..\models\Registry.h" />
+    <ClInclude Include="..\..\models\Session.h" />
     <ClInclude Include="..\..\models\State.h" />
+    <ClInclude Include="..\..\models\StateValue.h" />
     <ClInclude Include="..\..\utils\CloseInterval.h" />
     <ClInclude Include="..\..\utils\Config.h" />
     <ClInclude Include="..\..\utils\FileIO.h" />
@@ -218,8 +230,10 @@
     <ClInclude Include="..\..\views\menu\commands\InGameCommand.h" />
     <ClInclude Include="..\..\views\menu\commands\LoadGameCommand.h" />
     <ClInclude Include="..\..\views\menu\commands\OutGameCommand.h" />
+    <ClInclude Include="..\..\views\menu\commands\RedoCommand.h" />
     <ClInclude Include="..\..\views\menu\commands\SaveGameCommand.h" />
     <ClInclude Include="..\..\views\menu\commands\StartGameCommand.h" />
+    <ClInclude Include="..\..\views\menu\commands\UndoCommand.h" />
     <ClInclude Include="..\..\views\menu\FactoryMenu.h" />
     <ClInclude Include="..\..\views\menu\InGameMenu.h" />
     <ClInclude Include="..\..\views\menu\OutGameMenu.h" />

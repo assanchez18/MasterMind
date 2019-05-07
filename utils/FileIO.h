@@ -2,7 +2,7 @@
 
 #include <string>
 #include <map>
-#include "MasterMind.h"
+#include "Session.h"
 #include <fstream>
 
 class FileIO {
@@ -12,7 +12,7 @@ public:
 
   void saveGame(MasterMind* game, string name);
   int readConfig(string fileName, const char splitter, map<string, string> &config);
-  void loadGame(string name, MasterMind* game);
+  void loadGame(string name, Session* session);
 
 private:
   string getNextValue(string line);

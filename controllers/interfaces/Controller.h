@@ -1,18 +1,20 @@
 #pragma once
-#include "MasterMind.h"
+#include "Session.h"
+#include "IController.h"
 
-class Controller
+class Controller :
+	public IController
 {
 public:
 	Controller();
-	Controller(MasterMind* game);
+	Controller(Session* session);
 	~Controller();
 
-	const int getNumberOfRounds();
-	std::vector<std::pair<Combination*, Result*>>& getRounds();
-	int getPlayedRounds();
+	virtual const int getNumberOfRounds() override;
+	virtual std::vector<std::pair<Combination*, Result*>>& getRounds() override;
+	virtual StateValue getState() override;
 
 protected:
-	MasterMind* game_;
+	Session* session_;
 };
 

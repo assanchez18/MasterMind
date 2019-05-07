@@ -12,5 +12,6 @@ public:
 
 private:
   ExitController* controller_;
+  virtual bool isActive() override;
 };
 

@@ -5,7 +5,7 @@
 class LocalExitController :
   public ExitController, Controller {
 public:
-  LocalExitController(MasterMind* game);
+  LocalExitController(Session* session);
   ~LocalExitController();
 
   virtual void exitGame() override;

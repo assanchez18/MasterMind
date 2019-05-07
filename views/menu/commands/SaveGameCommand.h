@@ -10,7 +10,7 @@ public:
   ~SaveGameCommand();
 
   virtual void execute() override;
-
+  virtual bool isActive() override;
 private:
   int checkIfFileExists(const std::string &gameName);
 };

@@ -5,9 +5,6 @@
     <ClCompile Include="..\..\controllers\interfaces\Controller.cpp">
       <Filter>controllers</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\controllers\local\LocalBoardController.cpp">
-      <Filter>controllers\local</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\controllers\local\LocalOutGameController.cpp">
       <Filter>controllers\local</Filter>
     </ClCompile>
@@ -80,9 +77,6 @@
     <ClCompile Include="..\..\views\menu\Menu.cpp">
       <Filter>views\menu</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\models\Round.cpp">
-      <Filter>models</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\views\menu\commands\OutGameCommand.cpp">
       <Filter>views\menu\commands</Filter>
     </ClCompile>
@@ -122,17 +116,35 @@
     <ClCompile Include="..\..\views\menu\commands\LoadGameCommand.cpp">
       <Filter>views\menu\commands</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\views\menu\commands\UndoCommand.cpp">
+      <Filter>views\menu\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\views\menu\commands\RedoCommand.cpp">
+      <Filter>views\menu\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\controllers\local\LocalRedoController.cpp">
+      <Filter>controllers\local</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\controllers\local\LocalUndoController.cpp">
+      <Filter>controllers\local</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\models\Registry.cpp">
+      <Filter>models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\models\Memento.cpp">
+      <Filter>models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\models\State.cpp">
+      <Filter>models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\models\Session.cpp">
+      <Filter>models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\models\ParserFile.cpp">
+      <Filter>models</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\controllers\interfaces\BoardController.h">
-      <Filter>controllers\interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\controllers\interfaces\ClearGameController.h">
-      <Filter>controllers\interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\controllers\interfaces\Controller.h">
-      <Filter>controllers\interfaces</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\controllers\interfaces\IOperationControllerVisitor.h">
       <Filter>controllers\interfaces</Filter>
     </ClInclude>
@@ -144,9 +156,6 @@
     </ClInclude>
     <ClInclude Include="..\..\controllers\interfaces\RoundController.h">
       <Filter>controllers\interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\controllers\local\LocalBoardController.h">
-      <Filter>controllers\local</Filter>
     </ClInclude>
     <ClInclude Include="..\..\controllers\local\LocalOperationController.h">
       <Filter>controllers\local</Filter>
@@ -238,17 +247,11 @@
     <ClInclude Include="..\..\controllers\interfaces\InGameController.h">
       <Filter>controllers\interfaces</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\models\Round.h">
-      <Filter>models</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\views\menu\commands\OutGameCommand.h">
       <Filter>views\menu\commands</Filter>
     </ClInclude>
     <ClInclude Include="..\..\controllers\local\LocalLoadGameController.h">
       <Filter>controllers\local</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\models\State.h">
-      <Filter>models</Filter>
     </ClInclude>
     <ClInclude Include="..\..\controllers\interfaces\ExitController.h">
       <Filter>controllers\interfaces</Filter>
@@ -271,9 +274,6 @@
     <ClInclude Include="..\..\views\menu\commands\InGameCommand.h">
       <Filter>views\menu\commands</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\models\InternalState.h">
-      <Filter>models</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\utils\Config.h">
       <Filter>utils</Filter>
     </ClInclude>
@@ -295,6 +295,48 @@
     </ClInclude>
     <ClInclude Include="..\..\views\menu\commands\LoadGameCommand.h">
       <Filter>views\menu\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\views\menu\commands\UndoCommand.h">
+      <Filter>views\menu\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\views\menu\commands\RedoCommand.h">
+      <Filter>views\menu\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\interfaces\RedoController.h">
+      <Filter>controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\interfaces\UndoController.h">
+      <Filter>controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\local\LocalRedoController.h">
+      <Filter>controllers\local</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\local\LocalUndoController.h">
+      <Filter>controllers\local</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\interfaces\IController.h">
+      <Filter>controllers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\controllers\interfaces\Controller.h">
+      <Filter>controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\models\Registry.h">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\models\Memento.h">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\models\StateValue.h">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\models\State.h">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\models\Session.h">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\models\ParserFile.h">
+      <Filter>models</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

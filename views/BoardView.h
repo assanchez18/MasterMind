@@ -1,5 +1,5 @@
 #pragma once
-#include "BoardController.h"
+#include "IController.h"
 #include <vector>
 
 class BoardView
@@ -7,7 +7,7 @@ class BoardView
 public:
 	BoardView();
 	~BoardView();
-	void interact(BoardController* controller);
+	void interact(IController* controller);
 
 private:
 	void printRound(Combination* combination);

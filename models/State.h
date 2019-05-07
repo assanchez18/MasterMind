@@ -1,7 +1,18 @@
 #pragma once
+#include "StateValue.h"
 
-enum class State {
-  OUT_GAME,
-  IN_GAME,
-  EXIT_GAME
+class State
+{
+public:
+	State();
+	~State();
+
+	void nextState();
+	StateValue getState();
+	void reset();
+	void setState(StateValue state);
+	bool isEnd();
+private:
+	StateValue state_;
 };
+

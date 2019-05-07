@@ -2,7 +2,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include "Config.h"
-
+#include "ParserFile.h"
 using namespace std;
 #include <assert.h>
 
@@ -19,8 +19,8 @@ void FileIO::saveGame(MasterMind * game, string name) {
   myFile.open(name);
   myFile << "Name:" << name << "\n";
   myFile << "Secret combination:" << game->getSecretCombination()->toString() << "\n";
-  myFile << "Number of rounds:" << game->getPlayedRounds() << "\n";
-  for (int i = 0; i < game->getPlayedRounds(); i++) {
+  myFile << "Number of rounds:" << game->getRounds().size() << "\n";
+  for (unsigned int i = 0; i < game->getRounds().size(); i++) {
     myFile << "Round " << i << ":" << game->getRounds().at(i).first->toString() 
            << "*" << game->getRounds().at(i).second->toString();
   }
@@ -48,36 +48,34 @@ int FileIO::readConfig(string fileName, const char splitter, map<string, string>
   return 0;
 }
 
-void FileIO::loadGame(string name, MasterMind* game) {
+void FileIO::loadGame(string name, Session* session) {
   string fileName = Config::getInstance()->getSaveGamePath() + name;
   map<string, string> configuration;
   ifstream file;
   file.open(fileName);
   if (!file.is_open()) {
     cout << "Unable to open the selected game file " << name << endl;
-    game->setState(State::OUT_GAME);
+    session->clearGame();
     return;
   }
-  game->setState(State::IN_GAME);
   string line, value;
   int lineNumber = 1;
   getline(file, line);
   getline(file, line);
   value = getNextValue(line);
-  SecretCombination *secret = new SecretCombination(value);
-  game->setSecretCombination(secret);
+  ParserFile parser(session);
+  parser.secretCombination(value);
   getline(file, line);
   value = getNextValue(line);
-  int playedRounds = std::stoi(value);
-  game->setPlayedRounds(playedRounds);
-  for (int i = 0; i < playedRounds; i++) {
+  parser.playedRounds(value);
+  for (int i = 0; i < session->getPlayedRounds(); i++) {
     if (getline(file, line)) {
       value = getNextValue(line);
-      game->setRound(value);
+	  parser.toRound(value);
     }
     else {
       cout << "Error loading the game:" << name << endl;
-      game->setState(State::OUT_GAME);
+	  session->clearGame();
     }
   }
 }

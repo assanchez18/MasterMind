@@ -3,9 +3,9 @@
 
 class RoundView {
 public:
-  RoundView();
-  ~RoundView();
+	RoundView();
+	~RoundView();
 
-  Combination* requestCombination();
+	Combination* requestCombination();
 };
 

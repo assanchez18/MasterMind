@@ -1,12 +1,12 @@
 #pragma once
-#include "StartController.h"
+#include "OutGameController.h"
 
-class StartView 
+class StartView
 {
 public:
 	StartView();
 	~StartView();
 
-	void interact(StartController* startController);
+	void interact(OutGameController* startController);
 };
 

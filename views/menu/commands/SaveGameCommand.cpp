@@ -28,7 +28,7 @@ void SaveGameCommand::execute() {
       printf("Game was not saved.\n");
     }
 	BoardView* boardView = new BoardView();
-	boardView->interact(controller_->getBoardController());
+	boardView->interact(controller_);
   }
   delete view;
 }
@@ -63,4 +63,9 @@ int SaveGameCommand::checkIfFileExists(const std::string &gameName) {
     return ERROR_NOACCESS;
   }
 
+}
+
+bool SaveGameCommand::isActive()
+{
+	return true;
 }
